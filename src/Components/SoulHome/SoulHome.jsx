@@ -65,16 +65,20 @@ const SoulHome = () => {
                             <Col lg={14}>
                                 <div>
                                     <div>
-                                        <span className="TagEdit">Welcome to Innovest!</span>
-                                        <h1 className="PrimaryHeadingStyle">Planning is <span className="ColorChangeSpan">bringing the future</span> in present</h1>
+                                        <span className="TagEdit" data-aos="fade-up"
+                                            data-aos-duration="3000">Welcome to Innovest!</span>
+                                        <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="200">Planning is <span className="ColorChangeSpan">bringing the future</span> in present</h1>
                                     </div>
                                 </div>
                             </Col>
                             <Col lg={10}>
                                 <div>
                                     <div>
-                                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quae molestias nostrum laborum dignissimos optio sint quidem distinctio sit, perferendis totam esse, id at deserunt minus commodi rem, consectetur explicabo!</p>
-                                        <div className="PrimarybtnContainer">
+                                        <p data-aos="fade-left"
+                                            data-aos-duration="2000" data-aos-delay="300"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quae molestias nostrum laborum dignissimos optio sint quidem distinctio sit, perferendis totam esse, id at deserunt minus commodi rem, consectetur explicabo!</p>
+                                        <div className="PrimarybtnContainer" data-aos="fade-up"
+                                            data-aos-duration="3000" data-aos-delay="800">
                                             <button>Get In Touch</button>
                                         </div>
                                     </div>
@@ -103,8 +107,8 @@ const SoulHome = () => {
                             className="mySwiper"
                         >
                             {CarousalImages.map((item, index) => (
-                                <SwiperSlide key={index}>
-                                    <div>
+                                <SwiperSlide key={index}  >
+                                    <div >
                                         <div className="ParallaxImageContainer">
                                             <img style={{ transform: `translateY(${scrollY * 0.2}px)` }} src={item.img} alt="Image for soul-finspire office" loading="lazy" />
                                         </div>
@@ -119,7 +123,8 @@ const SoulHome = () => {
                         <div>
                             <Row>
                                 {CardsData.map((item, index) => (
-                                    <Col lg={8}>
+                                    <Col lg={8} data-aos="fade-up"
+                                        data-aos-duration="1000" data-aos-delay={index * 200}>
                                         <div>
                                             <div>
                                                 <span>0<b>{index + 1}</b></span>

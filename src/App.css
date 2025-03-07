@@ -54,10 +54,12 @@ h6 {
   padding-right: 3%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .MaxWidthContainer {
   width: 90%;
+  overflow: hidden;
 }
 
 .PrimaryHeadingStyle {

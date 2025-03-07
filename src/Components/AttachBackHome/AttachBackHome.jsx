@@ -57,7 +57,8 @@ const AttachBackHome = () => {
                             <div>
                                 <Row>
                                     <Col lg={12}>
-                                        <div>
+                                        <div data-aos="fade-up"
+                                            data-aos-duration="1200">
                                             <div>
                                                 <h2 className="PrimaryHeadingStyle" style={{ color: "white" }}>How <span>confident</span> are you that you'll be able to <span>achieve all</span> your <span>financial goals in the future</span>?</h2>
                                             </div>
@@ -65,11 +66,12 @@ const AttachBackHome = () => {
                                     </Col>
                                 </Row>
                             </div>
-                            <div>
+                            <div >
                                 <div className="AttachBackContentParagraphEdit">
-                                    <p> <span>{count}%</span> of our clients who have gone through the <b>Confident Investment</b> approach feel confident they will reach to the goals.</p>
+                                    <p data-aos="fade-left"
+                                        data-aos-duration="1200"> <span>{count}%</span> of our clients who have gone through the <b>Confident Investment</b> approach feel confident they will reach to the goals.</p>
                                     <br />
-                                    <div className='SwiperReadMoreBtnContainer'>
+                                    <div className='SwiperReadMoreBtnContainer' >
                                         <button>Let's Get You Started <IoArrowForward /></button>
                                     </div>
                                 </div>

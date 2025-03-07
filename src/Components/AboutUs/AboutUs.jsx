@@ -71,14 +71,21 @@ const AboutUs = () => {
                             <Row>
                                 <Col lg={14}>
                                     <div>
-                                        <span className="TagEdit">About Soulfinspire</span>
-                                        <h1 className="PrimaryHeadingStyle">
+                                        <span className="TagEdit" data-aos="fade-up"
+                                            data-aos-duration="3000">About Soulfinspire</span>
+                                        <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
+                                            data-aos-duration="2000" data-aos-delay="200">
                                             Discover Our <span>Vision</span>, Trust Our <span>Expertise</span>.
                                         </h1>
                                     </div>
                                 </Col>
                                 <Col lg={10}>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quae quasi, voluptatibus nostrum, vel eveniet natus dignissimos pariatur dolorem, doloremque numquam aliquid iste corporis animi repellat possimus aliquam quos labore.</p>
+                                    <div>
+                                        <div>
+                                            <p data-aos="fade-left"
+                                                data-aos-duration="2000" data-aos-delay="300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quae quasi, voluptatibus nostrum, vel eveniet natus dignissimos pariatur dolorem, doloremque numquam aliquid iste corporis animi repellat possimus aliquam quos labore.</p>
+                                        </div>
+                                    </div>
                                 </Col>
                             </Row>
                         </div>
@@ -91,7 +98,8 @@ const AboutUs = () => {
                         <div >
                             <Row className="PaddingAdjustHeadingContainer" style={{ paddingBottom: "0px" }}>
                                 {OurAchievementsData.map((item, index) => (
-                                    <Col lg={6} md={8} key={index}>
+                                    <Col lg={6} md={8} key={index} data-aos="fade-up"
+                                    data-aos-duration="1000" data-aos-delay={index * 200}>
                                         <div className="AchievementsCountersContainer" ref={(el) => countersRef.current[index] = el}>
                                             <h2 className="CounterFont"> {item.prefix} {/* Prefix Icon */}
                                                 {counts[index]} {/* Animated Counter */}
@@ -109,7 +117,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
-            <MainPrinciples/>
+            <MainPrinciples />
             <OurApproach />
         </>
     );

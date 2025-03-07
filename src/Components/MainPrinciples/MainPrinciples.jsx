@@ -27,18 +27,24 @@ const MainPrinciples = () => {
                             <Row>
                                 <Col lg={12}>
                                     <div>
-                                        <h1 className="PrimaryHeadingStyle">
+                                        <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
+                                            data-aos-duration="1000">
                                             Investment Solutions with <span>Trust</span> and <span>Transparency</span>
                                         </h1>
                                         <br /><br />
-                                        <p>We don’t aim to be just your financial advisors, those are available in plenty, but what we aim for is to be give you 360° insight and plan your investments with full trust and transparency such that any unwanted situations can be mitigated easily.</p>
+                                        <p data-aos="fade-up"
+                                            data-aos-duration="1000">We don’t aim to be just your financial advisors, those are available in plenty, but what we aim for is to be give you 360° insight and plan your investments with full trust and transparency such that any unwanted situations can be mitigated easily.</p>
                                         <br />
                                         <div className="TagsContainer">
                                             {/* <ul> */}
-                                            <span className="TagEdit">Hyper Personalized Plans</span>
-                                            <span className="TagEdit">Data Driven Investment Decisions</span>
-                                            <span className="TagEdit">Use of Cutting edge Technology</span>
-                                            <span className="TagEdit">Constant Monitoring and Re-alignment of Investments</span>
+                                            <span className="TagEdit" data-aos="fade-up"
+                                                data-aos-duration="1000" data-aos-delay="300">Hyper Personalized Plans</span>
+                                            <span className="TagEdit" data-aos="fade-up"
+                                                data-aos-duration="1000" data-aos-delay="500">Data Driven Investment Decisions</span>
+                                            <span className="TagEdit" data-aos="fade-up"
+                                                data-aos-duration="1000" data-aos-delay="700">Use of Cutting edge Technology</span>
+                                            <span className="TagEdit" data-aos="fade-up"
+                                                data-aos-duration="1000" data-aos-delay="900">Constant Monitoring and Re-alignment of Investments</span>
                                             {/* </ul> */}
                                         </div>
                                         {/* <ul>

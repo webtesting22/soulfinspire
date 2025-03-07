@@ -11,3 +11,11 @@
 .AchievementsCountersContainer .CounterFont {
     font-size: 3rem;
 }
+
+@media (max-width:900px){
+    .AchievementsCountersContainer {
+        border-left: 0.05px solid white;
+        padding: 20px 30px;
+        margin: 10px 0px;
+    }
+}

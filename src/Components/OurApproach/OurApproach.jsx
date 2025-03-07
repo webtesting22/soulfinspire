@@ -29,7 +29,7 @@ const OurApproach = () => {
         <>
             <section id="OurApproachContainer">
                 <div className="sectionContainerForSidePadding" style={{ overflow: "hidden" }}>
-                    <div className="MaxWidthContainer sliteSectionLikePadding">
+                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{ overflow: "unset" }}>
                         <div style={{ position: "relative" }}>
                             <div>
 
@@ -45,7 +45,8 @@ const OurApproach = () => {
 
                                             <div className="FlexContainer">
                                                 {OurApproachData.map((item, index) => (
-                                                    <div key={index} className="OurApprochCardContainer">
+                                                    <div key={index} className="OurApprochCardContainer" data-aos="fade-left"
+                                                        data-aos-duration="1300" data-aos-delay={index * 400}>
                                                         <div>
                                                             <h2>{item.title}</h2>
                                                             <br />

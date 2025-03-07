@@ -74,7 +74,8 @@ const ServicesHome = () => {
                     <div className="MaxWidthContainer sliteSectionLikePadding">
                         <SectionHeading text="Services SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
                         <div>
-                            <h1 className="PrimaryHeadingStyle" style={{ color: "black" }}>At Innovest, we are committed to fueling the <span className="ColorChangeSpan">growth</span> and <span className="ColorChangeSpan">innovation</span> of visionary <span className="ColorChangeSpan">startups</span> and high-potential <span className="ColorChangeSpan">companies</span>.</h1>
+                            <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
+                                data-aos-duration="1200">At Innovest, we are committed to fueling the <span className="ColorChangeSpan">growth</span> and <span className="ColorChangeSpan">innovation</span> of visionary <span className="ColorChangeSpan">startups</span> and high-potential <span className="ColorChangeSpan">companies</span>.</h1>
                         </div>
                         <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding">
                             <div className="InfiniteCarousalForServices PaddingAdjustHeadingContainer" onMouseMove={handleMouseMove}>
