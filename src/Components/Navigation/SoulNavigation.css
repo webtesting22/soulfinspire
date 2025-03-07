@@ -121,9 +121,36 @@
     border: none;
     padding: 15px;
 }
-.PcnavLinks{
+
+.PcnavLinks {
     color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
 }
+.PcnavLinks::after{
+    content: "";
+    position: absolute;
+    background-color: #1e402d4a;
+    height: 5px;
+    width: 0%;
+    display: inline-block;
+    border-radius: 10px;
+    transition: .5s;
+}
+.PcnavLinks:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #1e402d4a;
+    height: 4px;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10px;
+    transition: .5s;
+}
+
 @media (min-width:1500px) and (max-width:4000px) {
     .WidthContainer {
         width: 80% !important;

@@ -86,48 +86,48 @@ const SoulNavigation = () => {
                         boxShadow: scrolled ? "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" : "none",
                     }}
                 >
-                <div className="MobileNavContainer">
-                    <div className="MobileNavHeader">
-                        <Link to="/">
-                            <img src="/Images/SoulFinspireLogo.png" alt="Logo" />
-                        </Link>
-                        <MenuOutlined className="MenuIcon" onClick={() => setDrawerVisible(true)} />
-                    </div>
+                    <div className="MobileNavContainer">
+                        <div className="MobileNavHeader">
+                            <Link to="/">
+                                <img src="/Images/SoulFinspireLogo.png" alt="Logo" />
+                            </Link>
+                            <MenuOutlined className="MenuIcon" onClick={() => setDrawerVisible(true)} />
+                        </div>
 
-                    <Drawer
-                        title="Navigation"
-                        placement="right"
-                        closable
-                        onClose={() => setDrawerVisible(false)}
-                        visible={drawerVisible}
-                    >
-                        <Collapse accordion>
-                            {NavigationLinks.map((item, index) => (
-                                item.sublinks && item.sublinks.length > 0 ? (
-                                    <Panel header={item.link} key={index}>
-                                        {item.sublinks.map((sub, subIndex) => (
-                                            <p key={subIndex}>
-                                                <Link to={sub.path}>{sub.link}</Link>
-                                            </p>
-                                        ))}
-                                    </Panel>
-                                ) : (
-                                    <Panel
-                                        header={
-                                            <Link to={item.path || "#"} onClick={() => setDrawerVisible(false)}>
-                                                {item.link}
-                                            </Link>
-                                        }
-                                        key={index} showArrow={false} onClose={() => setDrawerVisible(false)} className="WithoutSublinkPanel">
-                                        {/* <p>
+                        <Drawer
+                            title="Navigation"
+                            placement="right"
+                            closable
+                            onClose={() => setDrawerVisible(false)}
+                            visible={drawerVisible}
+                        >
+                            <Collapse accordion>
+                                {NavigationLinks.map((item, index) => (
+                                    item.sublinks && item.sublinks.length > 0 ? (
+                                        <Panel header={item.link} key={index}>
+                                            {item.sublinks.map((sub, subIndex) => (
+                                                <p key={subIndex}>
+                                                    <Link to={sub.path}>{sub.link}</Link>
+                                                </p>
+                                            ))}
+                                        </Panel>
+                                    ) : (
+                                        <Panel
+                                            header={
+                                                <Link to={item.path || "#"} onClick={() => setDrawerVisible(false)}>
+                                                    {item.link}
+                                                </Link>
+                                            }
+                                            key={index} showArrow={false} onClose={() => setDrawerVisible(false)} className="WithoutSublinkPanel">
+                                            {/* <p>
                                             <Link to={item.path || "#"}>{item.link}</Link>
                                         </p> */}
-                                    </Panel>
-                                )
-                            ))}
-                        </Collapse>
-                    </Drawer>
-                </div>
+                                        </Panel>
+                                    )
+                                ))}
+                            </Collapse>
+                        </Drawer>
+                    </div>
                 </div>
             )}
         </>
