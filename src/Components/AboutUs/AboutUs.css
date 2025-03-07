@@ -1,0 +1,13 @@
+#OurAchivementsContainer {
+    background-color: black;
+    color: white;
+}
+
+.AchievementsCountersContainer {
+    border-left: 0.05px solid white;
+    padding: 20px 30px;
+}
+
+.AchievementsCountersContainer .CounterFont {
+    font-size: 3rem;
+}

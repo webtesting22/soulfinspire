@@ -1,0 +1,141 @@
+.NavigationFlexContainer {
+    display: flex;
+    justify-content: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    /* padding-top: 3%; */
+}
+
+.NavigationFlexContainer .NavigationLinksContainer ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0px;
+}
+
+.WidthContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+
+}
+
+.nav-item {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.WidthContainer .SoulLogoContainer img {
+    width: 130px;
+}
+
+.StikyContainer {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 0px;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px; */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    min-width: 200px;
+    /* padding: 0px; */
+    padding-top: 15px;
+
+}
+
+.dropdown-menu ul {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    gap: 0px !important;
+    transform: .5s;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #1e402d15;
+    transform: .5s;
+}
+
+.dropdown-menu li:hover {
+    background-color: #1e402d15;
+    border-bottom: 1px solid #1e402d;
+    transform: .5s;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+    transform: .5s;
+    display: block;
+}
+
+.NavigationLinksContainer .dropdown-menu li:last-child {
+    border-bottom: 0px !important;
+}
+
+/* Show Dropdown on Hover */
+.nav-item:hover .dropdown-menu,
+.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
+.WithoutSublinkPanel .ant-collapse-content {
+    display: none;
+}
+
+.ant-collapse-header-text {
+    display: flex !important;
+}
+
+.ant-collapse-header-text a {
+    /* padding: 15px; */
+    color: black;
+}
+
+.ant-collapse-header {
+    padding: 0px !important;
+}
+
+.ant-collapse {
+    border: none;
+    background-color: transparent;
+}
+
+.ant-collapse .ant-collapse-item {
+    border: none;
+    padding: 15px;
+}
+
+@media (min-width:1500px) and (max-width:4000px) {
+    .WidthContainer {
+        width: 80% !important;
+    }
+}
+
+@media (max-width:900px) {
+    .MobileNavHeader {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 3%;
+    }
+
+    .MobileNavHeader a img {
+        width: 130px;
+    }
+}

@@ -1,0 +1,43 @@
+.PaddingAdjustHeadingContainer {
+    padding: 2rem 0rem;
+    width: 100%;
+}
+
+.HeadingContainerDynamic {
+    border-top: 1px solid white;
+    padding: 1rem 0rem;
+}
+
+.HeadingContainerDynamic h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.HeadingContainerDynamic h2::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: var(--before-bg, white);
+    display: inline-block;
+    rotate: 45deg;
+    margin-right: 10px !important;
+    margin: 0px;
+}
+
+.before-color-white::before {
+    --before-bg: white;
+}
+
+.before-color-brand::before {
+    --before-bg: #1E402D;
+}
+
+.before-color-blue::before {
+    --before-bg: blue;
+}
+
+.before-color-black::before {
+    --before-bg: black;
+}

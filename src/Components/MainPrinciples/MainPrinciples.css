@@ -1,0 +1,48 @@
+#MainPrinciples .PaddingAdjustHeadingContainer .ant-row .ant-col span {
+    font-size: 3rem;
+    color: #c5c5c5;
+}
+
+#MainPrinciples .PaddingAdjustHeadingContainer .ant-row .ant-col span b {
+    color: #1E402D;
+    font-weight: 400;
+}
+
+#MainPrinciples .PaddingAdjustHeadingContainer .BorderContainer {
+    border-left: 1px solid black;
+    padding: 20px 30px;
+    height: 100%;
+}
+
+.MainPrinciplesContainerImages,
+.MainPrinciplesContainerImages>div {
+    height: 100%;
+}
+
+.MainPrinciplesContainerImages>div img {
+    width: 100%;
+
+    height: 100%;
+    object-fit: cover;
+}
+
+#MainPrinciples .ant-row .ant-col:first-child {
+    padding-right: 4rem;
+}
+#MainPrinciples .TagEdit{
+    margin: 0px !important;
+}
+.TagsContainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (max-width:900px){
+    .MainPrinciplesContainerImages{
+        margin-top: 20px;
+    }
+    #MainPrinciples .ant-row .ant-col:first-child {
+        padding-right: 0rem;
+    }
+}

@@ -1,0 +1,82 @@
+#AboutHomeComponent {
+    background-color: black;
+    color: white;
+}
+
+.AboutHomeSectionImageContainer>div img {
+    width: 100%;
+    transition: .5s;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+.AboutHomeSectionImageContainer>div:hover img {
+    transform: scale(1.1);
+    transition: .5s;
+} */
+
+.AboutHomeSectionImageContainer .ParallaxZoomImage {
+    height: 700px;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+}
+
+#AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:first-child {
+    padding-right: 4rem;
+}
+
+#AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:first-child>div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:last-child {
+    padding-left: 10px;
+}
+
+.ScrollWord {
+    font-size: 50px;
+    color: white;
+}
+
+.LeftToRight {
+    display: flex;
+    justify-content: end;
+    gap: 100px;
+    transition: .5s;
+}
+
+.RightToLeft {
+    display: flex;
+    justify-content: start;
+    gap: 100px;
+    transition: .3s;
+}
+
+@media (min-width:1500px) and (max-width:4000px) {
+    #AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:first-child {
+        padding-right: 8rem;
+    }
+    
+}
+
+@media (max-width:900px){
+    #AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:first-child {
+        padding-right: 0rem;
+    }
+    #AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:last-child {
+        padding-left: 0px;
+    }
+    .AboutHomeSectionImageContainer .ParallaxZoomImage {
+        height: 400px;
+        object-fit: cover;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    
+    
+}

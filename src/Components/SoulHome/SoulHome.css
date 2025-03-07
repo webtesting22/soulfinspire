@@ -1,0 +1,41 @@
+#HomepageContainerPaddingAdjust {
+    padding-top: 10rem;
+}
+
+.ParallaxImageContainer {
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.ParallaxImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -8rem;
+}
+
+#SoulHome .sectionContainerForSidePadding .sliteSectionLikePadding .ant-row .ant-col {
+    padding: 20px 30px;
+    border-left: 1px solid #c5c5c5;
+}
+
+#SoulHome .sectionContainerForSidePadding .sliteSectionLikePadding .ant-row .ant-col span {
+    color: #c5c5c5;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+#SoulHome .sectionContainerForSidePadding .sliteSectionLikePadding .ant-row .ant-col span b {
+    font-weight: 400;
+    color: #1E402D;
+}
+
+@media (max-width:900px){
+    #HomepageContainerPaddingAdjust {
+        padding-top: 4rem;
+    }
+}

@@ -1,0 +1,59 @@
+.AttachBackgroundImage {
+    min-height: 650px;
+    /* width: 100%; */
+    background-image: url("https://images.unsplash.com/photo-1733796941553-55e30faca742?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    color: white;
+}
+
+.AttachBackgroundImage .OverlayBackAttachBackground {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.586);
+
+}
+
+.AttachBackgroundImage .MaxWidthContainer {
+    position: sticky;
+    z-index: 55;
+}
+
+.ContentContainerAttachBack {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.AttachBackContentParagraphEdit {
+    /* background-color: ; */
+    border-left: 1px solid white;
+    padding: 20px 30px;
+}
+
+.AttachBackContentParagraphEdit p span {
+    font-size: 3rem;
+}
+.AttachBackContentParagraphEdit button{
+    color: white;
+}
+.AttachBackContentParagraphEdit button svg{
+    color: white;
+    border: 1px solid white;
+}
+
+@media (max-width:900px){
+    .AttachBackgroundImage {
+        height: 100% !important;
+    }
+    .ContentContainerAttachBack{
+        gap: 80px;
+    }
+}

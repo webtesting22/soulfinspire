@@ -1,0 +1,39 @@
+.CarousalImageContainer {
+    /* height: 400px; */
+    width: 100%;
+    padding: 20px;
+    /* overflow: hidden; */
+}
+
+.CarousalImageContainer img {
+    width: 250px;
+    aspect-ratio: 3/2;
+    /* height: 100%; */
+    object-fit: contain;
+    transition: .5s;
+}
+
+.InfiniteCarousalForServices .PaddingAdjustHeadingContainer {
+    border-left: 1px solid #c5c5c5;
+    padding: 20px 30px;
+    width: unset;
+}
+
+.InfiniteCarousalForServices .PaddingAdjustHeadingContainer {
+    border-left: 1px solid #c5c5c5;
+    padding: 20px 30px;
+    width: unset;
+    transition: .5s;
+}
+
+.InfiniteCarousalForServices .swiper-slide-next .PaddingAdjustHeadingContainer .CarousalImageContainer img {
+    transform: scale(1.3);
+    transition: .5s;
+}
+
+
+.InfiniteCarousalForServices .swiper-slide-next .PaddingAdjustHeadingContainer button svg {
+    background-color: var(--brandColor);
+    color: white;
+    transition: .5s;
+}
