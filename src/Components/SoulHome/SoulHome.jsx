@@ -68,7 +68,7 @@ const SoulHome = () => {
                                         <span className="TagEdit" data-aos="fade-up"
                                             data-aos-duration="3000">Welcome to Innovest!</span>
                                         <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
-                                            data-aos-duration="2000" data-aos-delay="200">Planning is <span className="ColorChangeSpan">bringing the future</span> in present</h1>
+                                            data-aos-duration="2000" data-aos-delay="200">Bringing tomorrow’s possibilities into <span>today’s plans</span> for a <span>brighter future</span></h1>
                                     </div>
                                 </div>
                             </Col>
@@ -76,7 +76,7 @@ const SoulHome = () => {
                                 <div>
                                     <div>
                                         <p data-aos="fade-left"
-                                            data-aos-duration="2000" data-aos-delay="300"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quae molestias nostrum laborum dignissimos optio sint quidem distinctio sit, perferendis totam esse, id at deserunt minus commodi rem, consectetur explicabo!</p>
+                                            data-aos-duration="2000" data-aos-delay="300"> Great investments aren't about chasing quick gains—they're about patience, discipline, and steady growth. Like watching grass grow or paint dry, the best strategies take time but yield lasting results. We help you navigate the market with a calm, calculated approach, ensuring your wealth flourishes securely over time. Let your investments grow the right way—with confidence and consistency.</p>
                                         <div className="PrimarybtnContainer" data-aos="fade-up"
                                             data-aos-duration="3000" data-aos-delay="800">
                                             <button>Get In Touch</button>

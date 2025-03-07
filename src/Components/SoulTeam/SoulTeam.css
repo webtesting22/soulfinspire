@@ -1,0 +1,34 @@
+.FounderImageContainer div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.FounderImageContainer {
+    /* height: 600px; */
+    height: 100%;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.ContentContainerFounder{
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+}
+
+@media (max-width:900px){
+    .FounderImageContainer {
+        /* height: 600px; */
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .ContentContainerFounder{
+        margin-top: 20px;
+    }
+}

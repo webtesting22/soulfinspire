@@ -42,8 +42,8 @@ const SoulNavigation = () => {
                     <div
                         className="NavigationFlexContainer"
                         style={{
-                            paddingTop: scrolled ? "0.5%" : "3%",
-                            paddingBottom: scrolled ? "0.5%" : "0%",
+                            paddingTop: scrolled ? "1%" : "1%",
+                            paddingBottom: scrolled ? "1%" : "1%",
                             transition: ".5s",
                         }}
                     >

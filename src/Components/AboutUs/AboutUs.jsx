@@ -4,6 +4,7 @@ import SectionHeading from "../SectionHeading/SectionHeading";
 import "./AboutUs.css";
 import OurApproach from "../OurApproach/OurApproach";
 import MainPrinciples from "../MainPrinciples/MainPrinciples";
+import SoulTeam from "../SoulTeam/SoulTeam";
 
 const AboutUs = () => {
     const countersRef = useRef([]);
@@ -117,6 +118,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
+            <SoulTeam/>
             <MainPrinciples />
             <OurApproach />
         </>
