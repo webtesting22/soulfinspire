@@ -1,0 +1,56 @@
+#FooterContainer {
+    background-color: white;
+    /* color: white; */
+}
+
+.FooterLogoContainer div img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+
+.LinksContainerFooter ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.LinksContainerFooter ul li {
+    font-size: 1rem;
+}
+
+.FooterContactContainer a {
+    color: black;
+}
+
+.CopyrightTextContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.SocialMediaLinks ul {
+    display: flex;
+    gap: 20px;
+}
+
+.SocialMediaLinks ul li svg{
+    background-color: #1E402D;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+@media (max-width:900px){
+    .FooterLogoContainer{
+        margin-bottom: 20px;
+    }
+    .LinksContainerFooter{
+        margin-bottom: 20px;
+    }
+    .CopyrightTextContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+}

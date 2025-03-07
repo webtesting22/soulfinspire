@@ -19,6 +19,9 @@ const SoulTeam = () => {
                 <p>At SoulFinspire, we believe that true financial success begins with understanding. Our mission is to equip you with clarity, knowledge, and a well-structured approach before you commit to any investment, helping you build a secure and prosperous future.
 
                 </p>
+                <br />
+                <p><b>Mr. Raj</b></p>
+                <p>Founder of SOULFINSPIRE</p>
             </>
         }
     ]
