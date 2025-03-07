@@ -112,6 +112,31 @@ h6 {
   transition: .5s;
 }
 
+.PrimarybtnContainer button {
+  border: none;
+  margin-top: 20px;
+  background-color: transparent;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  transition: .5s;
+}
+
+.PrimarybtnContainer button:hover {
+  border: none;
+  margin-top: 20px;
+  background-color: transparent;
+  border-radius: 20px;
+  background-color: #1E402D;
+  color: white;
+  padding: 10px 20px;
+  transform: scale(1.1);
+  transition: .5s;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
 
 
 
@@ -121,8 +146,8 @@ h6 {
   }
 }
 
-@media (max-width:900px){
-  .MaxWidthContainer{
+@media (max-width:900px) {
+  .MaxWidthContainer {
     width: 100% !important;
   }
 }

@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 // import required modules
-import { Autoplay, Pagination, Navigation,EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 
 const SoulHome = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -74,6 +74,9 @@ const SoulHome = () => {
                                 <div>
                                     <div>
                                         <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam quae molestias nostrum laborum dignissimos optio sint quidem distinctio sit, perferendis totam esse, id at deserunt minus commodi rem, consectetur explicabo!</p>
+                                        <div className="PrimarybtnContainer">
+                                            <button>Get In Touch</button>
+                                        </div>
                                     </div>
                                 </div>
                             </Col>
@@ -96,7 +99,7 @@ const SoulHome = () => {
                             //     clickable: true,
                             // }}
                             // navigation={true}
-                            modules={[Autoplay, Pagination, Navigation,EffectFade]}
+                            modules={[Autoplay, Pagination, Navigation, EffectFade]}
                             className="mySwiper"
                         >
                             {CarousalImages.map((item, index) => (

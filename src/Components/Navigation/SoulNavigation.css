@@ -121,7 +121,9 @@
     border: none;
     padding: 15px;
 }
-
+.PcnavLinks{
+    color: black;
+}
 @media (min-width:1500px) and (max-width:4000px) {
     .WidthContainer {
         width: 80% !important;

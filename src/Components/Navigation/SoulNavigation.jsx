@@ -57,7 +57,7 @@ const SoulNavigation = () => {
                                 <ul>
                                     {NavigationLinks.map((item, index) => (
                                         <li key={index} className="nav-item">
-                                            {item.link}
+                                            <Link to={item.path} className="PcnavLinks">{item.link}</Link>
                                             {item.sublinks && (
                                                 <div className="dropdown-menu">
                                                     <ul >
