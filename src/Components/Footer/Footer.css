@@ -26,9 +26,11 @@
 .CopyrightTextContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .SocialMediaLinks ul {
+    margin: 0px;
     display: flex;
     gap: 20px;
 }
@@ -38,6 +40,9 @@
     color: white;
     padding: 7px;
     border-radius: 4px;
+}
+#FooterContainer .sliteSectionLikePadding{
+    padding-bottom: 1rem;
 }
 
 @media (max-width:900px){
