@@ -78,7 +78,7 @@ const AboutHome = () => {
                                                 data-aos-duration="1200">At Innovest, we believe in <span>unlocking</span> potential.</h1>
                                             <br />
                                             <br />
-                                            <p>SoulFinspire, led by Mr. Raj Shah, is a top financial advisory firm in Ahmedabad.
+                                            <p><b>SoulFinspire, led by Mr. Raj Shah,</b> is a top financial advisory firm in Ahmedabad.
                                                 With 25 years of expertise, we specialize in wealth management, loans, and tax planning.
                                                 Our client-centric approach ensures tailored strategies for financial growth and stability.
                                                 We empower individuals and businesses with informed, strategic financial solutions.</p>
