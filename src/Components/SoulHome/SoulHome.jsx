@@ -60,20 +60,30 @@ const SoulHome = () => {
         <>
             <section id="SoulHome">
                 <div className="SectionContainer">
-                    <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust">
-                        <Row>
-                            <Col lg={14}>
+                    <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust" style={{overflow:"unset"}}>
+                        <Row id="HomePageRow">
+                            <Col lg={12} >
                                 <div>
                                     <div>
                                         <span className="TagEdit" data-aos="fade-up"
                                             data-aos-duration="3000">Welcome to Innovest!</span>
                                         <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
                                             data-aos-duration="2000" data-aos-delay="200">Bringing tomorrow’s possibilities into <span>today’s plans</span> for a <span>brighter future</span></h1>
+                                    <br />
+                                    <div className="PrimarybtnContainer" data-aos="fade-up"
+                                            data-aos-duration="3000" data-aos-delay="800">
+                                            <button>Get In Touch</button>
+                                        </div>
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={10}>
+                            <Col lg={12}>
+                            <div>
                                 <div>
+                                    <img src="/Images/IllustrationImages/HomePageStockImage.svg" alt="" />
+                                </div>
+                            </div>
+                                {/* <div>
                                     <div>
                                         <p data-aos="fade-left"
                                             data-aos-duration="2000" data-aos-delay="300"> Great investments aren't about chasing quick gains—they're about patience, discipline, and steady growth. Like watching grass grow or paint dry, the best strategies take time but yield lasting results. We help you navigate the market with a calm, calculated approach, ensuring your wealth flourishes securely over time. Let your investments grow the right way—with confidence and consistency.</p>
@@ -82,12 +92,12 @@ const SoulHome = () => {
                                             <button>Get In Touch</button>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </Col>
                         </Row>
                     </div>
                 </div>
-                <div className="HomePageImageContainer">
+                {/* <div className="HomePageImageContainer">
                     <div>
                         <Swiper
                             spaceBetween={30}
@@ -117,8 +127,8 @@ const SoulHome = () => {
                             ))}
                         </Swiper>
                     </div>
-                </div>
-                <div className="sectionContainerForSidePadding">
+                </div> */}
+                {/* <div className="sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding">
                         <div>
                             <Row>
@@ -139,7 +149,7 @@ const SoulHome = () => {
                             </Row>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </>
     )

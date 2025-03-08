@@ -65,7 +65,7 @@ const AboutHome = () => {
             <section id="AboutHomeComponent">
                 <div className=" sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding">
-                        <SectionHeading text="About SoulFinspire" color="white" beforeBgColor="white" />
+                        <SectionHeading text="About SoulFinspire" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
                         {/* <div>
                             <h1 className="PrimaryHeadingStyle" style={{ color: "white" }}>At Innovest, we are committed to fueling the <span className="ColorChangeSpan">growth</span> and <span className="ColorChangeSpan">innovation</span> of visionary <span className="ColorChangeSpan">startups</span> and high-potential <span className="ColorChangeSpan">companies</span>.</h1>
                         </div> */}
@@ -74,22 +74,21 @@ const AboutHome = () => {
                                 <Col lg={12}>
                                     <div>
                                         <div>
-                                            <h1 className="PrimaryHeadingStyle" style={{ color: "white" }} data-aos="fade-up"
+                                            <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
                                                 data-aos-duration="1200">At Innovest, we believe in <span>unlocking</span> potential.</h1>
                                             <br />
                                             <br />
-                                            <p data-aos="fade-up"
-                                                data-aos-duration="1200">Run successfully under the leadership of Mr. Raj Shah and his highly skilled team, SoulFinspire stands as a premier financial advisory firm headquartered in Ahmedabad, India. With a commitment to delivering strategic financial solutions, we go beyond traditional advisory services to empower individuals and businesses with informed financial decisions. Our client-centric approach, backed by extensive industry expertise, ensures tailored solutions that drive financial growth and stability.</p>
-                                            <br />
-                                            <p data-aos="fade-up"
-                                                data-aos-duration="1200">Backed by 25 years of expertise in curated financial products, we specialize in wealth management, financial consulting, loans, equity research, and tax planning. Our mission is to provide personalized financial strategies that align with our clients’ goals, ensuring long-term security and prosperity. With a deep understanding of market trends and regulatory frameworks, we strive to optimize financial portfolios, maximize returns, and offer holistic guidance for a secure financial future.</p>
+                                            <p>SoulFinspire, led by Mr. Raj Shah, is a top financial advisory firm in Ahmedabad.
+                                                With 25 years of expertise, we specialize in wealth management, loans, and tax planning.
+                                                Our client-centric approach ensures tailored strategies for financial growth and stability.
+                                                We empower individuals and businesses with informed, strategic financial solutions.</p>
                                         </div>
                                     </div>
                                 </Col>
                                 <Col lg={12} style={{ width: "100%" }}>
                                     <div className="AboutHomeSectionImageContainer" data-aos="fade-left"
-     data-aos-duration="1200">
-                                        <div
+                                        data-aos-duration="1200">
+                                        {/* <div
                                             ref={imageRef}
                                             className="ParallaxZoomImage"
                                             style={{ transform: `scale(${scale})`, transition: ".3s" }}
@@ -99,7 +98,7 @@ const AboutHome = () => {
                                                 alt=""
                                                 loading="lazy"
                                             />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </Col>
                             </Row>
