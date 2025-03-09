@@ -60,7 +60,7 @@ const SoulHome = () => {
         <>
             <section id="SoulHome">
                 <div className="SectionContainer">
-                    <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust" style={{overflow:"unset"}}>
+                    <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust" style={{ overflow: "unset" }}>
                         <Row id="HomePageRow">
                             <Col lg={12} >
                                 <div>
@@ -69,8 +69,8 @@ const SoulHome = () => {
                                             data-aos-duration="3000">Welcome to Innovest!</span>
                                         <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
                                             data-aos-duration="2000" data-aos-delay="200">Bringing tomorrow’s possibilities into <span>today’s plans</span> for a <span>brighter future</span></h1>
-                                    <br />
-                                    <div className="PrimarybtnContainer" data-aos="fade-up"
+                                        <br />
+                                        <div className="PrimarybtnContainer" data-aos="fade-up"
                                             data-aos-duration="3000" data-aos-delay="800">
                                             <button>Get In Touch</button>
                                         </div>
@@ -78,11 +78,11 @@ const SoulHome = () => {
                                 </div>
                             </Col>
                             <Col lg={12}>
-                            <div>
                                 <div>
-                                    <img src="/Images/IllustrationImages/HomePageStockImage.svg" alt="" />
+                                    <div>
+                                        <img src="/Images/IllustrationImages/HomePageStockImage.svg" alt="" />
+                                    </div>
                                 </div>
-                            </div>
                                 {/* <div>
                                     <div>
                                         <p data-aos="fade-left"
@@ -97,6 +97,7 @@ const SoulHome = () => {
                         </Row>
                     </div>
                 </div>
+
                 {/* <div className="HomePageImageContainer">
                     <div>
                         <Swiper
