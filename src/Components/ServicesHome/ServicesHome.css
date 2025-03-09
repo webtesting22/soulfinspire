@@ -37,3 +37,7 @@
     color: white;
     transition: .5s;
 }
+.InfiniteCarousalForServices .PaddingAdjustHeadingContainer:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}

@@ -60,7 +60,7 @@ const AttachBackHome = () => {
                                         <div data-aos="fade-up"
                                             data-aos-duration="1200">
                                             <div>
-                                                <h2 className="PrimaryHeadingStyle" style={{ color: "white" }}>How <span>confident</span> are you that you'll be able to <span>achieve all</span> your <span>financial goals in the future</span>?</h2>
+                                                <h2 className="PrimaryHeadingStyle" style={{ color: "white" }}>How <span style={{ color: "white" }}>confident</span> are you that you'll be able to <span style={{ color: "white" }}>achieve all</span> your <span style={{ color: "white" }}>financial goals in the future</span>?</h2>
                                             </div>
                                         </div>
                                     </Col>
