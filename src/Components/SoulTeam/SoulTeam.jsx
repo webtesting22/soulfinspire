@@ -8,7 +8,7 @@ const SoulTeam = () => {
         {
             image: "/Images/FounderImage.webp",
             content: <>
-                <h2 className="PrimaryHeadingStyle" style={{ margin: "0px" }}><span>SoulFinspire</span> is more than just a financial intermediary—we are your <span>trusted </span>partner in wealth management.
+                <h2 className="PrimaryHeadingStyle" style={{ margin: "0px" }}>Trusted Partner
 
                 </h2>
                 <br />
