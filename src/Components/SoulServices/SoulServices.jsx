@@ -11,7 +11,7 @@ const SoulServices = () => {
             const sectionId = location.hash.replace("#", ""); // Remove "#" from hash
             const section = document.getElementById(sectionId);
             if (section) {
-                const yOffset = -100; // Offset from the top
+                const yOffset = -200; // Offset from the top
                 const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
                 window.scrollTo({ top: y, behavior: "smooth" });
             }
@@ -110,7 +110,7 @@ const SoulServices = () => {
                                                     </div>
                                                     <div className="ContentContainerOurServices">
                                                         <div>
-                                                            <h2 style={{textTransform:"uppercase"}}>{item.title}</h2>
+                                                            <h2 style={{ textTransform: "uppercase" }}>{item.title}</h2>
                                                             <br />
                                                             <p>{item.content}</p>
                                                         </div>
