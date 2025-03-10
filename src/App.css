@@ -70,6 +70,7 @@ h6 {
   line-height: 1.2;
   font-family: 'Spline Sans', sans-serif;
   margin-top: 30px;
+  margin-right: 30px;
 }
 
 .PrimaryHeadingStyle span {
@@ -140,10 +141,6 @@ h6 {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-
-
-
-
 @media (min-width:1500px) and (max-width:4000px) {
   .MaxWidthContainer {
     width: 80% !important;
@@ -154,4 +151,14 @@ h6 {
   .MaxWidthContainer {
     width: 100% !important;
   }
+
+  .PrimaryHeadingStyle {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: 'Spline Sans', sans-serif;
+    margin-top: 30px;
+    margin-right: 0px;
+  }
+
 }

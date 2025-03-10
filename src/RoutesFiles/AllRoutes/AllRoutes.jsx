@@ -5,17 +5,19 @@ import AboutUs from "../../Components/AboutUs/AboutUs";
 import SoulNavigation from "../../Components/Navigation/SoulNavigation";
 import Footer from "../../Components/Footer/Footer";
 import WhatsAppButton from "../../Components/WhatsappBtn/WhatAppButton";
+import SoulServices from "../../Components/SoulServices/SoulServices";
 const AllRoutes = () => {
     return (
         <>
             <Router>
-                <SoulNavigation/>
-                <WhatsAppButton/>
+                <SoulNavigation />
+                <WhatsAppButton />
                 <Routes>
                     <Route path="/" element={<HomePageRoutes />} />
                     <Route path="/about-us" element={<AboutUs />} />
+                    <Route path="/soul-services" element={<SoulServices />} />
                 </Routes>
-                <Footer/>
+                <Footer />
             </Router>
         </>
     )

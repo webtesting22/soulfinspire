@@ -1,0 +1,90 @@
+.OurServicesCardsContainer {
+    padding: 20px 0px;
+    position: relative;
+    margin: 20px 0px;
+    color: white;
+    border: 3px solid #1e402d;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: .5s;
+}
+
+.OurServicesCardsContainer a{
+    color: white;
+}
+.OurServicesCardsContainer:hover {
+    transform: translateY(-10px);
+    transition: .5s;
+}
+
+.OurServicesCardsContainer .OverlayImage img {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.OurServicesCardsContainer:hover .OverlayImage img {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.OurServicesCardsContainer .OverlayImage::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.711);
+    display: inline-flex;
+    z-index: 5;
+}
+
+.OurServicesCardsContainer .OverlayImage::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(30, 64, 45, 0.8), rgba(30, 64, 45, 0));
+    /* Fades to transparent */
+
+    filter: blur(15px);
+    /* Adds blur effect */
+    display: inline-block;
+    top: 0;
+    pointer-events: none;
+}
+
+
+.ContentContainerOurServices {
+    position: sticky;
+    z-index: 6;
+    padding: 20px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.ContentContainerOurServices>div {
+    width: 70%;
+}
+
+@media (max-width:900px){
+    .ContentContainerOurServices>div {
+        width: 100%;
+    }
+    .ContentContainerOurServices > div p {
+        width: 100%;
+        word-wrap: break-word; /* Ensures words break when necessary */
+        overflow-wrap: break-word; /* Alternative for better compatibility */
+        word-break: break-word; /* Helps break long words */
+        white-space: normal; /* Allows text to wrap normally */
+    }
+    
+    
+}
