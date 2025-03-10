@@ -1,6 +1,9 @@
 #OurAchivementsContainer {
     background-color: #173022;
     color: white;
+    /* background: url("https://images.unsplash.com/photo-1643653186431-1e7b4c6ef7b5?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover; */
+    /* background-attachment: fixed; */
 }
 
 .AchievementsCountersContainer {
@@ -12,7 +15,7 @@
     font-size: 3rem;
 }
 
-@media (max-width:900px){
+@media (max-width:900px) {
     .AchievementsCountersContainer {
         border-left: 0.05px solid white;
         padding: 20px 30px;

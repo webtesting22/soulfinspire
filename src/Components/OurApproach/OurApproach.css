@@ -24,11 +24,49 @@
     position: absolute;
     left: -30%;
     right: 0px;
+
     /* background-position: center; */
 }
+.OurApprochCardContainer img{
+    width: 50%;
+    transition: .5s;
+    margin-bottom: 20px;
+}
+.OurApprochCardContainer{
+    border-bottom: 1px solid #1E402D;
+    padding-bottom: 20px;
+    position: relative;
+}
 
+.OurApprochCardContainer:hover img{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.OurApprochCardContainer::before{
+    content: "";
+    width: 20px;
+    background-color: #1E402D;
+    height: 2px;
+    position: absolute;
+    bottom: -1.5px;
+    transition: .5s;
+}
+.OurApprochCardContainer:hover::before{
+    content: "";
+    width: 100%;
+    background-color: #1E402D;
+    height: 2px;
+    position: absolute;
+    bottom: -1.5px;
+    transition: .5s;
+}
 @media (max-width:900px){
     #OurApproachContainer .ant-row .ant-col:last-child{
         padding-left: 0rem;
+    }
+    .OurApprochCardContainer img{
+        width: 100%;
+        transition: .5s;
+        margin-bottom: 20px;
     }
 }
