@@ -3,6 +3,7 @@ import SoulHome from "../../Components/SoulHome/SoulHome";
 import AboutHome from "../../Components/AboutHome/AboutHome";
 import ServicesHome from "../../Components/ServicesHome/ServicesHome";
 import AttachBackHome from "../../Components/AttachBackHome/AttachBackHome";
+import SoulTestimonial from "../../Components/SoulTestimonial/SoulTestimonial";
 
 const HomePageRoutes = () => {
     return (
@@ -11,6 +12,7 @@ const HomePageRoutes = () => {
             <AboutHome />
             <ServicesHome />
             <AttachBackHome />
+            <SoulTestimonial/>
         </>
     )
 }

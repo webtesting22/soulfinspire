@@ -37,20 +37,23 @@
     color: white;
     transition: .5s;
 }
+
 .InfiniteCarousalForServices .PaddingAdjustHeadingContainer:hover {
     transform: scale(1.05);
     transition: .5s;
 }
-@media (max-width:900px){
-   
+
+@media (max-width:900px) {
+
     .InfiniteCarousalForServices .swiper-slide-active .PaddingAdjustHeadingContainer button svg {
         background-color: var(--brandColor);
         color: white;
         transition: .5s;
     }
+
     .InfiniteCarousalForServices .swiper-slide-active .PaddingAdjustHeadingContainer .CarousalImageContainer img {
         transform: scale(1.3);
         transition: .5s;
     }
-    
+
 }

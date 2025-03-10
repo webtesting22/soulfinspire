@@ -1,0 +1,130 @@
+.TestimonialsSectionImage div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.TestimonialsSectionImage {
+    position: relative;
+}
+
+.AbsoluteContentContainer {
+    position: absolute;
+    bottom: 0px;
+    z-index: 55;
+    color: white;
+    padding: 20px;
+}
+
+.AbsoluteContentContainer p:nth-child(1) {
+    font-size: 3em;
+    margin: 10px 0px;
+}
+
+.TestimonialsSectionImage::before {
+    height: 60%;
+    width: 100%;
+    content: "";
+    display: inline-block;
+    background-color: black;
+    position: absolute;
+    z-index: 55;
+    bottom: 3px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+
+}
+
+.SwiperBtnContainer button {
+    background-color: #1e402db3;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SwiperBtnContainer button:hover {
+    background-color: #1e402d;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+.SwiperBtnContainer {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+#TestimonialsContainerRow .ant-row .ant-col:first-child {
+    padding-right: 4rem;
+}
+
+.NameAboutDetailsContainer {
+    border-top: 1px solid #c5c5c5;
+    margin-top: 20px;
+}
+
+.NameAboutDetailsContainer .ant-row .ant-col:first-child {
+    border-right: 1px solid #c5c5c5;
+}
+
+.NameAboutDetailsContainer .ant-row .ant-col>div {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* height: 100%; */
+    /* padding: 10px 0px; */
+}
+
+.NameAboutDetailsContainer .ant-row .ant-col {
+    padding: 10px;
+}
+
+#SwiperContainerAdjust {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.CustomNavigationButtons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media (max-width:900px) {
+    .CustomNavigationButtons {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+    }
+
+    #TestimonialsContainerRow .ant-row .ant-col:first-child {
+        padding-right: 0rem !important;
+    }
+
+    .NameAboutDetailsContainer {
+        border-top: none;
+        margin-top: 20px;
+    }
+
+    .NameAboutDetailsContainer .ant-row .ant-col:first-child {
+        border-right: none;
+    }
+
+}
