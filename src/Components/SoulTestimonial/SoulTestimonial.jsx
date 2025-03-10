@@ -23,7 +23,7 @@ const SoulTestimonial = () => {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     let start = 0;
-                    const duration = 2000; // Animation duration in ms
+                    const duration = 5000; // Animation duration in ms
                     const stepTime = duration / targetNumber;
 
                     const interval = setInterval(() => {
@@ -134,7 +134,7 @@ const SoulTestimonial = () => {
                     <div id="TestimonialsContainerRow">
                         <Row>
                             <Col lg={14}>
-                                <div>
+                                <div style={{ width: "100%" }}>
                                     <div>
                                         <h2
                                             className="PrimaryHeadingStyle"

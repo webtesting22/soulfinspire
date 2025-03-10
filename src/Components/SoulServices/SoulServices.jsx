@@ -103,7 +103,8 @@ const SoulServices = () => {
                                 <div className="PaddingAdjustHeadingContainer">
                                     {ServicesCards.map((item, index) => (
                                         <Row key={index} id={item.title.replace(/\s+/g, "").toLowerCase()}>
-                                            <Col lg={24} className="OurServicesCardsContainer">
+                                            <Col lg={24} className="OurServicesCardsContainer" data-aos="fade-up"
+                                                data-aos-duration="800" data-aos-delay={index * 200}>
                                                 <div>
                                                     <div className="OverlayImage">
                                                         <img src={item.backgroundImage} alt="" />

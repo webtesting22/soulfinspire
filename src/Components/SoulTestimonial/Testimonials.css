@@ -105,6 +105,10 @@
     height: 100%;
 }
 
+#TestimonialsContainerRow .ant-row .ant-col:first-child{
+    display: flex;
+    align-items: center;
+}
 @media (max-width:900px) {
     .CustomNavigationButtons {
         width: 100%;
