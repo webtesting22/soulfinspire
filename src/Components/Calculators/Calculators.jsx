@@ -27,7 +27,7 @@ const Calculators = () => {
                                     <Col lg={14}>
                                         <div>
                                             <span className="TagEdit" data-aos="fade-up"
-                                                data-aos-duration="3000">Our Soulfinspire Services</span>
+                                                data-aos-duration="3000">Our Soulfinspire Calculations</span>
                                             <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
                                                 data-aos-duration="2000" data-aos-delay="200">
                                                 Comprehensive <span>Investment</span> & Lending <span>Solutions</span> at Your Fingertips
@@ -59,8 +59,8 @@ const Calculators = () => {
 
                             <div style={{ marginTop: "20px" }}>
                                 {activeTab === "SIP Planning" && <SIPCalculator />}
-                                {activeTab === "Lumpsum Planning" && <LumpSumCalculator/>}
-                                {activeTab === "Retirement Planning" && <RetirementCalculator/>}
+                                {activeTab === "Lumpsum Planning" && <LumpSumCalculator />}
+                                {activeTab === "Retirement Planning" && <RetirementCalculator />}
                                 {activeTab === "House Planning" && <p>House Planning Calculator Coming Soon...</p>}
                                 {activeTab === "Marriage Planning" && <p>Marriage Planning Calculator Coming Soon...</p>}
                                 {activeTab === "Vacation Planning" && <p>Vacation Calculator Coming Soon...</p>}

@@ -1,14 +1,41 @@
 import React, { useState } from "react";
+import { Slider, TextField, Button, Box, Typography } from "@mui/material";
 import { Pie } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 
 // Register Chart.js components
 Chart.register(ArcElement, Tooltip, Legend);
 
+const marksAmount = [
+    { value: 1000, label: "1K" },
+    { value: 25000, label: "25K" },
+    { value: 50000, label: "50K" },
+    { value: 75000, label: "75K" },
+    { value: 100000, label: "1L" },
+];
+
+const marksDuration = [
+    { value: 1, label: "1" },
+    { value: 100, label: "100" },
+    { value: 200, label: "200" },
+    { value: 300, label: "300" },
+    { value: 400, label: "400" },
+    { value: 500, label: "500" },
+];
+
+const marksReturn = [
+    { value: 1, label: "1%" },
+    { value: 20, label: "20%" },
+    { value: 40, label: "40%" },
+    { value: 60, label: "60%" },
+    { value: 80, label: "80%" },
+    { value: 100, label: "100%" },
+];
+
 const SIPCalculator = () => {
-    const [sipAmount, setSIPAmount] = useState(100000); // Default: 1L
-    const [duration, setDuration] = useState(500); // Default: 500 months
-    const [returnRate, setReturnRate] = useState(100); // Default: 100%
+    const [sipAmount, setSIPAmount] = useState(10000);
+    const [duration, setDuration] = useState(120);
+    const [returnRate, setReturnRate] = useState(14);
 
     const [totalInvested, setTotalInvested] = useState(0);
     const [totalGrowth, setTotalGrowth] = useState(0);
@@ -17,7 +44,7 @@ const SIPCalculator = () => {
     const calculateSIP = () => {
         const P = sipAmount;
         const n = duration;
-        const r = returnRate / 12 / 100; // Monthly interest rate
+        const r = returnRate / 12 / 100;
 
         const FV = P * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
         const investedAmount = P * n;
@@ -28,94 +55,108 @@ const SIPCalculator = () => {
         setFutureValue(FV);
     };
 
-    // Calculate total amount to derive percentage
-    const totalAmount = totalInvested + totalGrowth;
-
-    // Chart Data
+    // Pie Chart Data
     const chartData = {
         labels: ["Principal Amount", "Growth Amount"],
         datasets: [
             {
                 data: [totalInvested, totalGrowth],
-                backgroundColor: ["#1D402D", "#FF9606"], // Static Colors
+                backgroundColor: ["#1D402D", "#FF9606"],
                 hoverBackgroundColor: ["#1D402D", "#FF9606"],
             },
         ],
     };
 
-    // Chart Options (Show Percentage on Hover)
-    const chartOptions = {
-        plugins: {
-            tooltip: {
-                callbacks: {
-                    label: function (tooltipItem) {
-                        let value = tooltipItem.raw;
-                        let percentage = ((value / totalAmount) * 100).toFixed(2);
-                        return `${tooltipItem.label}: ₹${value.toLocaleString()} (${percentage}%)`;
-                    },
-                },
-            },
-        },
-    };
-
     return (
-        <div style={{ maxWidth: "600px", margin: "auto", textAlign: "center", padding: "20px" }}>
-            <h2>SIP Calculator</h2>
+        <Box sx={{ maxWidth: "600px", margin: "auto", textAlign: "center", padding: "20px", borderRadius: "10px", background: "#fff", boxShadow: "0px 0px 10px rgba(0,0,0,0.1)" }}>
+            <Typography variant="h5" sx={{ marginBottom: "20px", fontWeight: "bold", color: "#1D402D" }}>SIP Calculator</Typography>
 
-            {/* Monthly SIP Amount (in steps of 100) */}
-            <label>Monthly SIP Amount (₹ {sipAmount.toLocaleString()}) </label>
-            <input
-                type="range"
-                min="1000" max="1000000" step="100"
+            {/* Monthly SIP Amount */}
+            <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Monthly SIP Amount (₹)</Typography>
+            <TextField
                 value={sipAmount}
                 onChange={(e) => setSIPAmount(Number(e.target.value))}
-                style={{ width: "100%" }}
+                type="number"
+                fullWidth
+                variant="outlined"
+                sx={{ mb: 1 }}
+            />
+            <Slider
+                value={sipAmount}
+                onChange={(e, val) => setSIPAmount(val)}
+                min={1000}
+                max={100000}
+                step={1000}
+                marks={marksAmount}
+                sx={{ color: "#FF9606" }}
             />
 
             {/* SIP Duration */}
-            <label>SIP Duration ({duration} Months): </label>
-            <input
-                type="range"
-                min="1" max="500" step="1"
+            <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>SIP Duration (In Months)</Typography>
+            <TextField
                 value={duration}
                 onChange={(e) => setDuration(Number(e.target.value))}
-                style={{ width: "100%" }}
+                type="number"
+                fullWidth
+                variant="outlined"
+                sx={{ mb: 1 }}
+            />
+            <Slider
+                value={duration}
+                onChange={(e, val) => setDuration(val)}
+                min={1}
+                max={500}
+                step={10}
+                marks={marksDuration}
+                sx={{ color: "#FF9606" }}
             />
 
             {/* Expected Return */}
-            <label>Expected Return ({returnRate}%)</label>
-            <input
-                type="range"
-                min="1" max="100" step="1"
+            <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Expected Return (%)</Typography>
+            <TextField
                 value={returnRate}
                 onChange={(e) => setReturnRate(Number(e.target.value))}
-                style={{ width: "100%" }}
+                type="number"
+                fullWidth
+                variant="outlined"
+                sx={{ mb: 1 }}
+            />
+            <Slider
+                value={returnRate}
+                onChange={(e, val) => setReturnRate(val)}
+                min={1}
+                max={100}
+                step={1}
+                marks={marksReturn}
+                sx={{ color: "#FF9606" }}
             />
 
             {/* Calculate Button */}
-            <button
+            <Button
                 onClick={calculateSIP}
-                style={{ marginTop: "15px", padding: "10px", fontSize: "16px", cursor: "pointer" }}
+                variant="contained"
+                sx={{ mt: 2, background: "#1D402D", color: "white", "&:hover": { background: "#15482D" } }}
+                fullWidth
             >
-                Calculate
-            </button>
+                Calculate Now
+            </Button>
 
             {/* Results */}
-            <div style={{ marginTop: "20px", textAlign: "left", background: "#f5f5f5", padding: "15px", borderRadius: "8px" }}>
-                <h3>Results:</h3>
-                <p><strong>Total SIP Amount Invested:</strong> ₹{totalInvested.toLocaleString()}</p>
-                <p><strong>Total Growth:</strong> ₹{totalGrowth.toLocaleString()}</p>
-                <p><strong>Total Future Value:</strong> ₹{futureValue.toLocaleString()}</p>
-            </div>
+            <Box sx={{ mt: 3, textAlign: "left", background: "#f5f5f5", padding: "15px", borderRadius: "8px" }}>
+                <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1D402D" }}>Results:</Typography>
+                <Typography><strong>Total SIP Amount Invested:</strong> ₹{totalInvested.toLocaleString()}</Typography>
+                <Typography><strong>Total Growth:</strong> ₹{totalGrowth.toLocaleString()}</Typography>
+                <Typography><strong>Total Future Value:</strong> ₹{futureValue.toLocaleString()}</Typography>
+            </Box>
 
             {/* Pie Chart */}
             {totalInvested > 0 && (
-                <div style={{ marginTop: "20px", textAlign: "center" }}>
-                    <h3>Investment Breakdown</h3>
-                    <Pie data={chartData} options={chartOptions} />
-                </div>
+                <Box sx={{ mt: 3, textAlign: "center" }}>
+                    <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1D402D" }}>Investment Breakdown</Typography>
+                    <Pie data={chartData} />
+                </Box>
             )}
-        </div>
+        </Box>
     );
 };
 
