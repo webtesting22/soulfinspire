@@ -69,7 +69,7 @@ const NavigationLinks = [
                 path: ""
             }
         ],
-        path: ""
+        path: "/soul-calculators"
     }
 ];
 

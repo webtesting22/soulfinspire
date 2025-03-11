@@ -6,6 +6,7 @@ import SoulNavigation from "../../Components/Navigation/SoulNavigation";
 import Footer from "../../Components/Footer/Footer";
 import WhatsAppButton from "../../Components/WhatsappBtn/WhatAppButton";
 import SoulServices from "../../Components/SoulServices/SoulServices";
+import Calculators from "../../Components/Calculators/Calculators";
 const AllRoutes = () => {
     return (
         <>
@@ -16,6 +17,7 @@ const AllRoutes = () => {
                     <Route path="/" element={<HomePageRoutes />} />
                     <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/soul-services" element={<SoulServices />} />
+                    <Route path="/soul-calculators" element={<Calculators />} />
                 </Routes>
                 <Footer />
             </Router>
