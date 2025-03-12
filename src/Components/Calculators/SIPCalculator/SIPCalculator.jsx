@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Slider, TextField, Button, Box, Typography } from "@mui/material";
-import { Bar, Line, Pie } from "react-chartjs-2";
+import { Bar, Pie } from "react-chartjs-2";
 
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement } from "chart.js";
 
