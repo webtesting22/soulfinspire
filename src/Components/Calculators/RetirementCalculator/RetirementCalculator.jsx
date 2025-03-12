@@ -1,9 +1,38 @@
 import React, { useState } from "react";
+import { Slider, TextField, Button, Box, Typography } from "@mui/material";
 import { Pie } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 
 // Register Chart.js components
 Chart.register(ArcElement, Tooltip, Legend);
+
+const marksAge = [
+    { value: 18, label: "18" },
+    { value: 30, label: "30" },
+    { value: 45, label: "45" },
+    { value: 60, label: "60" },
+];
+
+const marksLife = [
+    { value: 60, label: "60" },
+    { value: 70, label: "70" },
+    { value: 85, label: "85" },
+    { value: 100, label: "100" },
+];
+
+const marksExpense = [
+    { value: 5000, label: "₹5K" },
+    { value: 100000, label: "₹1L" },
+    { value: 250000, label: "₹2.5L" },
+    { value: 500000, label: "₹5L" },
+];
+
+const marksReturn = [
+    { value: 1, label: "1%" },
+    { value: 5, label: "5%" },
+    { value: 10, label: "10%" },
+    { value: 15, label: "15%" },
+];
 
 const RetirementCalculator = () => {
     const [currentAge, setCurrentAge] = useState(30);
@@ -16,141 +45,107 @@ const RetirementCalculator = () => {
 
     const [futureExpense, setFutureExpense] = useState(0);
     const [requiredCorpus, setRequiredCorpus] = useState(0);
-    const [sipInvestment, setSIPInvestment] = useState(0);
-    const [lumpsumInvestment, setLumpsumInvestment] = useState(0);
 
     const calculateRetirementPlan = () => {
         const yearsToRetirement = retirementAge - currentAge;
         const retirementDuration = lifeExpectancy - retirementAge;
 
-        // Future Monthly Expenses Adjusted for Inflation
         const futureMonthlyExpense = monthlyExpense * Math.pow(1 + inflationRate / 100, yearsToRetirement);
-
-        // Required Retirement Corpus Calculation
         const r = postRetirementReturn / 12 / 100;
         const n = retirementDuration * 12;
-
         const corpus = futureMonthlyExpense * ((1 - Math.pow(1 + r, -n)) / r);
-
-        // SIP Required to Achieve Corpus
-        const sipMonths = yearsToRetirement * 12;
-        const preRetirementMonthlyRate = preRetirementReturn / 12 / 100;
-
-        const sipAmount = corpus / (((Math.pow(1 + preRetirementMonthlyRate, sipMonths) - 1) / preRetirementMonthlyRate) * (1 + preRetirementMonthlyRate));
-
-        // Lump Sum Required Today
-        const lumpsumAmount = corpus / Math.pow(1 + preRetirementMonthlyRate, sipMonths);
 
         setFutureExpense(futureMonthlyExpense);
         setRequiredCorpus(corpus);
-        setSIPInvestment(sipAmount);
-        setLumpsumInvestment(lumpsumAmount);
     };
 
-    // Calculate total amount for percentage display
-    const totalAmount = sipInvestment + lumpsumInvestment;
-
-    // Chart Data
     const chartData = {
-        labels: ["Invested Amount", "Growth Amount"],
+        labels: ["Required Corpus"],
         datasets: [
             {
-                data: [sipInvestment, requiredCorpus - sipInvestment],
-                backgroundColor: ["#1D402D", "#FF9606"], // Static Colors
-                hoverBackgroundColor: ["#1D402D", "#FF9606"],
+                data: [requiredCorpus],
+                backgroundColor: ["#FF9606"],
+                hoverBackgroundColor: ["#FF9606"],
             },
         ],
     };
 
-    // Chart Options (Show Percentage on Hover)
-    const chartOptions = {
-        plugins: {
-            tooltip: {
-                callbacks: {
-                    label: function (tooltipItem) {
-                        let value = tooltipItem.raw;
-                        let percentage = ((value / totalAmount) * 100).toFixed(2);
-                        return `${tooltipItem.label}: ₹${value.toLocaleString()} (${percentage}%)`;
-                    },
-                },
-            },
-        },
-    };
-
     return (
-        <div style={{ maxWidth: "600px", margin: "auto", textAlign: "center", padding: "20px" }}>
-            <h2>Retirement Planning Calculator</h2>
+        <Box sx={{ maxWidth: "100%", margin: "auto", textAlign: "center", padding: "20px", borderRadius: "10px", background: "#fff", }}>
+            <Typography variant="h5" sx={{ marginBottom: "20px", fontWeight: "bold", color: "#1D402D" }}>Retirement Planning Calculator</Typography>
 
-            {/* Current Age */}
-            <label>Your Current Age: {currentAge} Years</label>
-            <input
-                type="range"
-                min="18" max="60" step="1"
-                value={currentAge}
-                onChange={(e) => setCurrentAge(Number(e.target.value))}
-                style={{ width: "100%" }}
-            />
+            {[{
+                label: "Your Current Age",
+                value: currentAge,
+                setValue: setCurrentAge,
+                min: 18, max: 60, step: 1, marks: marksAge
+            }, {
+                label: "Retirement Age",
+                value: retirementAge,
+                setValue: setRetirementAge,
+                min: currentAge + 1, max: 80, step: 1
+            }, {
+                label: "Life Expectancy",
+                value: lifeExpectancy,
+                setValue: setLifeExpectancy,
+                min: retirementAge + 1, max: 100, step: 1, marks: marksLife
+            }, {
+                label: "Current Monthly Expenses (₹)",
+                value: monthlyExpense,
+                setValue: setMonthlyExpense,
+                min: 5000, max: 500000, step: 5000, marks: marksExpense
+            }, {
+                label: "Expected Inflation Rate (%)",
+                value: inflationRate,
+                setValue: setInflationRate,
+                min: 1, max: 10, step: 0.5, marks: marksReturn
+            }].map(({ label, value, setValue, min, max, step, marks }) => (
+                <Box key={label} sx={{ marginBottom: "15px", textAlign: "left" }}>
+                    <Typography sx={{ fontWeight: "bold", color: "#1D402D" }}>{label}</Typography>
+                    <TextField
+                        value={value}
+                        onChange={(e) => setValue(Number(e.target.value))}
+                        type="number"
+                        fullWidth
+                        variant="outlined"
+                        sx={{ mb: 1 }}
+                    />
+                    <Slider
+                        value={value}
+                        onChange={(e, val) => setValue(val)}
+                        min={min}
+                        max={max}
+                        step={step}
+                        marks={marks}
+                        sx={{ color: "#FF9606" }}
+                    />
+                </Box>
+            ))}
 
-            {/* Retirement Age */}
-            <label>Retirement Age: {retirementAge} Years</label>
-            <input
-                type="range"
-                min={currentAge + 1} max="80" step="1"
-                value={retirementAge}
-                onChange={(e) => setRetirementAge(Number(e.target.value))}
-                style={{ width: "100%" }}
-            />
+            <Button
+                onClick={calculateRetirementPlan}
+                variant="contained"
+                sx={{ mt: 2, background: "#1D402D", color: "white", "&:hover": { background: "#15482D" } }}
+                fullWidth
+            >
+                Calculate Now
+            </Button>
 
-            {/* Life Expectancy */}
-            <label>Life Expectancy: {lifeExpectancy} Years</label>
-            <input
-                type="range"
-                min={retirementAge + 1} max="100" step="1"
-                value={lifeExpectancy}
-                onChange={(e) => setLifeExpectancy(Number(e.target.value))}
-                style={{ width: "100%" }}
-            />
+            {requiredCorpus > 0 && (
+                <Box sx={{ mt: 3, textAlign: "left", background: "#f5f5f5", padding: "15px", borderRadius: "8px" }}>
+                    <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1D402D" }}>Retirement Planning Summary:</Typography>
+                    <Typography><strong>Future Monthly Expenses:</strong> ₹{futureExpense.toLocaleString()}</Typography>
+                    <Typography><strong>Required Corpus:</strong> ₹{requiredCorpus.toLocaleString()}</Typography>
+                </Box>
+            )}
 
-            {/* Monthly Expenses */}
-            <label>Current Monthly Expenses (₹ {monthlyExpense.toLocaleString()})</label>
-            <input
-                type="range"
-                min="5000" max="500000" step="5000"
-                value={monthlyExpense}
-                onChange={(e) => setMonthlyExpense(Number(e.target.value))}
-                style={{ width: "100%" }}
-            />
-
-            {/* Inflation Rate */}
-            <label>Expected Inflation Rate ({inflationRate}%)</label>
-            <input
-                type="range"
-                min="1" max="10" step="0.5"
-                value={inflationRate}
-                onChange={(e) => setInflationRate(Number(e.target.value))}
-                style={{ width: "100%" }}
-            />
-
-            {/* Calculate Button */}
-            <button onClick={calculateRetirementPlan} style={{ marginTop: "15px", padding: "10px", fontSize: "16px", cursor: "pointer" }}>
-                Calculate
-            </button>
-
-            {/* Results */}
-            <div style={{ marginTop: "20px", textAlign: "left", background: "#f5f5f5", padding: "15px", borderRadius: "8px" }}>
-                <h3>Retirement Planning Summary:</h3>
-                <p><strong>Monthly Expenses at Retirement:</strong> ₹{futureExpense.toLocaleString()}</p>
-                <p><strong>Required Lumpsum Corpus:</strong> ₹{requiredCorpus.toLocaleString()}</p>
-                <p><strong>Planning Through SIP:</strong> ₹{sipInvestment.toLocaleString()}</p>
-                <p><strong>Planning Through Lumpsum:</strong> ₹{lumpsumInvestment.toLocaleString()}</p>
-            </div>
-
-            {/* Pie Chart */}
-            <div style={{ marginTop: "20px", textAlign: "center" }}>
-                <h3>Investment Breakdown</h3>
-                <Pie data={chartData} options={chartOptions} />
-            </div>
-        </div>
+            {requiredCorpus > 0 && (
+                <Box sx={{ mt: 3, textAlign: "center" }}>
+                    <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1D402D" }}>Investment Breakdown</Typography>
+                    <Pie data={chartData} />
+                </Box>
+            )}
+        </Box>
     );
 };
 

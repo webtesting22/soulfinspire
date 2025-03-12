@@ -75,7 +75,7 @@ const AboutUs = () => {
                     <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust">
                         <div>
                             <Row>
-                                <Col lg={14}>
+                                <Col lg={24}>
                                     <div>
                                         <span className="TagEdit" data-aos="fade-up"
                                             data-aos-duration="3000">About Soulfinspire</span>
@@ -85,7 +85,7 @@ const AboutUs = () => {
                                         </h1>
                                     </div>
                                 </Col>
-                                <Col lg={10}>
+                                {/* <Col lg={10}>
                                     <div>
                                         <div>
                                             <p data-aos="fade-left"
@@ -93,7 +93,7 @@ const AboutUs = () => {
                                                 We don’t aim to be just your financial advisors, those are available in plenty, but what we aim for is to be give you 360° insight and plan your investments with full trust and transparency such that any unwanted situations can be mitigated easily.</p>
                                         </div>
                                     </div>
-                                </Col>
+                                </Col> */}
                             </Row>
                         </div>
                     </div>

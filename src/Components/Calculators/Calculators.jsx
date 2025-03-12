@@ -1,78 +1,79 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Tabs } from "antd";
+import { useLocation } from "react-router-dom";
 import SIPCalculator from "./SIPCalculator/SIPCalculator";
-import SectionHeading from "../SectionHeading/SectionHeading";
-import "./Calculators.css"
-import NavigationLinks from "../Navigation/NavigationLinks";
 import LumpSumCalculator from "./LumpSumCalculator/LumpSumCalculator";
 import RetirementCalculator from "./RetirementCalculator/RetirementCalculator";
+import NavigationLinks from "../Navigation/NavigationLinks";
+import "./Calculators.css";
+import SectionHeading from "../SectionHeading/SectionHeading";
 const { TabPane } = Tabs;
+
 const Calculators = () => {
-    // Extract the sublinks from "Calculators"
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const tabParam = queryParams.get("tab");
+
     const calculatorNav = NavigationLinks.find(item => item.link === "Calculators");
     const calculatorTabs = calculatorNav ? calculatorNav.sublinks : [];
 
-    // Set first sublink as the default active tab
-    const [activeTab, setActiveTab] = useState(calculatorTabs.length > 0 ? calculatorTabs[0].link : "");
+    // Set the default active tab based on URL query param or the first sublink
+    const [activeTab, setActiveTab] = useState(tabParam || (calculatorTabs.length > 0 ? calculatorTabs[0].link : ""));
 
+    useEffect(() => {
+        if (tabParam) {
+            setActiveTab(tabParam);
+        }
+    }, [tabParam]);
 
     return (
         <>
-            <section>
+            <section id="CalculatorsContainer">
                 <div className="SectionContainer">
                     <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust">
-                        <div>
-                            <div>
-                                <Row>
-                                    <Col lg={14}>
-                                        <div>
-                                            <span className="TagEdit" data-aos="fade-up"
-                                                data-aos-duration="3000">Our Soulfinspire Calculations</span>
-                                            <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
-                                                data-aos-duration="2000" data-aos-delay="200">
-                                                Comprehensive <span>Investment</span> & Lending <span>Solutions</span> at Your Fingertips
-                                            </h1>
-                                        </div>
-                                    </Col>
-                                    <Col lg={10}>
-                                        <div>
-                                            <div>
-                                                <p data-aos="fade-left"
-                                                    data-aos-duration="2000" data-aos-delay="300">
-
-                                                    We offer a comprehensive range of Investment products such as Mutual Funds, Insurance, Stock Broking, Fixed Income Products and Properties as well as lending solutions through dedicated web, App and Chatbot platforms.</p>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </div>
+                        <Row>
+                            <Col lg={24}>
+                                <span className="TagEdit" data-aos="fade-up" data-aos-duration="3000">
+                                    Our Soulfinspire Calculations
+                                </span>
+                                <h1 className="PrimaryHeadingStyle" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+                                    Comprehensive <span>Investment</span> & Lending <span>Solutions</span> at Your Fingertips
+                                </h1>
+                            </Col>
+                            {/* <Col lg={10}>
+                                <p data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300">
+                                    We offer a comprehensive range of Investment products such as Mutual Funds, Insurance, Stock Broking, Fixed Income Products and Properties as well as lending solutions through dedicated web, App and Chatbot platforms.
+                                </p>
+                            </Col> */}
+                        </Row>
                         <div className="sliteSectionLikePadding">
-                            {/* <SectionHeading text="Soulfinspire Provides" valueOfBorder="1px solid black" color="black" beforeBgColor="black" /> */}
+                            <SectionHeading text="Soulfinspire Calculations" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
 
+                            <div className="sliteSectionLikePadding ">
+                                <Tabs activeKey={activeTab} onChange={setActiveTab}>
+                                    {calculatorTabs.map((calculator) => (
+                                        <TabPane tab={calculator.link} key={calculator.link} />
+                                    ))}
+                                </Tabs>
 
-                            <Tabs defaultActiveKey={activeTab} onChange={setActiveTab}>
-                                {calculatorTabs.map((calculator, index) => (
-                                    <TabPane tab={calculator.link} key={calculator.link} />
-                                ))}
-                            </Tabs>
-
-                            <div style={{ marginTop: "20px" }}>
-                                {activeTab === "SIP Planning" && <SIPCalculator />}
-                                {activeTab === "Lumpsum Planning" && <LumpSumCalculator />}
-                                {activeTab === "Retirement Planning" && <RetirementCalculator />}
-                                {activeTab === "House Planning" && <p>House Planning Calculator Coming Soon...</p>}
-                                {activeTab === "Marriage Planning" && <p>Marriage Planning Calculator Coming Soon...</p>}
-                                {activeTab === "Vacation Planning" && <p>Vacation Calculator Coming Soon...</p>}
-                                {activeTab === "Education Planning" && <p>Education Calculator Coming Soon...</p>}
-                                {activeTab === "Car Planning" && <p>Car Loan Calculator Coming Soon...</p>}
+                                <div style={{ marginTop: "20px" }}>
+                                    {activeTab === "SIP Planning" && <SIPCalculator />}
+                                    {activeTab === "Lumpsum Planning" && <LumpSumCalculator />}
+                                    {activeTab === "Retirement Planning" && <RetirementCalculator />}
+                                    {activeTab === "House Planning" && <p>House Planning Calculator Coming Soon...</p>}
+                                    {activeTab === "Marriage Planning" && <p>Marriage Planning Calculator Coming Soon...</p>}
+                                    {activeTab === "Vacation Planning" && <p>Vacation Calculator Coming Soon...</p>}
+                                    {activeTab === "Education Planning" && <p>Education Calculator Coming Soon...</p>}
+                                    {activeTab === "Car Planning" && <p>Car Loan Calculator Coming Soon...</p>}
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </section>
         </>
-    )
-}
-export default Calculators
+    );
+};
+
+export default Calculators;

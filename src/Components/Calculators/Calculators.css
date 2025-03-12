@@ -6,6 +6,9 @@
     background-color: white !important;
     padding: 10px 20px !important;
 }
+.ant-tabs-tab:hover{
+    color: black !important;
+}
 
 .ant-tabs-tab-active {
     background-color: #1E402D !important;
@@ -15,4 +18,11 @@
 
 .ant-tabs-tab-active .ant-tabs-tab-btn {
     color: white !important;
+}
+.ant-tabs-tab-active .ant-tabs-tab-btn:hover {
+    color: white !important;
+}
+
+#CalculatorsContainer .MuiInputBase-input{
+    padding: 8px 10px !important;
 }

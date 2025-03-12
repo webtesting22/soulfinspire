@@ -20,7 +20,7 @@ const SoulServices = () => {
     const ServicesCards = [
         {
             title: "MUTUAL FUNDS",
-            backgroundImage: "/Images/SoulServicesImage.webp",
+            backgroundImage: "/Images/SoulServicesBackgrounds/MUTUALFUNDS.jpg",
             content: <>
                 <p>India’s 5th largest Mutual Fund distributor offering a wide range of Mutual Fund product & features like SIP, Trigger facility, Risk Profiling, Goal Planner, INSTAFUNDZ, Gold Accumulation Plan, Smart Combos and Asset Allocation Combos all under one place at www.fundzbazar.com. One can invest through App and Chat bot as well.</p>
                 <p><b>For more information visit <Link to="https://www.fundzbazar.com" target="_blank">www.fundzbazar.com</Link>
@@ -29,7 +29,7 @@ const SoulServices = () => {
         },
         {
             title: "INSURANCE",
-            backgroundImage: "/Images/SoulServicesImage.webp",
+            backgroundImage: "/Images/SoulServicesBackgrounds/INSURANCE.jpg",
             content: <>
                 <p>Providing Life and General Insurance solutions through state of the art online platform and App backed by Gennext Insurance Brokers Pvt. Ltd., an IRDA registered Insurance Broking Company. One can Select, Compare, Buy, Renew and Manage their policies online from anywhere through www.policyworld.com. Policy world has partnered with leading insurers to provide insurance solutions related to Life, Health, Personal Accident, Critical Illness, Travel, Car and Two wheeler. </p>
                 <p><b>For more information visit <Link to="https://www.policyworld.com" target="_blank">www.policyworld.com</Link></b></p>
@@ -37,7 +37,7 @@ const SoulServices = () => {
         },
         {
             title: "Tax Planning",
-            backgroundImage: "/Images/SoulServicesImage.webp",
+            backgroundImage: "/Images/SoulServicesBackgrounds/TaxPlanning.jpg",
             content: <>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora tenetur deleniti odit aut, possimus sit iste voluptas eum, similique magnam. Quasi repellendus sequi similique eius placeat praesentium architecto dignissimos?</p>
                 <p><b>For more information visit <Link to="https://www.policyworld.com" target="_blank">www.policyworld.com</Link></b></p>
@@ -46,7 +46,7 @@ const SoulServices = () => {
 
         {
             title: "Financial Planning",
-            backgroundImage: "/Images/SoulServicesImage.webp",
+            backgroundImage: "/Images/SoulServicesBackgrounds/FinancialPlanning.jpg",
             content: <>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora tenetur deleniti odit aut, possimus sit iste voluptas eum, similique magnam. Quasi repellendus sequi similique eius placeat praesentium architecto dignissimos?</p>
                 <p><b>For more information visit <Link to="https://www.policyworld.com" target="_blank">www.policyworld.com</Link></b></p>
@@ -54,7 +54,7 @@ const SoulServices = () => {
         },
         {
             title: "FIXED INCOME",
-            backgroundImage: "/Images/SoulServicesImage.webp",
+            backgroundImage: "/Images/SoulServicesBackgrounds/FIXEDINCOME.jpg",
             content: <>
                 <p>Fixed Income Products are offered to investors who need fixed and regular income and wish to diversify their portfolio. Through Fundzbazar.com we provide paperless Investment solution for Gsec, SDL, Fixed Deposits & Liquiloans.</p>
                 <p><b>For more information visit <Link to="https://www.fundzbazar.com" target="_blank">www.fundzbazar.com</Link></b></p>
@@ -74,7 +74,7 @@ const SoulServices = () => {
                         <div>
                             <div>
                                 <Row>
-                                    <Col lg={14}>
+                                    <Col lg={24}>
                                         <div>
                                             <span className="TagEdit" data-aos="fade-up"
                                                 data-aos-duration="3000">Our Soulfinspire Services</span>
@@ -84,7 +84,7 @@ const SoulServices = () => {
                                             </h1>
                                         </div>
                                     </Col>
-                                    <Col lg={10}>
+                                    {/* <Col lg={10}>
                                         <div>
                                             <div>
                                                 <p data-aos="fade-left"
@@ -93,7 +93,7 @@ const SoulServices = () => {
                                                     We offer a comprehensive range of Investment products such as Mutual Funds, Insurance, Stock Broking, Fixed Income Products and Properties as well as lending solutions through dedicated web, App and Chatbot platforms.</p>
                                             </div>
                                         </div>
-                                    </Col>
+                                    </Col> */}
                                 </Row>
                             </div>
                         </div>

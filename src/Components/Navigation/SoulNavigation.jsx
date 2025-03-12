@@ -107,7 +107,7 @@ const SoulNavigation = () => {
                                         <Panel header={item.link} key={index}>
                                             {item.sublinks.map((sub, subIndex) => (
                                                 <p key={subIndex}>
-                                                    <Link to={sub.path}>{sub.link}</Link>
+                                                    <Link to={sub.path} onClick={() => setDrawerVisible(false)}>{sub.link}</Link>
                                                 </p>
                                             ))}
                                         </Panel>

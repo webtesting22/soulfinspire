@@ -151,6 +151,7 @@ h6 {
 @media (max-width:900px) {
   .MaxWidthContainer {
     width: 100% !important;
+    padding: 20px 0px !important;
   }
 
   .PrimaryHeadingStyle {

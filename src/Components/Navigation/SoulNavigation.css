@@ -130,7 +130,8 @@
     justify-content: center;
     transition: .5s;
 }
-.PcnavLinks::after{
+
+.PcnavLinks::after {
     content: "";
     position: absolute;
     background-color: #1e402d4a;
@@ -140,6 +141,7 @@
     border-radius: 10px;
     transition: .5s;
 }
+
 .PcnavLinks:hover::after {
     content: "";
     position: absolute;
