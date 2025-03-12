@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Slider, TextField, Button, Box, Typography } from "@mui/material";
 import { Pie } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
-
+import { Row, Col } from "antd";
 // Register Chart.js components
 Chart.register(ArcElement, Tooltip, Legend);
 
@@ -62,97 +62,159 @@ const LumpSumCalculator = () => {
     };
 
     return (
-        <Box sx={{ maxWidth: "100%", margin: "auto", textAlign: "center", padding: "20px", borderRadius: "10px", background: "#fff", }}>
-            <Typography variant="h5" sx={{ marginBottom: "20px", fontWeight: "bold", color: "#1D402D" }}>Lump Sum Investment Calculator</Typography>
+        <div className="LumpSumCalculator">
+            <Row>
+                <Col lg={24} md={24}>
+                    {/* <Typography variant="h5" sx={{ marginBottom: "20px", fontWeight: "bold", color: "#1D402D" }}>Lump Sum Investment Calculator</Typography> */}
 
-            {/* Investment Inputs */}
-            <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Investment Amount (₹)</Typography>
-            <TextField
-                value={investmentAmount}
-                onChange={(e) => setInvestmentAmount(Number(e.target.value))}
-                type="number"
-                fullWidth
-                variant="outlined"
-                sx={{ mb: 1 }}
-            />
-            <Slider
-                value={investmentAmount}
-                onChange={(e, val) => setInvestmentAmount(val)}
-                min={0}
-                max={100000000}
-                step={100000}
-                marks={marksAmount}
-                sx={{ color: "#FF9606" }}
-            />
+                    {/* Investment Inputs */}
+                    <div className="AdjustContainer" style={{ borderTop: "1px solid #c5c5c5" }}>
+                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Investment Amount (₹)</Typography>
+                        <div>
+                            <TextField
+                                value={investmentAmount}
+                                onChange={(e) => setInvestmentAmount(Number(e.target.value))}
+                                type="number"
+                                fullWidth
+                                variant="outlined"
+                                sx={{ mb: 1 }}
+                            />
+                            <Slider
+                                value={investmentAmount}
+                                onChange={(e, val) => setInvestmentAmount(val)}
+                                min={0}
+                                max={100000000}
+                                step={100000}
+                                marks={marksAmount}
+                                sx={{ color: "#FF9606" }}
+                            />
+                        </div>
 
-            {/* Investment Duration */}
-            <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Investment Duration (Months)</Typography>
-            <TextField
-                value={duration}
-                onChange={(e) => setDuration(Number(e.target.value))}
-                type="number"
-                fullWidth
-                variant="outlined"
-                sx={{ mb: 1 }}
-            />
-            <Slider
-                value={duration}
-                onChange={(e, val) => setDuration(val)}
-                min={1}
-                max={600}
-                step={10}
-                marks={marksDuration}
-                sx={{ color: "#FF9606" }}
-            />
+                    </div>
+                    {/* Investment Duration */}
+                    <div className="AdjustContainer">
+                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Investment Duration (Months)</Typography>
+                        <div>
+                            <TextField
+                                value={duration}
+                                onChange={(e) => setDuration(Number(e.target.value))}
+                                type="number"
+                                fullWidth
+                                variant="outlined"
+                                sx={{ mb: 1 }}
+                            />
+                            <Slider
+                                value={duration}
+                                onChange={(e, val) => setDuration(val)}
+                                min={1}
+                                max={600}
+                                step={10}
+                                marks={marksDuration}
+                                sx={{ color: "#FF9606" }}
+                            />
+                        </div>
+                    </div>
 
-            {/* Growth Rate */}
-            <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Expected Growth Rate (%)</Typography>
-            <TextField
-                value={growthRate}
-                onChange={(e) => setGrowthRate(Number(e.target.value))}
-                type="number"
-                fullWidth
-                variant="outlined"
-                sx={{ mb: 1 }}
-            />
-            <Slider
-                value={growthRate}
-                onChange={(e, val) => setGrowthRate(val)}
-                min={1}
-                max={100}
-                step={1}
-                marks={marksReturn}
-                sx={{ color: "#FF9606" }}
-            />
+                    {/* Growth Rate */}
+                    <div className="AdjustContainer">
+                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Expected Growth Rate (%)</Typography>
+                        <div>
+                            <TextField
+                                value={growthRate}
+                                onChange={(e) => setGrowthRate(Number(e.target.value))}
+                                type="number"
+                                fullWidth
+                                variant="outlined"
+                                sx={{ mb: 1 }}
+                            />
+                            <Slider
+                                value={growthRate}
+                                onChange={(e, val) => setGrowthRate(val)}
+                                min={1}
+                                max={100}
+                                step={1}
+                                marks={marksReturn}
+                                sx={{ color: "#FF9606" }}
+                            />
+                        </div>
+                    </div>
 
-            {/* Calculate Button */}
-            <Button
-                onClick={calculateLumpSum}
-                variant="contained"
-                sx={{ mt: 2, background: "#1D402D", color: "white", "&:hover": { background: "#15482D" } }}
-                fullWidth
-            >
-                Calculate Now
-            </Button>
+                    {/* Calculate Button */}
+                    <Button
+                        onClick={calculateLumpSum}
+                        variant="contained"
+                        sx={{ mt: 2, background: "#1D402D", color: "white", "&:hover": { background: "#15482D" } }}
+                        fullWidth
+                        className="CalculateBtn"
+                    >
+                        Calculate Now
+                    </Button>
+                </Col>
+                {/* Results */}
+                <Col lg={24}>
+                    <div className="AnalysisContainer">
 
-            {/* Results */}
-            {totalInvested > 0 && (
-                <Box sx={{ mt: 3, textAlign: "left", background: "#f5f5f5", padding: "15px", borderRadius: "8px" }}>
-                    <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1D402D" }}>Lump Sum Investment Summary:</Typography>
-                    <Typography><strong>Initial Investment:</strong> ₹{totalInvested.toLocaleString()}</Typography>
-                    <Typography><strong>Total Growth:</strong> ₹{totalGrowth.toLocaleString()}</Typography>
-                    <Typography><strong>Total Future Value:</strong> ₹{futureValue.toLocaleString()}</Typography>
-                </Box>
-            )}
+                        <Box sx={{ maxWidth: "100%", margin: "auto", textAlign: "center", }}>
+                            <Box sx={{ mt: 3, textAlign: "left", padding: "15px", }}>
+                                <Row>
+                                    <Col lg={8} md={12} >
+                                        <div>
+                                            <div>
+                                                <h2>Initial Investment:</h2>
+                                                <br />
+                                                <div>
+                                                    <h2>{new Intl.NumberFormat("en-IN").format(totalInvested)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col lg={8} md={12}>
+                                        <div>
+                                            <div>
+                                                <h2> Total Growth:</h2>
+                                                <br />
+                                                <div>
+                                                    <h2> ₹{new Intl.NumberFormat("en-IN").format(totalGrowth)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col lg={8} md={12}>
+                                        <div>
+                                            <div>
+                                                <h2> Total Future Value:</h2>
+                                                <br />
+                                                <div>
+                                                    <h2>₹{new Intl.NumberFormat("en-IN").format(futureValue)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Box>
+                        </Box>
+                    </div>
 
-            {/* Pie Chart */}
-            {totalInvested > 0 && (
-                <Box sx={{ mt: 3, textAlign: "center" }}>
-                    <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1D402D" }}>Investment Breakdown</Typography>
-                    <Pie data={chartData} />
-                </Box>
-            )}
-        </Box>
+                    <br /><br />
+                    <div className="ChartsContainer">
+                        <Row>
+                            <Col lg={8} style={{ width: "100%" }}>
+                                <Box sx={{ mt: 3, textAlign: "center" }}>
+                                    <h2> Investment Breakdown</h2>
+                                    <br />
+                                    <Pie data={chartData} />
+                                </Box>
+                            </Col>
+                            <Col lg={16}>
+
+                            </Col>
+                        </Row>
+                    </div>
+
+                </Col>
+
+            </Row>
+        </div >
     );
 };
 
