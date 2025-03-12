@@ -8,6 +8,7 @@ import { Row, Col } from "antd";
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement);
 
+
 const marksAmount = [
     { value: 1000, label: "1K" },
     { value: 25000, label: "25K" },

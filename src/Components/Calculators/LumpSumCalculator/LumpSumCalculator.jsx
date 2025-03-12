@@ -1,11 +1,27 @@
 import React, { useState } from "react";
 import { Slider, TextField, Button, Box, Typography } from "@mui/material";
 import { Pie } from "react-chartjs-2";
-import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 import { Row, Col } from "antd";
-// Register Chart.js components
-Chart.register(ArcElement, Tooltip, Legend);
+import {
+    Chart as ChartJS,
+    LineElement,
+    PointElement,
+    LinearScale,
+    CategoryScale,
+    Title,
+    Tooltip,
+    Legend
+} from 'chart.js';
 
+ChartJS.register(
+    LineElement,
+    PointElement,
+    LinearScale,
+    CategoryScale,
+    Title,
+    Tooltip,
+    Legend
+);
 const marksAmount = [
     { value: 0, label: "0" },
     { value: 10000000, label: "1Cr" },
