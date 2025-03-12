@@ -6,7 +6,8 @@
     background-color: white !important;
     padding: 10px 20px !important;
 }
-.ant-tabs-tab:hover{
+
+.ant-tabs-tab:hover {
     color: black !important;
 }
 
@@ -19,10 +20,80 @@
 .ant-tabs-tab-active .ant-tabs-tab-btn {
     color: white !important;
 }
+
 .ant-tabs-tab-active .ant-tabs-tab-btn:hover {
     color: white !important;
 }
 
-#CalculatorsContainer .MuiInputBase-input{
+#CalculatorsContainer .MuiInputBase-input {
     padding: 8px 10px !important;
+}
+
+/* .AllComponentsContainer {
+    padding: 0px 20px;
+} */
+
+.AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer {
+    /* margin-bottom: 20px; */
+    border-bottom: 1px solid #c5c5c5;
+    padding: 20px 20px;
+    border-left: 1px solid #c5c5c5;
+    border-right: 1px solid #c5c5c5;
+}
+
+.AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div .MuiTextField-root {
+    width: 20%;
+}
+
+.AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .CalculateBtn {
+    max-width: 200px;
+}
+
+.AnalysisContainer {
+    background-color: #1e402dc4;
+    color: white;
+}
+
+.AnalysisContainer .ant-row .ant-col {
+    padding: 10px;
+    width: 100%;
+}
+
+.AnalysisContainer .ant-row .ant-col>div {
+    padding: 20px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.ChartsContainer .ant-row .ant-col{
+    padding:10px 30px;
+}
+
+@media (max-width:900px){
+
+.ChartsContainer .ant-row .ant-col{
+    padding:10px 10px;
+}
+.AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 20px;
+}
+
+.AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div .MuiTextField-root {
+    width: 100%;
+}
+
 }

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Slider, TextField, Button, Box, Typography } from "@mui/material";
-import { Pie } from "react-chartjs-2";
-import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
+import { Bar, Line, Pie } from "react-chartjs-2";
+
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement } from "chart.js";
+
 import { Row, Col } from "antd";
 // Register Chart.js components
-Chart.register(ArcElement, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement);
 
 const marksAmount = [
     { value: 1000, label: "1K" },
@@ -40,6 +42,10 @@ const SIPCalculator = () => {
     const [totalInvested, setTotalInvested] = useState(0);
     const [totalGrowth, setTotalGrowth] = useState(0);
     const [futureValue, setFutureValue] = useState(0);
+    const years = Array.from({ length: 10 }, (_, i) => 2026 + i); // Generate years dynamically
+    const principalData = years.map((_, i) => totalInvested * (i + 1) / 10); // Simulated principal growth
+    const growthData = years.map((_, i) => totalGrowth * (i + 1) / 10); // Simulated growth
+    const projectedReturns = years.map((_, i) => futureValue * (i + 1) / 10); // Simulated projection
 
     const calculateSIP = () => {
         const P = sipAmount;
@@ -66,79 +72,170 @@ const SIPCalculator = () => {
             },
         ],
     };
+    const chartOptions = {
+        responsive: true,
+        plugins: {
+            legend: { display: true, position: "bottom" },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        const dataset = tooltipItem.dataset;
+                        const dataIndex = tooltipItem.dataIndex;
+                        const value = dataset.data[dataIndex];
+                        const total = dataset.data.reduce((acc, val) => acc + val, 0);
+                        const percentage = ((value / total) * 100).toFixed(2);
+                        const formattedValue = new Intl.NumberFormat("en-IN").format(value);
+                        return `${percentage}% (₹${formattedValue})`;
+                    },
+                },
+            },
+        },
+    };
+
+    const investmentChartData = {
+        labels: years,
+        datasets: [
+            {
+                label: "Principal Amount",
+                data: principalData,
+                backgroundColor: "#1D402D",
+                borderRadius: 5,
+            },
+            {
+                label: "Growth Amount",
+                data: growthData,
+                backgroundColor: "#FF9606",
+                borderRadius: 5,
+            },
+            {
+                label: "Projected Returns",
+                data: projectedReturns,
+                type: "line",
+                borderColor: "#FF9606",
+                backgroundColor: "#1D402D",
+                pointRadius: 5,
+                borderWidth: 2,
+            },
+        ],
+    };
+
+    const investmentChartOptions = {
+        responsive: true,
+        scales: {
+            x: { title: { display: true, text: "Years" } },
+            y: {
+                title: { display: true, text: "Projected Returns" },
+                ticks: {
+                    callback: function (value) {
+                        if (value >= 1000000) {
+                            return "₹" + (value / 1000000).toFixed(1) + "M"; // Format 1M, 2.5M
+                        } else if (value >= 1000) {
+                            return "₹" + (value / 1000).toFixed(0) + "K"; // Format 100K, 500K
+                        } else {
+                            return "₹" + value; // Keep small numbers unchanged
+                        }
+                    },
+                },
+            },
+        },
+        plugins: {
+            legend: { display: true, position: "bottom" },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        const dataset = tooltipItem.dataset;
+                        const dataIndex = tooltipItem.dataIndex;
+                        const value = dataset.data[dataIndex];
+                        const formattedValue = new Intl.NumberFormat("en-IN").format(value);
+                        return `${dataset.label}: ₹${formattedValue}`;
+                    },
+                },
+            },
+        },
+    };
+
 
     return (
-        <div>
+        <div className="SIPCalculatorContainer">
 
             <Row>
                 <Col lg={24} md={24} style={{ width: "100%" }}>
 
-                    <Typography variant="h5" sx={{ marginBottom: "20px", fontWeight: "bold", color: "#1D402D" }}>SIP Calculator</Typography>
+                    {/* <Typography variant="h5" sx={{ marginBottom: "20px", fontWeight: "bold", color: "#1D402D" }}>SIP Calculator</Typography> */}
 
                     {/* Monthly SIP Amount */}
-                    <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Monthly SIP Amount (₹)</Typography>
-                    <div>
-                        <TextField
-                            value={sipAmount}
-                            onChange={(e) => setSIPAmount(Number(e.target.value))}
-                            type="number"
-                            fullWidth
-                            variant="outlined"
-                            sx={{ mb: 1 }}
-                        />
-                        <Slider
-                            value={sipAmount}
-                            onChange={(e, val) => setSIPAmount(val)}
-                            min={1000}
-                            max={100000}
-                            step={1000}
-                            marks={marksAmount}
-                            sx={{ color: "#FF9606" }}
-                        />
+                    <div className="AdjustContainer" style={{ borderTop: "1px solid #c5c5c5" }}>
+                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Monthly SIP Amount (₹)</Typography>
+
+                        <div>
+                            <TextField
+                                value={sipAmount}
+                                onChange={(e) => setSIPAmount(Number(e.target.value))}
+                                type="number"
+                                fullWidth
+                                variant="outlined"
+                                sx={{ mb: 1 }}
+                            />
+                            <Slider
+                                value={sipAmount}
+                                onChange={(e, val) => setSIPAmount(val)}
+                                min={1000}
+                                max={100000}
+                                step={1000}
+                                marks={marksAmount}
+                                sx={{ color: "#FF9606" }}
+                            />
+                        </div>
                     </div>
 
                     {/* SIP Duration */}
-                    <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>SIP Duration (In Months)</Typography>
-                    <div>
-                        <TextField
-                            value={duration}
-                            onChange={(e) => setDuration(Number(e.target.value))}
-                            type="number"
-                            fullWidth
-                            variant="outlined"
-                            sx={{ mb: 1 }}
-                        />
-                        <Slider
-                            value={duration}
-                            onChange={(e, val) => setDuration(val)}
-                            min={1}
-                            max={500}
-                            step={10}
-                            marks={marksDuration}
-                            sx={{ color: "#FF9606" }}
-                        />
+                    <div className="AdjustContainer">
+                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>SIP Duration (In Months)</Typography>
+                        <div>
+
+                            <TextField
+                                value={duration}
+                                onChange={(e) => setDuration(Number(e.target.value))}
+                                type="number"
+                                fullWidth
+                                variant="outlined"
+                                sx={{ mb: 1 }}
+                            />
+                            <Slider
+                                value={duration}
+                                onChange={(e, val) => setDuration(val)}
+                                min={1}
+                                max={500}
+                                step={10}
+                                marks={marksDuration}
+                                sx={{ color: "#FF9606" }}
+                            />
+                        </div>
                     </div>
 
                     {/* Expected Return */}
-                    <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Expected Return (%)</Typography>
-                    <div>
-                        <TextField
-                            value={returnRate}
-                            onChange={(e) => setReturnRate(Number(e.target.value))}
-                            type="number"
-                            fullWidth
-                            variant="outlined"
-                            sx={{ mb: 1 }}
-                        />
-                        <Slider
-                            value={returnRate}
-                            onChange={(e, val) => setReturnRate(val)}
-                            min={1}
-                            max={100}
-                            step={1}
-                            marks={marksReturn}
-                            sx={{ color: "#FF9606" }}
-                        />
+                    <div className="AdjustContainer">
+                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Expected Return (%)</Typography>
+
+                        <div>
+                            <TextField
+                                value={returnRate}
+                                onChange={(e) => setReturnRate(Number(e.target.value))}
+                                type="number"
+                                fullWidth
+                                variant="outlined"
+                                sx={{ mb: 1 }}
+                            />
+                            <Slider
+                                value={returnRate}
+                                onChange={(e, val) => setReturnRate(val)}
+                                min={1}
+                                max={100}
+                                step={1}
+                                marks={marksReturn}
+                                sx={{ color: "#FF9606" }}
+                            />
+                        </div>
                     </div>
 
                     {/* Calculate Button */}
@@ -147,35 +244,80 @@ const SIPCalculator = () => {
                         variant="contained"
                         sx={{ mt: 2, background: "#1D402D", color: "white", "&:hover": { background: "#15482D" } }}
                         fullWidth
+                        className="CalculateBtn"
                     >
                         Calculate Now
                     </Button>
                 </Col>
 
                 <Col lg={24} md={24} style={{ width: "100%" }}>
-                    <Box sx={{ maxWidth: "600px", margin: "auto", textAlign: "center", padding: "20px", borderRadius: "10px", background: "#fff", }}>
+                    <div className="AnalysisContainer">
+                        <Box sx={{ maxWidth: "100%", margin: "auto", textAlign: "center", }}>
+                            {/* Results */}
+                            <Box sx={{ mt: 3, textAlign: "left", padding: "15px", }}>
+                                {/* <h2> Results:</h2> */}
+                                <Row>
+                                    <Col lg={8} md={12} >
+                                        <div>
+                                            <div>
+                                                <h2>Total SIP Amount Invested:</h2>
+                                                <br />
+                                                <div>
+                                                    <h2>₹{new Intl.NumberFormat("en-IN").format(totalInvested)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col lg={8} md={12}>
+                                        <div>
+                                            <div>
+                                                <h2>Total Growth:</h2>
+                                                <br />
+                                                <div>
+                                                    <h2>₹{new Intl.NumberFormat("en-IN").format(totalGrowth)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col lg={8} md={12}>
+                                        <div>
+                                            <div>
+                                                <h2>Total Future Value:</h2>
+                                                <br />
+                                                <div>
+                                                    <h2>₹{new Intl.NumberFormat("en-IN").format(futureValue)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Box>
 
+                            {/* Pie Chart */}
 
-                        {/* Results */}
-                        <Box sx={{ mt: 3, textAlign: "left", background: "#f5f5f5", padding: "15px", borderRadius: "8px" }}>
-                            <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1D402D" }}>Results:</Typography>
-                            <Typography><strong>Total SIP Amount Invested:</strong> ₹{totalInvested.toLocaleString()}</Typography>
-                            <Typography><strong>Total Growth:</strong> ₹{totalGrowth.toLocaleString()}</Typography>
-                            <Typography><strong>Total Future Value:</strong> ₹{futureValue.toLocaleString()}</Typography>
                         </Box>
-
-                        {/* Pie Chart */}
+                    </div>
+                    <br /><br />
+                    <div className="ChartsContainer">
                         <Row>
-                            <Col lg={12} style={{ width: "100%" }}>
-                                {totalInvested > 0 && (
-                                    <Box sx={{ mt: 3, textAlign: "center" }}>
-                                        <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1D402D" }}>Investment Breakdown</Typography>
-                                        <Pie data={chartData} />
-                                    </Box>
-                                )}
+                            <Col lg={8} style={{ width: "100%" }}>
+                                {/* {totalInvested > 0 && ( */}
+                                <Box sx={{ mt: 3, textAlign: "center" }}>
+                                    <h2>SIP Investment Breakup</h2>
+                                    <br />
+                                    <Pie data={chartData} options={chartOptions} />
+                                </Box>
+                                {/* )} */}
+                            </Col>
+                            <Col lg={16}>
+                                <Box sx={{ mt: 3, textAlign: "center" }}>
+                                    <h2>SIP Investment Projection</h2>
+                                    <br />
+                                    <Bar data={investmentChartData} options={investmentChartOptions} />
+                                </Box>
                             </Col>
                         </Row>
-                    </Box>
+                    </div>
                 </Col>
             </Row>
         </div>

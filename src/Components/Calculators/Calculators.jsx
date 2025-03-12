@@ -34,7 +34,8 @@ const Calculators = () => {
                         <Row>
                             <Col lg={24}>
                                 <span className="TagEdit" data-aos="fade-up" data-aos-duration="3000">
-                                    Our Soulfinspire Calculations
+                                    Our Soulfinspire Planning
+
                                 </span>
                                 <h1 className="PrimaryHeadingStyle" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
                                     Comprehensive <span>Investment</span> & Lending <span>Solutions</span> at Your Fingertips
@@ -47,7 +48,7 @@ const Calculators = () => {
                             </Col> */}
                         </Row>
                         <div className="sliteSectionLikePadding">
-                            <SectionHeading text="Soulfinspire Calculations" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
+                            <SectionHeading text="Soulfinspire Planning" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
 
                             <div className="sliteSectionLikePadding ">
                                 <Tabs activeKey={activeTab} onChange={setActiveTab}>
@@ -56,7 +57,7 @@ const Calculators = () => {
                                     ))}
                                 </Tabs>
 
-                                <div style={{ marginTop: "20px" }}>
+                                <div style={{ marginTop: "20px" }} className="AllComponentsContainer">
                                     {activeTab === "SIP Planning" && <SIPCalculator />}
                                     {activeTab === "Lumpsum Planning" && <LumpSumCalculator />}
                                     {activeTab === "Retirement Planning" && <RetirementCalculator />}
