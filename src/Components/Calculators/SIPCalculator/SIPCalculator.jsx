@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Slider, TextField, Button, Box, Typography } from "@mui/material";
 import { Bar, Pie } from "react-chartjs-2";
+import { Row,Col } from "antd";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement, LineController } from "chart.js";
 
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement } from "chart.js";
-
-import { Row, Col } from "antd";
-// Register Chart.js components
-ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement);
+ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, LineController);
 
 
 const marksAmount = [
