@@ -25,7 +25,9 @@ const Calculators = () => {
             setActiveTab(tabParam);
         }
     }, [tabParam]);
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <section id="CalculatorsContainer">

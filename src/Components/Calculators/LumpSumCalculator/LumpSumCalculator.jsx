@@ -77,6 +77,17 @@ const LumpSumCalculator = () => {
         ],
     };
 
+
+    const chartOptions = {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true,
+                position: "bottom", // 👈 Set legend position to bottom
+            },
+        }
+    }
+    
     return (
         <div className="LumpSumCalculator">
             <Row>
@@ -216,9 +227,10 @@ const LumpSumCalculator = () => {
                         <Row>
                             <Col lg={8} style={{ width: "100%" }}>
                                 <Box sx={{ mt: 3, textAlign: "center" }}>
-                                    <h2> Investment Breakdown</h2>
+                                    <h2> Lumpsum Investment Breakup
+                                    </h2>
                                     <br />
-                                    <Pie data={chartData} />
+                                    <Pie data={chartData} options={chartOptions}/>
                                 </Box>
                             </Col>
                             <Col lg={16}>
