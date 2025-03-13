@@ -7,7 +7,7 @@ const OurApproach = () => {
     const OurApproachData = [
         {
             title: "Assess Your Needs",
-            image: "/Images/OurApprochIcons/AssessYour.svg",
+            image: "/Images/OurApprochIcons/AssesYouNeed.svg",
             content: <>
                 We begin by having an in-depth conversation to understand your investment milestones, volatility tolerance, and investment preferences. This comprehensive assessment allows us to gain deep insights into your aspirations and the financial landscape you wish to navigate.
 
@@ -21,7 +21,7 @@ const OurApproach = () => {
         },
         {
             title: "Implement and Monitor",
-            image: "/Images/OurApprochIcons/InvestementMonitor.svg",
+            image: "/Images/OurApprochIcons/ImplementMonitor.png",
             content: <>
                 Once your custom plan is mutually agreed, we handle the implementation of your investments. Our team diligently reviews your portfolio. We provide you with regular updates and feedback, so you can rest easy knowing your financial future is in expert hands.
             </>

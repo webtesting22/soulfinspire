@@ -120,7 +120,7 @@ const LumpSumCalculator = () => {
                     </div>
                     {/* Investment Duration */}
                     <div className="AdjustContainer">
-                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Investment Duration (Months)</Typography>
+                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Duration (In Months)</Typography>
                         <div>
                             <TextField
                                 value={duration}
@@ -144,7 +144,7 @@ const LumpSumCalculator = () => {
 
                     {/* Growth Rate */}
                     <div className="AdjustContainer">
-                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Expected Growth Rate (%)</Typography>
+                        <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Growth Rate (%)</Typography>
                         <div>
                             <TextField
                                 value={growthRate}
