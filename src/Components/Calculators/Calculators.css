@@ -83,6 +83,9 @@
     padding: 10px 30px;
 }
 
+.ant-tabs-ink-bar{
+    display: none !important;
+}
 @media (max-width:900px) {
 
     .ChartsContainer .ant-row .ant-col {
