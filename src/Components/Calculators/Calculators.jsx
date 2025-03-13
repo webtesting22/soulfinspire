@@ -29,7 +29,7 @@ const Calculators = () => {
     return (
         <>
             <section id="CalculatorsContainer">
-                <div className="SectionContainer">
+                <div className="SectionContainer" style={{paddingBottom:"0px"}}>
                     <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust">
                         <Row>
                             <Col lg={24}>
@@ -50,7 +50,7 @@ const Calculators = () => {
                         <div className="sliteSectionLikePadding">
                             <SectionHeading text="Soulfinspire Planning" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
 
-                            <div className="sliteSectionLikePadding ">
+                            <div className="sliteSectionLikePadding " style={{paddingBottom:"0px"}}>
                                 <Tabs activeKey={activeTab} onChange={setActiveTab}>
                                     {calculatorTabs.map((calculator) => (
                                         <TabPane tab={calculator.link} key={calculator.link} />
