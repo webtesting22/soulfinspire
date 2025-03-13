@@ -34,6 +34,10 @@
     display: flex;
     gap: 20px;
 }
+.SocialMediaLinks ul a{
+    display: flex;
+    align-items: center;
+}
 
 .SocialMediaLinks ul li svg{
     background-color: #1E402D;
