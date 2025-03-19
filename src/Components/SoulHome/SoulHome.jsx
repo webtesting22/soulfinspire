@@ -99,7 +99,7 @@ const SoulHome = () => {
                 </div>
 
                 <div className="HomePageImageContainer">
-                    <img src="/Images/HomePageGrowthBack.jpg" alt="" />
+                    <img src="/Images/HomePageGrowthBack.jpg" alt="" style={{width:"100%"}}/>
                     {/* <div>
                         <Swiper
                             spaceBetween={30}
