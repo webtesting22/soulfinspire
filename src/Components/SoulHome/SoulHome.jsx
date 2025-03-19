@@ -98,8 +98,9 @@ const SoulHome = () => {
                     </div>
                 </div>
 
-                {/* <div className="HomePageImageContainer">
-                    <div>
+                <div className="HomePageImageContainer">
+                    <img src="/Images/HomePageGrowthBack.jpg" alt="" />
+                    {/* <div>
                         <Swiper
                             spaceBetween={30}
                             effect={'fade'}
@@ -127,8 +128,8 @@ const SoulHome = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                    </div>
-                </div> */}
+                    </div> */}
+                </div>
                 {/* <div className="sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding">
                         <div>

@@ -10,7 +10,6 @@ const OurApproach = () => {
             image: "/Images/OurApprochIcons/AssesYouNeed.svg",
             content: <>
                 We begin by having an in-depth conversation to understand your investment milestones, volatility tolerance, and investment preferences. This comprehensive assessment allows us to gain deep insights into your aspirations and the financial landscape you wish to navigate.
-
             </>
         },
         {
@@ -44,7 +43,6 @@ const OurApproach = () => {
                                     <Col lg={12}>
                                         <div>
                                             <SectionHeading text="Our Approach" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
-
                                             <div className="FlexContainer">
                                                 {OurApproachData.map((item, index) => (
                                                     <div key={index} className="OurApprochCardContainer" data-aos="fade-left"
