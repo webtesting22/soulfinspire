@@ -50,7 +50,7 @@ const SoulNavigation = () => {
                         <div className="WidthContainer">
                             <div className="SoulLogoContainer">
                                 <Link to="/">
-                                    <img src="/Images/SoulFinspireLogo.png" alt="Logo" />
+                                    <img src="/Images/SoulFinspireLogo.png" alt="Logo" loading="lazy"/>
                                 </Link>
                             </div>
                             <div className="NavigationLinksContainer">
@@ -89,7 +89,7 @@ const SoulNavigation = () => {
                     <div className="MobileNavContainer">
                         <div className="MobileNavHeader">
                             <Link to="/">
-                                <img src="/Images/SoulFinspireLogo.png" alt="Logo" />
+                                <img src="/Images/SoulFinspireLogo.png" alt="Logo" loading="lazy"/>
                             </Link>
                             <MenuOutlined className="MenuIcon" onClick={() => setDrawerVisible(true)} />
                         </div>

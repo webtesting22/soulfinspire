@@ -75,7 +75,7 @@ const ServicesHome = () => {
                         <SectionHeading text="Services SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
                         <div>
                             <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
-                                data-aos-duration="1200">At Innovest, we are committed to fueling the <span className="ColorChangeSpan">growth</span> and <span className="ColorChangeSpan">innovation</span> of visionary <span className="ColorChangeSpan">startups</span> and high-potential <span className="ColorChangeSpan">companies</span>.</h1>
+                                data-aos-duration="1200">Empowering <span>Innovation</span>. Fueling Future <span>Growth</span>.</h1>
                         </div>
                         <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding">
                             <div className="InfiniteCarousalForServices PaddingAdjustHeadingContainer" onMouseMove={handleMouseMove}>
@@ -116,7 +116,7 @@ const ServicesHome = () => {
                                             <div className="PaddingAdjustHeadingContainer">
                                                 <div>
                                                     <div className="CarousalImageContainer">
-                                                        <img src={item.img} alt="" />
+                                                        <img src={item.img} alt="" loading="lazy"/>
                                                     </div>
                                                     <br />
                                                     <div>

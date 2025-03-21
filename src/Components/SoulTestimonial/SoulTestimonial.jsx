@@ -222,7 +222,7 @@ const SoulTestimonial = () => {
                                             <div className="AnimatedWhiteLayer">
 
                                             </div>
-                                            <img src="https://cdn.prod.website-files.com/67765ad592aee8ab80237e9b/677df7303175761c2bfd1181_review-img.jpg" alt="" style={{ width: "100%" }} />
+                                            <img src="https://cdn.prod.website-files.com/67765ad592aee8ab80237e9b/677df7303175761c2bfd1181_review-img.jpg" alt="" style={{ width: "100%" }} loading="lazy"/>
                                         </div>
                                     </div>
                                 </div>

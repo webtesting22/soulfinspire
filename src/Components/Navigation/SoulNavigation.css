@@ -135,22 +135,24 @@
     content: "";
     position: absolute;
     background-color: #1e402d4a;
-    height: 5px;
+    height: 0%;
     width: 0%;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 34px;
     transition: .5s;
+    padding: 0px;
 }
 
 .PcnavLinks:hover::after {
     content: "";
     position: absolute;
     background-color: #1e402d4a;
-    height: 4px;
+    height: 100%;
     width: 100%;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 34px;
     transition: .5s;
+    padding: 5px 20px;
 }
 
 @media (min-width:1500px) and (max-width:4000px) {

@@ -46,10 +46,10 @@ const OurApproach = () => {
                                             <div className="FlexContainer">
                                                 {OurApproachData.map((item, index) => (
                                                     <div key={index} className="OurApprochCardContainer" data-aos="fade-left"
-                                                        data-aos-duration="1300" data-aos-delay={index * 400}>
+                                                        data-aos-duration="1000" data-aos-delay={index * 100}>
                                                         <div>
-                                                            <img src={item.image} alt="" />
-                                                            
+                                                            <img src={item.image} alt="" loading="lazy" />
+
                                                             <h2>{item.title}</h2>
                                                             <br />
                                                             <p>{item.content}</p>

@@ -67,7 +67,7 @@ const MainPrinciples = () => {
                                             <div className="AnimatedWhiteLayer">
 
                                             </div>
-                                            <img src="/Images/MainPrinciples.webp" alt="" />
+                                            <img src="/Images/MainPrinciples.webp" alt="" loading="lazy"/>
                                         </div>
                                     </div>
                                 </Col>

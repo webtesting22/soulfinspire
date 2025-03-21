@@ -88,7 +88,7 @@
   
   /* When the parent container gets the "animate" class, trigger the slide animation */
   .AnimatedSlideWhiteLayerAnimation.animate .AnimatedWhiteLayer {
-    animation: slideOnce 1s ease-in-out forwards;
+    animation: slideOnce 2s ease-in-out forwards;
   }
   
   /* Slide the layer from left (0) to completely off to the right (100%) */

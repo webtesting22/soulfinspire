@@ -20,7 +20,7 @@ const Footer = () => {
                             <Col lg={14}>
                                 <div className="FooterLogoContainer">
                                     <div>
-                                        <img src="/Images/SoulFinspireLogo.png" alt="" />
+                                        <img src="/Images/SoulFinspireLogo.png" alt="" loading="lazy"/>
                                         <p>We put clients first, we lead with exceptional idea, and we believe in doing the right thing</p>
                                     </div>
                                 </div>

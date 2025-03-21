@@ -45,7 +45,7 @@ const SoulTeam = () => {
                                                 <div className="AnimatedWhiteLayer">
 
                                                 </div>
-                                                <img src={item.image} alt="" style={{ width: "100%" }} />
+                                                <img src={item.image} alt="" style={{ width: "100%" }} loading="lazy"/>
                                             </div>
                                         </div>
                                     </Col>

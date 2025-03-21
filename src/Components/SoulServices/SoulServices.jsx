@@ -98,22 +98,22 @@ const SoulServices = () => {
                             </div>
                         </div>
                         <div className="OurServicesContainer">
-                            <div className="sliteSectionLikePadding" style={{paddingBottom:"0px"}}>
+                            <div className="sliteSectionLikePadding" style={{ paddingBottom: "0px" }}>
                                 <SectionHeading text="Soulfinspire Provides" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
-                                <div className="PaddingAdjustHeadingContainer" style={{paddingBottom:"0px"}}>
+                                <div className="PaddingAdjustHeadingContainer" style={{ paddingBottom: "0px" }}>
                                     {ServicesCards.map((item, index) => (
                                         <Row key={index} id={item.title.replace(/\s+/g, "").toLowerCase()}>
                                             <Col lg={24} className="OurServicesCardsContainer" data-aos="fade-up"
                                                 data-aos-duration="800" data-aos-delay={index * 200}>
                                                 <div>
                                                     <div className="OverlayImage">
-                                                        <img src={item.backgroundImage} alt="" />
+                                                        <img src={item.backgroundImage} alt="" loading="lazy"/>
                                                     </div>
                                                     <div className="ContentContainerOurServices">
                                                         <div>
                                                             <h2 style={{ textTransform: "uppercase" }}>{item.title}</h2>
                                                             <br />
-                                                        {item.content}
+                                                            {item.content}
                                                         </div>
                                                     </div>
                                                 </div>
