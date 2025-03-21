@@ -125,7 +125,7 @@ const AboutHome = () => {
                                     <Row>
                                         {CardsData.map((item, index) => (
                                             <Col lg={8} data-aos="fade-up"
-                                                data-aos-duration="1000" data-aos-delay={index * 200}>
+                                                data-aos-duration="1000" data-aos-delay={index * 200} key={index}>
                                                 <div>
                                                     <div>
                                                         <span>0<b>{index + 1}</b></span>

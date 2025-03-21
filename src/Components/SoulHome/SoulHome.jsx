@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./SoulHome.css";
 import { Row, Col } from "antd";
 // Import Swiper React components
@@ -9,12 +9,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import useIntersectionAnimation from "./useIntersectionAnimation";
 // import required modules
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 
 const SoulHome = () => {
     const [scrollY, setScrollY] = useState(0);
+    const containerRef = useRef(null);
 
+    // Use our custom hook to add the "animate" class after a delay when visible
+    useIntersectionAnimation(containerRef, 100, 0.5, "animate");
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -99,7 +103,12 @@ const SoulHome = () => {
                 </div>
 
                 <div className="HomePageImageContainer">
-                    <img src="/Images/HomePageGrowthBack.jpg" alt="" style={{width:"100%"}}/>
+                    <div className="AnimatedSlideWhiteLayerAnimation"ref={containerRef}>
+                        <div className="AnimatedWhiteLayer">
+
+                        </div>
+                        <img src="/Images/IllustrationImages/GraphImage.svg" alt="" style={{ width: "100%" }} />
+                    </div>
                     {/* <div>
                         <Swiper
                             spaceBetween={30}

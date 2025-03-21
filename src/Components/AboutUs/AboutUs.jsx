@@ -83,6 +83,8 @@ const AboutUs = () => {
                                             data-aos-duration="2000" data-aos-delay="200">
                                             Discover Our <span>Vision</span>, Trust Our <span>Expertise</span>.
                                         </h1>
+                                        {/* <br /> */}
+                                        {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ullam voluptatem sequi mollitia reprehenderit blanditiis, exercitationem nobis, aliquam amet ut iure nisi soluta, reiciendis cumque hic laboriosam ea totam enim.</p> */}
                                     </div>
                                 </Col>
                                 {/* <Col lg={10}>

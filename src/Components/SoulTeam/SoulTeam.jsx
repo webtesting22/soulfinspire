@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./SoulTeam.css"
 import { Row, Col } from "antd";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import useIntersectionAnimation from "../SoulHome/useIntersectionAnimation";
 const SoulTeam = () => {
+    const containerRef = useRef(null);
 
+    // Use our custom hook to add the "animate" class after a delay when visible
+    useIntersectionAnimation(containerRef, 100, 0.5, "animate");
     const SoulTeamInfo = [
         {
             image: "/Images/FounderImage.webp",
@@ -37,8 +41,11 @@ const SoulTeam = () => {
                                 <Row>
                                     <Col lg={12}>
                                         <div className="FounderImageContainer">
-                                            <div style={{height:"100%"}}>
-                                                <img src={item.image} alt="" />
+                                            <div className="AnimatedSlideWhiteLayerAnimation" ref={containerRef}>
+                                                <div className="AnimatedWhiteLayer">
+
+                                                </div>
+                                                <img src={item.image} alt="" style={{ width: "100%" }} />
                                             </div>
                                         </div>
                                     </Col>

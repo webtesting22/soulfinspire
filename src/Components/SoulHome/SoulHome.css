@@ -37,20 +37,24 @@
 #SoulHome .SectionContainer {
     height: 80vh;
 }
-#HomePageRow{
+
+#HomePageRow {
     height: 100%;
 }
-#HomePageRow .ant-col:first-child>div{
+
+#HomePageRow .ant-col:first-child>div {
     height: 100%;
     display: flex;
     align-items: center;
 }
-#HomePageRow .ant-col:first-child{
+
+#HomePageRow .ant-col:first-child {
     height: 100%;
     display: flex;
     align-items: center;
     padding-right: 4rem;
 }
+
 #HomePageRow .ant-col:last-child>div {
     display: flex;
     justify-content: center;
@@ -58,19 +62,61 @@
     height: 100%;
     width: 100%;
 }
-#HomePageRow .ant-col:last-child>div div{
+
+#HomePageRow .ant-col:last-child>div div {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+.AnimatedSlideWhiteLayerAnimation {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Initially, the white layer simply covers the container */
+  .AnimatedWhiteLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Or any desired color */
+    transform: translateX(0);
+    /* No animation here initially */
+  }
+  
+  /* When the parent container gets the "animate" class, trigger the slide animation */
+  .AnimatedSlideWhiteLayerAnimation.animate .AnimatedWhiteLayer {
+    animation: slideOnce 1s ease-in-out forwards;
+  }
+  
+  /* Slide the layer from left (0) to completely off to the right (100%) */
+  @keyframes slideOnce {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+
 @keyframes smoothFloat {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(20px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-#HomePageRow .ant-col:last-child > div img {
+#HomePageRow .ant-col:last-child>div img {
     width: 70%;
     animation: smoothFloat 2s ease-in-out infinite;
 }
@@ -79,22 +125,27 @@
     #HomePageRow .ant-col:last-child {
         margin-top: 40px;
     }
-    #HomePageRow .ant-col:last-child > div img {
+
+    #HomePageRow .ant-col:last-child>div img {
         width: 80%;
         animation: smoothFloat 2s ease-in-out infinite;
     }
-    #HomePageRow .ant-col{
+
+    #HomePageRow .ant-col {
         width: 100%;
     }
-    #HomePageRow{
+
+    #HomePageRow {
         height: unset;
     }
-    #HomePageRow .ant-col:first-child{
+
+    #HomePageRow .ant-col:first-child {
         height: 100%;
         display: flex;
         align-items: center;
         padding-right: 0rem;
     }
+
     #HomepageContainerPaddingAdjust {
         padding-top: 0rem;
     }

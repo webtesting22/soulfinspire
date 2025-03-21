@@ -31,7 +31,7 @@ const Footer = () => {
                                         <h2>Links</h2>
                                         <ul>
                                             {NavigationLinks.map((item, index) => (
-                                                <li>{item.link}</li>
+                                                <li key={index}>{item.link}</li>
                                             ))}
                                         </ul>
                                     </div>

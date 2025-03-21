@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import { Row, Col } from "antd";
 import "./MainPrinciples.css"
+import useIntersectionAnimation from "../SoulHome/useIntersectionAnimation";
 const MainPrinciples = () => {
+    const containerRef = useRef(null);
+
+    // Use our custom hook to add the "animate" class after a delay when visible
+    useIntersectionAnimation(containerRef, 100, 0.5, "animate");
     const CardsData = [
         {
             title: "Detailed market analysis for a smoother investment journey",
@@ -57,8 +62,12 @@ const MainPrinciples = () => {
                                 </Col>
                                 <Col lg={12}>
                                     <div className="MainPrinciplesContainerImages">
-                                        <div>
-                                            <img src="https://images.unsplash.com/photo-1507964835371-fa305b71ab8b?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+                                        <div className="AnimatedSlideWhiteLayerAnimation" ref={containerRef}>
+                                            <div className="AnimatedWhiteLayer">
+
+                                            </div>
+                                            <img src="/Images/MainPrinciples.webp" alt="" />
                                         </div>
                                     </div>
                                 </Col>

@@ -99,7 +99,7 @@ const SoulNavigation = () => {
                             placement="right"
                             closable
                             onClose={() => setDrawerVisible(false)}
-                            visible={drawerVisible}
+                            open={drawerVisible}
                         >
                             <Collapse accordion>
                                 {NavigationLinks.map((item, index) => (

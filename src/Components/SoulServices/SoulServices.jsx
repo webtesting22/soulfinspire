@@ -113,7 +113,7 @@ const SoulServices = () => {
                                                         <div>
                                                             <h2 style={{ textTransform: "uppercase" }}>{item.title}</h2>
                                                             <br />
-                                                            <p>{item.content}</p>
+                                                        {item.content}
                                                         </div>
                                                     </div>
                                                 </div>

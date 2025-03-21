@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+import useIntersectionAnimation from "../SoulHome/useIntersectionAnimation";
 
 const SoulTestimonial = () => {
     const swiperRef = useRef(null);
@@ -17,7 +18,10 @@ const SoulTestimonial = () => {
     const countRef = useRef(null);
     const [count, setCount] = useState(0);
     const targetNumber = 98;
+    const containerRef = useRef(null);
 
+    // Use our custom hook to add the "animate" class after a delay when visible
+    useIntersectionAnimation(containerRef, 100, 0.5, "animate");
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -214,10 +218,12 @@ const SoulTestimonial = () => {
                                             <p>{count}%</p>
                                             <p>Client Satisfaction Rate</p>
                                         </div>
-                                        <img
-                                            src="https://cdn.prod.website-files.com/67765ad592aee8ab80237e9b/677df7303175761c2bfd1181_review-img.jpg"
-                                            alt=""
-                                        />
+                                        <div className="AnimatedSlideWhiteLayerAnimation" ref={containerRef}>
+                                            <div className="AnimatedWhiteLayer">
+
+                                            </div>
+                                            <img src="https://cdn.prod.website-files.com/67765ad592aee8ab80237e9b/677df7303175761c2bfd1181_review-img.jpg" alt="" style={{ width: "100%" }} />
+                                        </div>
                                     </div>
                                 </div>
                             </Col>

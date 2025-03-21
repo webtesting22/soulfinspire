@@ -142,6 +142,11 @@ h6 {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+.AnimatedSlideWhiteLayerAnimation {
+  overflow: hidden;
+  position: relative;
+}
+
 @media (min-width:1500px) and (max-width:4000px) {
   .MaxWidthContainer {
     width: 80% !important;
@@ -166,5 +171,5 @@ h6 {
   .sliteSectionLikePadding {
     padding: 2rem 0rem;
   }
-  
+
 }
