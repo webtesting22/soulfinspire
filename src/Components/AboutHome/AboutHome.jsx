@@ -59,20 +59,20 @@ const AboutHome = () => {
         };
     }, []);
 
-    const CardsData = [
-        {
-            title: "Detailed market analysis for a smoother investment journey",
-            tagline: "Our thorough research based on different markets, helps choose right business returns"
-        },
-        {
-            title: "Expert assistance at fingertips to make your future better",
-            tagline: "Our Expert advice helps you make tax efficient optimized  decisions"
-        },
-        {
-            title: "Customized financial solutions for a well-built monetary growth",
-            tagline: "Understanding your financial picture and managing  investments with risk tolerance and time horizon"
-        }
-    ]
+    // const CardsData = [
+    //     {
+    //         title: "Detailed market analysis for a smoother investment journey",
+    //         tagline: "Our thorough research based on different markets, helps choose right business returns"
+    //     },
+    //     {
+    //         title: "Expert assistance at fingertips to make your future better",
+    //         tagline: "Our Expert advice helps you make tax efficient optimized  decisions"
+    //     },
+    //     {
+    //         title: "Customized financial solutions for a well-built monetary growth",
+    //         tagline: "Understanding your financial picture and managing  investments with risk tolerance and time horizon"
+    //     }
+    // ]
     return (
         <>
             <section id="AboutHomeComponent">
@@ -88,7 +88,7 @@ const AboutHome = () => {
                                     <div>
                                         <div>
                                             <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
-                                                data-aos-duration="1200">At Innovest, we believe in <span>unlocking</span> potential.</h1>
+                                                data-aos-duration="1100">At Innovest, we believe in <span>unlocking</span> potential.</h1>
                                             <br />
                                             <br />
                                             <p data-aos="fade-up"
@@ -118,7 +118,7 @@ const AboutHome = () => {
                                 </Col>
                             </Row>
                         </div>
-                        <div className="AboutusCardsContainer PaddingAdjustHeadingContainer" style={{paddingBottom:"0px"}}>
+                        {/* <div className="AboutusCardsContainer PaddingAdjustHeadingContainer" style={{paddingBottom:"0px"}}>
 
                             <div >
                                 <div>
@@ -140,7 +140,7 @@ const AboutHome = () => {
                                     </Row>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* <div ref={textRef}>
                             <div className="ScrollingText LeftToRight" style={{ transform: `translateX(${scrollX}px)` }}>
                                 {ScrollBleWords.slice(0, 4).map((word, index) => (

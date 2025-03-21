@@ -55,7 +55,7 @@ const AboutUs = () => {
                     }
                 });
             },
-            { threshold: 0.5 } // Trigger animation when 50% visible
+            { threshold: 0.1 } // Trigger animation when 50% visible
         );
 
         countersRef.current.forEach((el, index) => {

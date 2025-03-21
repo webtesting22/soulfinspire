@@ -45,6 +45,21 @@ const AttachBackHome = () => {
             }
         };
     }, []);
+
+    const CardsData = [
+        {
+            title: "Detailed market analysis for a smoother investment journey",
+            tagline: "Our thorough research based on different markets, helps choose right business returns"
+        },
+        {
+            title: "Expert assistance at fingertips to make your future better",
+            tagline: "Our Expert advice helps you make tax efficient optimized  decisions"
+        },
+        {
+            title: "Customized financial solutions for a well-built monetary growth",
+            tagline: "Understanding your financial picture and managing  investments with risk tolerance and time horizon"
+        }
+    ]
     return (
         <>
             <section ref={sectionRef}>
@@ -74,6 +89,34 @@ const AttachBackHome = () => {
                                     <div className='SwiperReadMoreBtnContainer' >
                                         <button>Let's Get You Started <IoArrowForward /></button>
                                     </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div className=" sectionContainerForSidePadding">
+                    <div className="MaxWidthContainer sliteSectionLikePadding">
+                        <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
+
+                            <div >
+                                <div>
+                                    <Row>
+                                        {CardsData.map((item, index) => (
+                                            <Col lg={8} data-aos="fade-up"
+                                                data-aos-duration="1000" data-aos-delay={index * 200} key={index}>
+                                                <div>
+                                                    <div>
+                                                        <span>0<b>{index + 1}</b></span>
+                                                        <br /><br /><br />
+                                                        <h2>{item.title}</h2>
+                                                        <br />
+                                                        <p>{item.tagline}</p>
+                                                    </div>
+                                                </div>
+                                            </Col>
+                                        ))}
+                                    </Row>
                                 </div>
                             </div>
                         </div>

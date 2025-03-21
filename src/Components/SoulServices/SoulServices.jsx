@@ -123,6 +123,7 @@ const SoulServices = () => {
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>

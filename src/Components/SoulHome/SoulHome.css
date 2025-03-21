@@ -36,6 +36,7 @@
 
 #SoulHome .SectionContainer {
     height: 80vh;
+    padding-bottom: 0px;
 }
 
 #HomePageRow {

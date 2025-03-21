@@ -9,7 +9,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 import { IoArrowForward } from "react-icons/io5";
-
+import { Row,Col } from 'antd';
 const ServicesHome = () => {
     const swiperRef = useRef(null);
 
@@ -67,6 +67,7 @@ const ServicesHome = () => {
             swiperRef.current.slideNext();
         }
     };
+    
     return (
         <>
             <section>
@@ -134,6 +135,7 @@ const ServicesHome = () => {
                                 </Swiper>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>
