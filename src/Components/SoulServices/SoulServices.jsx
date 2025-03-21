@@ -98,9 +98,9 @@ const SoulServices = () => {
                             </div>
                         </div>
                         <div className="OurServicesContainer">
-                            <div className="sliteSectionLikePadding">
+                            <div className="sliteSectionLikePadding" style={{paddingBottom:"0px"}}>
                                 <SectionHeading text="Soulfinspire Provides" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
-                                <div className="PaddingAdjustHeadingContainer">
+                                <div className="PaddingAdjustHeadingContainer" style={{paddingBottom:"0px"}}>
                                     {ServicesCards.map((item, index) => (
                                         <Row key={index} id={item.title.replace(/\s+/g, "").toLowerCase()}>
                                             <Col lg={24} className="OurServicesCardsContainer" data-aos="fade-up"

@@ -103,7 +103,7 @@ const SoulHome = () => {
                 </div>
 
                 <div className="HomePageImageContainer">
-                    <div className="AnimatedSlideWhiteLayerAnimation"ref={containerRef}>
+                    <div className="AnimatedSlideWhiteLayerAnimation" ref={containerRef}>
                         <div className="AnimatedWhiteLayer">
 
                         </div>
