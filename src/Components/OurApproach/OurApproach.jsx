@@ -14,6 +14,7 @@ const OurApproach = () => {
         },
         {
             title: "Create a Custom Roadmap",
+            image:"/Images/OurApprochIcons/CreateaCustomRoadmap.png",
             content: <>
                 With a clear understanding of your needs, we craft a personalized investment strategy. This strategy includes optimum asset allocation, careful selection of suitable investment products, and a detailed investment roadmap. Every aspect of the strategy is tailored to meet your specific objectives, ensuring a focused and individualized approach.
             </>

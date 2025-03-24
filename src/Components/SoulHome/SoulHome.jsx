@@ -84,7 +84,7 @@ const SoulHome = () => {
                             <Col lg={12}>
                                 <div>
                                     <div>
-                                        <img src="/Images/IllustrationImages/HomePageStockImage.svg" alt="" loading="lazy"/>
+                                        <img src="/Images/IllustrationImages/HomePageStockImage.svg" alt="" loading="lazy" />
                                     </div>
                                 </div>
                                 {/* <div>
@@ -102,12 +102,13 @@ const SoulHome = () => {
                     </div>
                 </div>
 
+                <br />
                 <div className="HomePageImageContainer">
-                    <div className="AnimatedSlideWhiteLayerAnimation" ref={containerRef}>
+                    <div className="AnimatedSlideWhiteLayerAnimation" ref={containerRef} >
                         <div className="AnimatedWhiteLayer">
 
                         </div>
-                        <img src="/Images/IllustrationImages/GraphImage.svg" alt="" style={{ width: "100%" }} loading="lazy"/>
+                        <img src="/Images/IllustrationImages/HomePageIllustratorGraph1.png" alt="" style={{ width: "100%" }} loading="lazy" />
                     </div>
                     {/* <div>
                         <Swiper

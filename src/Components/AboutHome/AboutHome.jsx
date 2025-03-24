@@ -77,8 +77,8 @@ const AboutHome = () => {
         <>
             <section id="AboutHomeComponent">
                 <div className=" sectionContainerForSidePadding">
-                    <div className="MaxWidthContainer sliteSectionLikePadding">
-                        <SectionHeading text="About SoulFinspire" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
+                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{paddingTop:"10px",paddingBottom:"0px"}}>
+                        {/* <SectionHeading text="About SoulFinspire" valueOfBorder="1px solid black" color="black" beforeBgColor="black" /> */}
                         {/* <div>
                             <h1 className="PrimaryHeadingStyle" style={{ color: "white" }}>At Innovest, we are committed to fueling the <span className="ColorChangeSpan">growth</span> and <span className="ColorChangeSpan">innovation</span> of visionary <span className="ColorChangeSpan">startups</span> and high-potential <span className="ColorChangeSpan">companies</span>.</h1>
                         </div> */}
@@ -109,7 +109,7 @@ const AboutHome = () => {
                                         >
                                             <img
                                                 style={{ width: "100%" }}
-                                                src="/Images/AboutusGraph3.jpg"
+                                                src="/Images/IllustrationImages/HomePageIllustratorboy.png"
                                                 alt=""
                                                 loading="lazy"
                                             />

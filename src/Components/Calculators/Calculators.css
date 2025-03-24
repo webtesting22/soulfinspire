@@ -29,13 +29,9 @@
     padding: 8px 10px !important;
 }
 
-/* .AllComponentsContainer {
-    padding: 0px 20px;
-} */
-
 .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer,
-.AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer {
-    /* margin-bottom: 20px; */
+.AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer,
+.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer {
     border-bottom: 1px solid #c5c5c5;
     padding: 20px 20px;
     border-left: 1px solid #c5c5c5;
@@ -43,19 +39,22 @@
 }
 
 .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div,
-.AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer>div {
+.AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer>div,
+.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer>div {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
 .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div .MuiTextField-root,
-.AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer>div .MuiTextField-root {
+.AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer>div .MuiTextField-root,
+.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer>div .MuiTextField-root {
     width: 20%;
 }
 
 .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .CalculateBtn,
-.AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .CalculateBtn {
+.AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .CalculateBtn,
+.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .CalculateBtn {
     max-width: 200px;
 }
 
@@ -83,16 +82,18 @@
     padding: 10px 30px;
 }
 
-.ant-tabs-ink-bar{
+.ant-tabs-ink-bar {
     display: none !important;
 }
-@media (max-width:900px) {
 
+@media (max-width:900px) {
     .ChartsContainer .ant-row .ant-col {
         padding: 10px 10px;
     }
 
-    .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div {
+    .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div,
+    .AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer>div,
+    .AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer>div {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -100,7 +101,9 @@
         margin-top: 20px;
     }
 
-    .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div .MuiTextField-root {
+    .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div .MuiTextField-root,
+    .AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer>div .MuiTextField-root,
+    .AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer>div .MuiTextField-root {
         width: 100%;
     }
 
