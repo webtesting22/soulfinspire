@@ -69,7 +69,8 @@ const AwardsandRecognitions = () => {
                                             <div>
                                                 <Row>
                                                     {AwardsData.map((item, index) => (
-                                                        <Col key={index} lg={8} md={12}>
+                                                        <Col key={index} lg={8} md={12} data-aos="fade-up"
+                                                        data-aos-duration="800" data-aos-delay={index * 200}>
                                                             <Link to={item.link} target="_blank">
                                                             <div>
                                                                 <div className="AwardsImageCard">
