@@ -1,56 +1,50 @@
 import React, { useState } from "react";
 import { Slider, TextField, Button, Box, Typography } from "@mui/material";
-import { Pie } from "react-chartjs-2";
+import { Bar, Pie } from "react-chartjs-2";
 import { Row, Col } from "antd";
-import {
-    Chart as ChartJS,
-    LineElement,
-    PointElement,
-    LinearScale,
-    CategoryScale,
-    Title,
-    Tooltip,
-    Legend
-} from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement, LineController } from "chart.js";
 
-ChartJS.register(
-    LineElement,
-    PointElement,
-    LinearScale,
-    CategoryScale,
-    Title,
-    Tooltip,
-    Legend
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, LineController);
+
 const marksAmount = [
-    { value: 0, label: "0" },
-    { value: 10000000, label: "1Cr" },
-    { value: 50000000, label: "5Cr" },
-    { value: 100000000, label: "10Cr" },
+    { value: 1000, label: "1K" },
+    { value: 25000, label: "25K" },
+    { value: 50000, label: "50K" },
+    { value: 75000, label: "75K" },
+    { value: 100000, label: "1L" },
+    { value: 500000, label: "5L" },
+    { value: 1000000, label: "10L" },
 ];
 
 const marksDuration = [
-    { value: 1, label: "1" },
-    { value: 100, label: "100" },
-    { value: 300, label: "300" },
-    { value: 600, label: "600" },
+    { value: 1, label: "1 Year" },
+    { value: 10, label: "10 Years" },
+    { value: 20, label: "20 Years" },
+    { value: 30, label: "30 Years" },
+    { value: 40, label: "40 Years" },
 ];
 
 const marksReturn = [
     { value: 1, label: "1%" },
+    { value: 5, label: "5%" },
+    { value: 10, label: "10%" },
+    { value: 15, label: "15%" },
     { value: 20, label: "20%" },
-    { value: 50, label: "50%" },
-    { value: 100, label: "100%" },
 ];
 
-const LumpSumCalculator = () => {
+const LumpsumCalculator = () => {
     const [investmentAmount, setInvestmentAmount] = useState(1000000);
-    const [duration, setDuration] = useState(600);
+    const [lumpsumAmount, setLumpsumAmount] = useState(100000);
+    const [duration, setDuration] = useState(10);
+    const [returnRate, setReturnRate] = useState(12);
     const [growthRate, setGrowthRate] = useState(10);
-
     const [totalInvested, setTotalInvested] = useState(0);
     const [totalGrowth, setTotalGrowth] = useState(0);
     const [futureValue, setFutureValue] = useState(0);
+    const years = Array.from({ length: duration }, (_, i) => new Date().getFullYear() + i);
+    const principalData = years.map((_, i) => totalInvested);
+    const growthData = years.map((_, i) => (totalGrowth * (i + 1)) / duration);
+    const projectedReturns = years.map((_, i) => (futureValue * (i + 1)) / duration);
 
     const calculateLumpSum = () => {
         const P = investmentAmount;
@@ -75,19 +69,78 @@ const LumpSumCalculator = () => {
                 hoverBackgroundColor: ["#1D402D", "#FF9606"],
             },
         ],
+
     };
-
-
     const chartOptions = {
         responsive: true,
         plugins: {
             legend: {
                 display: true,
-                position: "bottom", // 👈 Set legend position to bottom
+                position: "bottom",
             },
-        }
-    }
-    
+        },
+    };
+    const investmentChartData = {
+        labels: years,
+        datasets: [
+            {
+                label: "Principal Amount",
+                data: principalData,
+                backgroundColor: "#1D402D",
+                borderRadius: 5,
+            },
+            {
+                label: "Growth Amount",
+                data: growthData,
+                backgroundColor: "#FF9606",
+                borderRadius: 5,
+            },
+            {
+                label: "Projected Returns",
+                data: projectedReturns,
+                type: "line",
+                borderColor: "#FF9606",
+                backgroundColor: "#1D402D",
+                pointRadius: 5,
+                borderWidth: 2,
+            },
+        ],
+    };
+
+    const investmentChartOptions = {
+        responsive: true,
+        scales: {
+            x: { title: { display: true, text: "Years" } },
+            y: {
+                title: { display: true, text: "Projected Returns" },
+                ticks: {
+                    callback: function (value) {
+                        if (value >= 10000000) {
+                            return "₹" + (value / 10000000).toFixed(1) + "Cr";
+                        } else if (value >= 100000) {
+                            return "₹" + (value / 100000).toFixed(1) + "L";
+                        } else {
+                            return "₹" + value;
+                        }
+                    },
+                },
+            },
+        },
+        plugins: {
+            legend: { display: true, position: "bottom" },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        const dataset = tooltipItem.dataset;
+                        const dataIndex = tooltipItem.dataIndex;
+                        const value = dataset.data[dataIndex];
+                        const formattedValue = new Intl.NumberFormat("en-IN").format(value);
+                        return `${dataset.label}: ₹${formattedValue}`;
+                    },
+                },
+            },
+        },
+    };
     return (
         <div className="LumpSumCalculator">
             <Row>
@@ -221,29 +274,30 @@ const LumpSumCalculator = () => {
                             </Box>
                         </Box>
                     </div>
-
-                    <br /><br />
+                </Col>
+                <Col lg={24} md={24} style={{ width: "100%" }}>
                     <div className="ChartsContainer">
                         <Row>
                             <Col lg={8} style={{ width: "100%" }}>
                                 <Box sx={{ mt: 3, textAlign: "center" }}>
-                                    <h2> Lumpsum Investment Breakup
-                                    </h2>
+                                    <h2>Investment Breakup</h2>
                                     <br />
-                                    <Pie data={chartData} options={chartOptions}/>
+                                    <Pie data={chartData} options={chartOptions} />
                                 </Box>
                             </Col>
                             <Col lg={16}>
-
+                                <Box sx={{ mt: 3, textAlign: "center" }}>
+                                    <h2>Investment Projection</h2>
+                                    <br />
+                                    <Bar data={investmentChartData} options={investmentChartOptions} />
+                                </Box>
                             </Col>
                         </Row>
                     </div>
-
                 </Col>
-
             </Row>
-        </div >
+        </div>
     );
 };
 
-export default LumpSumCalculator;
+export default LumpsumCalculator;

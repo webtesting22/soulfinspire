@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Slider, TextField, Button, Box, Typography } from "@mui/material";
 import { Bar, Pie } from "react-chartjs-2";
-import { Row,Col } from "antd";
+import { Row, Col } from "antd";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement, LineController } from "chart.js";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, LineController);
@@ -153,6 +153,7 @@ const SIPCalculator = () => {
         },
     };
 
+    
 
     return (
         <div className="SIPCalculatorContainer">
