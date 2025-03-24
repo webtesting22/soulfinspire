@@ -4,6 +4,7 @@ import AboutHome from "../../Components/AboutHome/AboutHome";
 import ServicesHome from "../../Components/ServicesHome/ServicesHome";
 import AttachBackHome from "../../Components/AttachBackHome/AttachBackHome";
 import SoulTestimonial from "../../Components/SoulTestimonial/SoulTestimonial";
+import AwardsandRecognitions from "../../Components/AwardsandRecognitions/AwardsandRecognitions";
 
 const HomePageRoutes = () => {
     return (
@@ -13,6 +14,7 @@ const HomePageRoutes = () => {
             <ServicesHome />
             <AttachBackHome />
             <SoulTestimonial/>
+            <AwardsandRecognitions/>
         </>
     )
 }

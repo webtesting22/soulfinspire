@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <>
             <section id="FooterContainer">
-                <div className="sectionContainerForSidePadding" >
+                <div className="sectionContainerForSidePadding" style={{backgroundColor:"white"}}>
                     <div className="MaxWidthContainer sliteSectionLikePadding" >
                         <Row>
                             <Col lg={14}>
