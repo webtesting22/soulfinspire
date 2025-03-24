@@ -74,6 +74,10 @@
     width: 70%;
 }
 
+#ServicesCardAdjust .ant-col:nth-child(odd){
+    padding-right: 40px;
+}
+
 @media (max-width:900px){
     .ContentContainerOurServices>div {
         width: 100%;

@@ -101,13 +101,14 @@ const SoulServices = () => {
                             <div className="sliteSectionLikePadding" style={{ paddingBottom: "0px" }}>
                                 <SectionHeading text="Soulfinspire Provides" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
                                 <div className="PaddingAdjustHeadingContainer" style={{ paddingBottom: "0px" }}>
-                                    {ServicesCards.map((item, index) => (
-                                        <Row key={index} id={item.title.replace(/\s+/g, "").toLowerCase()}>
-                                            <Col lg={24} className="OurServicesCardsContainer" data-aos="fade-up"
+                                    <Row id="ServicesCardAdjust">
+                                        {ServicesCards.map((item, index) => (
+
+                                            <Col lg={12} key={index} id={item.title.replace(/\s+/g, "").toLowerCase()}  data-aos="fade-up"
                                                 data-aos-duration="800" data-aos-delay={index * 200}>
-                                                <div>
+                                                <div className="OurServicesCardsContainer">
                                                     <div className="OverlayImage">
-                                                        <img src={item.backgroundImage} alt="" loading="lazy"/>
+                                                        <img src={item.backgroundImage} alt="" loading="lazy" />
                                                     </div>
                                                     <div className="ContentContainerOurServices">
                                                         <div>
@@ -118,12 +119,13 @@ const SoulServices = () => {
                                                     </div>
                                                 </div>
                                             </Col>
-                                        </Row>
-                                    ))}
+
+                                        ))}
+                                    </Row>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
