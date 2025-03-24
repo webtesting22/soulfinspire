@@ -34,33 +34,37 @@
     display: flex;
     gap: 20px;
 }
-.SocialMediaLinks ul a{
+
+.SocialMediaLinks ul a {
     display: flex;
     align-items: center;
 }
 
-.SocialMediaLinks ul li svg{
+.SocialMediaLinks ul li svg {
     background-color: #1E402D;
     color: white;
     padding: 7px;
     border-radius: 4px;
 }
-#FooterContainer .sliteSectionLikePadding{
+
+#FooterContainer .sliteSectionLikePadding {
     padding-bottom: 1rem;
 }
 
-@media (max-width:900px){
-    .FooterLogoContainer{
+@media (max-width:900px) {
+    .FooterLogoContainer {
         margin-bottom: 20px;
     }
-    .LinksContainerFooter{
+
+    .LinksContainerFooter {
         margin-bottom: 20px;
     }
+
     .CopyrightTextContainer {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         align-items: start;
+        gap: 10px;
     }
-    
 }

@@ -6,11 +6,29 @@
     /* padding-top: 3%; */
 }
 
+.NavigationLinksContainer {
+    display: flex;
+    align-items: center;
+}
+
 .NavigationFlexContainer .NavigationLinksContainer ul {
     display: flex;
     list-style: none;
     gap: 20px;
     margin: 0px;
+}
+
+.MobileNavContainer svg{
+    font-size: 20px;
+}
+.NavigationFlexContainer .NavigationLinksContainer button {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.PortfolioLoginBtn {
+    padding-left: 20px;
 }
 
 .WidthContainer {

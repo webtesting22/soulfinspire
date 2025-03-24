@@ -123,6 +123,12 @@
 }
 
 @media (max-width:900px) {
+
+#SoulHome .SectionContainer {
+    height: 90vh;
+    padding-bottom: 0px;
+}
+
     #HomePageRow .ant-col:last-child {
         margin-top: 40px;
     }

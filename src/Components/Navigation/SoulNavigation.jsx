@@ -4,6 +4,7 @@ import { Drawer, Collapse } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import "./SoulNavigation.css";
 import NavigationLinks from "./NavigationLinks";
+import { FaUser } from "react-icons/fa";
 
 const { Panel } = Collapse;
 
@@ -49,8 +50,8 @@ const SoulNavigation = () => {
                     >
                         <div className="WidthContainer">
                             <div className="SoulLogoContainer">
-                                <Link to="/">
-                                    <img src="/Images/SoulFinspireLogo.png" alt="Logo" loading="lazy"/>
+                                <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <img src="/Images/SoulFinspireLogo.png" alt="Logo" loading="lazy" />
                                 </Link>
                             </div>
                             <div className="NavigationLinksContainer">
@@ -73,6 +74,11 @@ const SoulNavigation = () => {
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="PortfolioLoginBtn">
+                                    <div className="PrimarybtnContainer">
+                                        <button style={{marginTop:"0px"}}><FaUser/>&nbsp; Portfolio Login</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,7 +95,7 @@ const SoulNavigation = () => {
                     <div className="MobileNavContainer">
                         <div className="MobileNavHeader">
                             <Link to="/">
-                                <img src="/Images/SoulFinspireLogo.png" alt="Logo" loading="lazy"/>
+                                <img src="/Images/SoulFinspireLogo.png" alt="Logo" loading="lazy" />
                             </Link>
                             <MenuOutlined className="MenuIcon" onClick={() => setDrawerVisible(true)} />
                         </div>
