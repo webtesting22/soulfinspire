@@ -77,17 +77,17 @@ const PerfectMatchMutualFundsCardsData = [
     {
         title: "Seasoned Investors",
         content: <>For those with a well-established investment portfolio, Mutual Funds offer diversified options, including conservative, moderate, and aggressive products. Whether it's short-term Debt Funds or more aggressive Mid Cap, Small Cap, or Thematic Funds, you can customize your investments via Systematic Investment Plans or Systematic Transfer Plans (STPs).</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         title: "Retirement Planning",
         content: <>Planning for retirement requires building a substantial corpus to maintain your lifestyle. Mutual Funds offer a range of products to help you create wealth during your working years and generate regular income post-retirement through Hybrid and Debt Funds with Systematic Withdrawal Plans (SWPs).</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         title: "Institutional Investors",
         content: <>Businesses and institutions can also benefit from Mutual Funds, with products designed for both short-term investments and long-term wealth creation. These solutions help manage cash flows efficiently and cater to the varied investment horizons of your organization.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
 ]
 
@@ -96,22 +96,22 @@ const InsuranceCards = [
     {
         title: "Families and Breadwinners",
         content: <>If you have financial dependents, a Term Life Insurance plan and a Family Floater Health Insurance plan with a Super Top-up are essential. These ensure that your family's financial future is protected in the event of your untimely demise or hospitalization, allowing them to maintain their standard of living even in your absence.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         title: "Individuals with Family History",
         content: <>For those with pre-existing health conditions or a family history of medical issues, Life and Health Insurance is vital. It covers hospitalization costs, medical treatments, and preventive care, reducing the financial burden during health emergencies.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         title: "Young Professionals",
         content: <>Starting early with Life and Health Insurance is advantageous, as premiums are generally lower when you are younger and healthier. This not only ensures long-term protection but also locks in affordable rates for the future.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         title: "Retirees",
         content: <>As medical expenses rise with age, Health Insurance becomes crucial for retirees. A robust Health Insurance plan ensures you receive the best care without depleting your savings, allowing you to enjoy your retirement without financial stress.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
 ]
 
@@ -119,12 +119,12 @@ const AlternativeInvestmentsCards = [
     {
         title: "Visionary Investors",
         content: <>If you have financial dependents, a Term Life Insurance plan and a Family Floater Health Insurance plan with a Super Top-up are essential. These ensure that your family's financial future is protected in the event of your untimely demise or hospitalization, allowing them to maintain their standard of living even in your absence.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         title: "Institutions and Family Offices",
         content: <>For those with pre-existing health conditions or a family history of medical issues, Life and Health Insurance is vital. It covers hospitalization costs, medical treatments, and preventive care, reducing the financial burden during health emergencies.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
 ]
 
@@ -137,17 +137,17 @@ const FixedIncomeCards = [
     {
         title: "Retirees",
         content: <>For those looking to secure post-retirement expenses, FDs and Bonds offer regular interest payouts, ensuring a stable income. These instruments help retirees avoid market volatility while focusing on capital protection.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         title: "Short-term Milestone Planners",
         content: <>Whether you're saving for a major purchase, funding education, or building an emergency fund, Fixed Deposits and Bonds offer the required safety and stability for short-term investment milestones.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         title: "Institutional Investors",
         content: <>Businesses and institutions seeking stable investment options can benefit from FDs and Bonds. These instruments provide assured returns and help efficiently manage cash flow, making them a reliable choice for organizational investments.</>,
-        img: ""
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
 ]
 
@@ -182,7 +182,6 @@ export const AnimatedWhyChooseUsCard = ({ WhyChooseUsCards }) => {
                                 </div>
                             </div>
                         </Col>
-
                     ))}
                 </Row>
             </div>

@@ -93,10 +93,11 @@
     #AnimatedWhyChooseUsCard .ant-row .ant-col:nth-child(even) {
         padding-left: 0px;
     }
-    
+
     #AnimatedWhyChooseUsCard .ant-row .ant-col:nth-child(odd) {
         padding-right: 0px;
     }
+
     .Animated3DCard {
         background-color: transparent;
         margin-bottom: 50px;
