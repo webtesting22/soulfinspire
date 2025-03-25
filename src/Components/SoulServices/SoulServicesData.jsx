@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
 import { Row, Col } from "antd";
-export const MutualFundCards = () => {
+
+
+//----------- This is a animated card common component to used every services inside
+export const AnimatedCards = ({ cardsData }) => {
     const cardRefs = useRef([]);
 
     useEffect(() => {
@@ -34,7 +37,7 @@ export const MutualFundCards = () => {
         // <div>
         <>
             <div>
-                {PerfectMatchMutualFundsCardsData.map((item, index) => (
+                {cardsData.map((item, index) => (
                     <Row>
                         <Col lg={24}>
                             <div key={index} className="Animated3DCard" ref={(el) => (cardRefs.current[index] = el)}>
@@ -56,11 +59,14 @@ export const MutualFundCards = () => {
                 ))}
             </div>
         </>
-        // </div>
     );
 };
 
 export { ServiceData };
+
+
+
+//----------- This is a animated card common component to used every services inside
 
 const PerfectMatchMutualFundsCardsData = [
     {
@@ -85,6 +91,70 @@ const PerfectMatchMutualFundsCardsData = [
     }
 ]
 
+
+const InsuranceCards = [
+    {
+        title: "Families and Breadwinners",
+        content: <>If you have financial dependents, a Term Life Insurance plan and a Family Floater Health Insurance plan with a Super Top-up are essential. These ensure that your family's financial future is protected in the event of your untimely demise or hospitalization, allowing them to maintain their standard of living even in your absence.</>,
+        img: ""
+    },
+    {
+        title: "Individuals with Family History",
+        content: <>For those with pre-existing health conditions or a family history of medical issues, Life and Health Insurance is vital. It covers hospitalization costs, medical treatments, and preventive care, reducing the financial burden during health emergencies.</>,
+        img: ""
+    },
+    {
+        title: "Young Professionals",
+        content: <>Starting early with Life and Health Insurance is advantageous, as premiums are generally lower when you are younger and healthier. This not only ensures long-term protection but also locks in affordable rates for the future.</>,
+        img: ""
+    },
+    {
+        title: "Retirees",
+        content: <>As medical expenses rise with age, Health Insurance becomes crucial for retirees. A robust Health Insurance plan ensures you receive the best care without depleting your savings, allowing you to enjoy your retirement without financial stress.</>,
+        img: ""
+    }
+]
+const AlternativeInvestmentsCards = [
+    {
+        title: "Visionary Investors",
+        content: <>If you have financial dependents, a Term Life Insurance plan and a Family Floater Health Insurance plan with a Super Top-up are essential. These ensure that your family's financial future is protected in the event of your untimely demise or hospitalization, allowing them to maintain their standard of living even in your absence.</>,
+        img: ""
+    },
+    {
+        title: "Institutions and Family Offices",
+        content: <>For those with pre-existing health conditions or a family history of medical issues, Life and Health Insurance is vital. It covers hospitalization costs, medical treatments, and preventive care, reducing the financial burden during health emergencies.</>,
+        img: ""
+    },
+]
+
+const FixedIncomeCards = [
+    {
+        title: "Conservative Investors",
+        content: <>If your priority is capital preservation and generating steady income, Fixed Deposits and Bonds are ideal. They provide predictable income with minimal volatility, making them suitable for those who prefer safety over high returns.</>,
+        img: "https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        title: "Retirees",
+        content: <>For those looking to secure post-retirement expenses, FDs and Bonds offer regular interest payouts, ensuring a stable income. These instruments help retirees avoid market volatility while focusing on capital protection.</>,
+        img: ""
+    },
+    {
+        title: "Short-term Milestone Planners",
+        content: <>Whether you're saving for a major purchase, funding education, or building an emergency fund, Fixed Deposits and Bonds offer the required safety and stability for short-term investment milestones.</>,
+        img: ""
+    },
+    {
+        title: "Institutional Investors",
+        content: <>Businesses and institutions seeking stable investment options can benefit from FDs and Bonds. These instruments provide assured returns and help efficiently manage cash flow, making them a reliable choice for organizational investments.</>,
+        img: ""
+    }
+]
+
+//----------- This is a animated card common component to used every services inside end--------------------
+
+
+
+
 const ServiceData = [
     {
         id: "mutual-funds",
@@ -96,7 +166,7 @@ const ServiceData = [
             <>
                 {/* <div>
                     <div> */}
-                <MutualFundCards />
+                <AnimatedCards cardsData={PerfectMatchMutualFundsCardsData} />
                 {/* </div>
                 </div> */}
             </>
@@ -109,8 +179,7 @@ const ServiceData = [
         backgroundImage: "/Images/SoulServicesBackgrounds/INSURANCE.jpg",
         description: (
             <>
-                <p>Providing Life and General Insurance solutions through state of the art online platform and App backed by Gennext Insurance Brokers Pvt. Ltd., an IRDA registered Insurance Broking Company. One can Select, Compare, Buy, Renew and Manage their policies online from anywhere through www.policyworld.com. Policy world has partnered with leading insurers to provide insurance solutions related to Life, Health, Personal Accident, Critical Illness, Travel, Car and Two wheeler. </p>
-                <p><b>For more information visit <Link to="https://www.policyworld.com" target="_blank">www.policyworld.com</Link></b></p>
+                <AnimatedCards cardsData={InsuranceCards} />
             </>
         )
     },
@@ -121,8 +190,7 @@ const ServiceData = [
         backgroundImage: "/Images/SoulServicesBackgrounds/TaxPlanning.jpg",
         description: (
             <>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora tenetur deleniti odit aut, possimus sit iste voluptas eum, similique magnam. Quasi repellendus sequi similique eius placeat praesentium architecto dignissimos?</p>
-                <p><b>For more information visit <Link to="https://www.policyworld.com" target="_blank">www.policyworld.com</Link></b></p>
+                <AnimatedCards cardsData={AlternativeInvestmentsCards} />
             </>
         )
     },
@@ -133,8 +201,7 @@ const ServiceData = [
         backgroundImage: "/Images/SoulServicesBackgrounds/FIXEDINCOME.jpg",
         description: (
             <>
-                <p>Fixed Income Products are offered to investors who need fixed and regular income and wish to diversify their portfolio. Through Fundzbazar.com we provide paperless Investment solution for Gsec, SDL, Fixed Deposits & Liquiloans.</p>
-                <p><b>For more information visit <Link to="https://www.fundzbazar.com" target="_blank">www.fundzbazar.com</Link></b></p>
+                <AnimatedCards cardsData={FixedIncomeCards} />
             </>
         )
     }
