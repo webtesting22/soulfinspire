@@ -1,0 +1,98 @@
+.SingleServicesMainGraphicImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.SingleServicesMainGraphicImage {
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#SingleServicePageTopHeroSection .ant-row .ant-col:nth-child(2)>div {
+    padding-left: 4rem !important;
+}
+
+#SingleServicePageTopHeroSection .ContentBottomImageStyle {
+    margin-top: 3rem;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#SingleServicePageTopHeroSection .ContentBottomImageStyle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Animated3DCard {
+    background-color: transparent;
+    margin-bottom: 50px;
+    transform: scale3d(1.1, 1.1, 1);
+    padding: 30px;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.Animated3DCard.shrinked {
+    transform: scale3d(1, 1, 1);
+    transform-style: preserve-3d;
+}
+
+.AnimatedInsideImageContainer {
+    width: 40%;
+    overflow: hidden;
+}
+
+.AnimatedInsideImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.AnimatedContentContainer {
+    width: 60%;
+    color: black;
+    padding-right: 4rem;
+}
+
+.AnimatedContentContainer .PrimaryHeadingStyle {
+    color: #1E402D;
+}
+
+.CountCards span {
+    font-size: 3rem;
+}
+
+@media (max-width:900px) {
+    .Animated3DCard {
+        background-color: transparent;
+        margin-bottom: 50px;
+        transform: scale3d(1.1, 1.1, 1);
+        padding: 20px;
+        transform-style: preserve-3d;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .AnimatedContentContainer {
+        width: 100%;
+        color: black;
+        padding-right: 0rem;
+    }
+
+    .AnimatedInsideImageContainer {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+}

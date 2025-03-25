@@ -7,6 +7,7 @@ import Footer from "../../Components/Footer/Footer";
 import WhatsAppButton from "../../Components/WhatsappBtn/WhatAppButton";
 import SoulServices from "../../Components/SoulServices/SoulServices";
 import Calculators from "../../Components/Calculators/Calculators";
+import SoulDynamicSingleService from "../../Components/SoulServices/SoulDynamicSingleService";
 const AllRoutes = () => {
     return (
         <>
@@ -17,6 +18,7 @@ const AllRoutes = () => {
                     <Route path="/" element={<HomePageRoutes />} />
                     <Route path="/about-us" element={<AboutUs />} />
                     <Route path="/soul-services" element={<SoulServices />} />
+                    <Route path="/soul-services/:serviceId" element={<SoulDynamicSingleService />} />
                     <Route path="/soul-calculators" element={<Calculators />} />
                 </Routes>
                 <Footer />

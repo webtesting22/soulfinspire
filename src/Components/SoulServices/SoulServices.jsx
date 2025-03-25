@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import "./SoulServices.css"
 import { Link, useLocation } from "react-router-dom";
+import { ServiceData } from "./SoulServicesData";
 const SoulServices = () => {
 
     const location = useLocation();
@@ -17,52 +18,7 @@ const SoulServices = () => {
             }
         }
     }, [location]);
-    const ServicesCards = [
-        {
-            title: "MUTUAL FUNDS",
-            backgroundImage: "/Images/SoulServicesBackgrounds/MUTUALFUNDS.jpg",
-            content: <>
-                <p>India’s 5th largest Mutual Fund distributor offering a wide range of Mutual Fund product & features like SIP, Trigger facility, Risk Profiling, Goal Planner, INSTAFUNDZ, Gold Accumulation Plan, Smart Combos and Asset Allocation Combos all under one place at www.fundzbazar.com. One can invest through App and Chat bot as well.</p>
-                <p><b>For more information visit <Link to="https://www.fundzbazar.com" target="_blank">www.fundzbazar.com</Link>
-                </b></p>
-            </>
-        },
-        {
-            title: "INSURANCE",
-            backgroundImage: "/Images/SoulServicesBackgrounds/INSURANCE.jpg",
-            content: <>
-                <p>Providing Life and General Insurance solutions through state of the art online platform and App backed by Gennext Insurance Brokers Pvt. Ltd., an IRDA registered Insurance Broking Company. One can Select, Compare, Buy, Renew and Manage their policies online from anywhere through www.policyworld.com. Policy world has partnered with leading insurers to provide insurance solutions related to Life, Health, Personal Accident, Critical Illness, Travel, Car and Two wheeler. </p>
-                <p><b>For more information visit <Link to="https://www.policyworld.com" target="_blank">www.policyworld.com</Link></b></p>
-            </>
-        },
-        {
-            title: "Tax Planning",
-            backgroundImage: "/Images/SoulServicesBackgrounds/TaxPlanning.jpg",
-            content: <>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora tenetur deleniti odit aut, possimus sit iste voluptas eum, similique magnam. Quasi repellendus sequi similique eius placeat praesentium architecto dignissimos?</p>
-                <p><b>For more information visit <Link to="https://www.policyworld.com" target="_blank">www.policyworld.com</Link></b></p>
-            </>
-        },
 
-        {
-            title: "Financial Planning",
-            backgroundImage: "/Images/SoulServicesBackgrounds/FinancialPlanning.jpg",
-            content: <>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, tempora tenetur deleniti odit aut, possimus sit iste voluptas eum, similique magnam. Quasi repellendus sequi similique eius placeat praesentium architecto dignissimos?</p>
-                <p><b>For more information visit <Link to="https://www.policyworld.com" target="_blank">www.policyworld.com</Link></b></p>
-            </>
-        },
-        {
-            title: "FIXED INCOME",
-            backgroundImage: "/Images/SoulServicesBackgrounds/FIXEDINCOME.jpg",
-            content: <>
-                <p>Fixed Income Products are offered to investors who need fixed and regular income and wish to diversify their portfolio. Through Fundzbazar.com we provide paperless Investment solution for Gsec, SDL, Fixed Deposits & Liquiloans.</p>
-                <p><b>For more information visit <Link to="https://www.fundzbazar.com" target="_blank">www.fundzbazar.com</Link></b></p>
-            </>
-        },
-
-
-    ]
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -102,9 +58,8 @@ const SoulServices = () => {
                                 <SectionHeading text="Soulfinspire Provides" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
                                 <div className="PaddingAdjustHeadingContainer" style={{ paddingBottom: "0px" }}>
                                     <Row id="ServicesCardAdjust">
-                                        {ServicesCards.map((item, index) => (
-
-                                            <Col lg={12} key={index} id={item.title.replace(/\s+/g, "").toLowerCase()}  data-aos="fade-up"
+                                        {ServiceData.map((item, index) => (
+                                            <Col lg={12} key={index} id={item.title.replace(/\s+/g, "").toLowerCase()} data-aos="fade-up"
                                                 data-aos-duration="800" data-aos-delay={index * 200}>
                                                 <div className="OurServicesCardsContainer">
                                                     <div className="OverlayImage">
@@ -113,10 +68,18 @@ const SoulServices = () => {
                                                     <div className="ContentContainerOurServices">
                                                         <div>
                                                             <h2 style={{ textTransform: "uppercase" }}>{item.title}</h2>
-                                                            <br />
-                                                            {item.content}
+                                                            {/* <br /> */}
+                                                            <p style={{ marginTop: "8px" }}>{item.tagline}</p>
+                                                            {/* <br /> */}
+                                                            <div className="PrimarybtnContainer" >
+                                                                <Link to={`/soul-services/${item.title.replace(/\s+/g, "-").toLowerCase()}`}>
+                                                                    <button className="ReadMoreButton" style={{ marginTop: "10px" }}>Read More</button>
+                                                                </Link>
+                                                            </div>
                                                         </div>
+
                                                     </div>
+
                                                 </div>
                                             </Col>
 

@@ -12,8 +12,7 @@ const NavigationLinks = [
         sublinks: [
             { link: "Mutual Funds", path: "/soul-services#mutualfunds" },
             { link: "Insurance", path: "/soul-services#insurance" },
-            { link: "Tax Planning", path: "/soul-services#taxplanning" },
-            { link: "Financial Planning", path: "/soul-services#financialplanning" },
+            { link: "Alternative Investments", path: "/soul-services#alternativeinvestments" },
             { link: "Fixed Income", path: "/soul-services#fixedincome" }
         ],
         path: "/soul-services"

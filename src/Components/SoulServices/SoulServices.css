@@ -9,9 +9,10 @@
     transition: .5s;
 }
 
-.OurServicesCardsContainer a{
+.OurServicesCardsContainer a {
     color: white;
 }
+
 .OurServicesCardsContainer:hover {
     transform: translateY(-10px);
     transition: .5s;
@@ -51,10 +52,7 @@
     width: 30%;
     height: 100%;
     background: linear-gradient(to right, rgba(30, 64, 45, 0.8), rgba(30, 64, 45, 0));
-    /* Fades to transparent */
-
     filter: blur(15px);
-    /* Adds blur effect */
     display: inline-block;
     top: 0;
     pointer-events: none;
@@ -74,11 +72,18 @@
     width: 70%;
 }
 
-#ServicesCardAdjust .ant-col:nth-child(odd){
+#ServicesCardAdjust .ant-col:nth-child(odd) {
     padding-right: 40px;
 }
 
-@media (max-width:900px){
+.ContentContainerOurServices .PrimarybtnContainer .ReadMoreButton {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media (max-width:900px) {
     .OurServicesCardsContainer {
         padding: 20px 0px;
         position: relative;
@@ -89,20 +94,20 @@
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         transition: .5s;
     }
-    
-    #ServicesCardAdjust .ant-col:nth-child(odd){
+
+    #ServicesCardAdjust .ant-col:nth-child(odd) {
         padding-right: 0px;
     }
+
     .ContentContainerOurServices>div {
         width: 100%;
     }
-    .ContentContainerOurServices > div p {
+
+    .ContentContainerOurServices>div p {
         width: 100%;
-        word-wrap: break-word; /* Ensures words break when necessary */
-        overflow-wrap: break-word; /* Alternative for better compatibility */
-        word-break: break-word; /* Helps break long words */
-        white-space: normal; /* Allows text to wrap normally */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
     }
-    
-    
 }

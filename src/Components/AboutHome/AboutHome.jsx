@@ -77,7 +77,7 @@ const AboutHome = () => {
         <>
             <section id="AboutHomeComponent">
                 <div className=" sectionContainerForSidePadding">
-                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{paddingTop:"10px",paddingBottom:"0px"}}>
+                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "10px", paddingBottom: "0px" }}>
                         {/* <SectionHeading text="About SoulFinspire" valueOfBorder="1px solid black" color="black" beforeBgColor="black" /> */}
                         {/* <div>
                             <h1 className="PrimaryHeadingStyle" style={{ color: "white" }}>At Innovest, we are committed to fueling the <span className="ColorChangeSpan">growth</span> and <span className="ColorChangeSpan">innovation</span> of visionary <span className="ColorChangeSpan">startups</span> and high-potential <span className="ColorChangeSpan">companies</span>.</h1>
