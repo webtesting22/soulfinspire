@@ -30,36 +30,6 @@ const SoulHome = () => {
         };
     }, []);
 
-    const CardsData = [
-        {
-            title: "Detailed market analysis for a smoother investment journey",
-            tagline: "Our thorough research based on different markets, helps choose right business returns"
-        },
-        {
-            title: "Expert assistance at fingertips to make your future better",
-            tagline: "Our Expert advice helps you make tax efficient optimized  decisions"
-        },
-        {
-            title: "Customized financial solutions for a well-built monetary growth",
-            tagline: "Understanding your financial picture and managing  investments with risk tolerance and time horizon"
-        }
-    ]
-
-
-    const CarousalImages = [
-        {
-            img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            img: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-            img: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        }
-    ]
     return (
         <>
             <section id="SoulHome">

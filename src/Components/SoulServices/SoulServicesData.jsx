@@ -114,6 +114,7 @@ const InsuranceCards = [
         img: ""
     }
 ]
+
 const AlternativeInvestmentsCards = [
     {
         title: "Visionary Investors",
@@ -155,6 +156,123 @@ const FixedIncomeCards = [
 
 
 
+//---------- why choose us dynamic component start
+
+import SectionHeading from "../SectionHeading/SectionHeading";
+export const AnimatedWhyChooseUsCard = ({ WhyChooseUsCards }) => {
+
+    return (
+        <>
+            <div id="AnimatedWhyChooseUsCard">
+                <Row>
+                    {WhyChooseUsCards.map((item, index) => (
+                        <Col lg={12} key={index}>
+                            <div>
+                                <div className="OurServicesCardsContainer">
+                                    <div className="OverlayImage">
+                                        <img src={item.backgroundImg} alt="" loading="lazy" />
+                                    </div>
+                                    <div className="ContentContainerOurServices">
+                                        <div>
+                                            <h2 style={{ textTransform: "uppercase" }}>{item.title}</h2>
+                                            <br />
+                                            <p>{item.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </Col>
+
+                    ))}
+                </Row>
+            </div>
+        </>
+    );
+};
+
+export default AnimatedWhyChooseUsCard
+
+const MutualFundsCardsData = [
+    {
+        title: "Regulation and Safety",
+        backgroundImg: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=3226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: <>Mutual Funds in India are highly regulated and closely monitored by SEBI, making them a safe investment choice.</>
+    },
+    {
+        title: "Professional Management",
+        backgroundImg: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=3226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: <>Managed by expert fund managers, Mutual Funds benefit from professional insights, ensuring your investments are in capable hands.</>
+    },
+    {
+        title: "Low Cost",
+        backgroundImg: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=3226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: <>With a transparent fee structure regulated by SEBI, Mutual Funds are one of the most affordable investment options available.</>
+    },
+    {
+        title: "Diversification",
+        backgroundImg: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=3226&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: <>Mutual Funds invest in a variety of securities, spreading risk and providing a balanced portfolio. Whether it’s 25 or 200 stocks, the diversification offered helps mitigate risk without compromising on potential returns.</>
+    }
+]
+
+const InsuranceWhyChooseUsCards = [
+    {
+        title: "Financial Security",
+        description: <>Life & Health Insurance provides a safety net for your family, covering expenses such as hospital bills, mortgage payments, education costs, and daily living expenses, ensuring their financial stability in your absence.</>
+    },
+    {
+        title: "Comprehensive Health Coverage",
+        description: <>Health Insurance offers extensive coverage, including hospitalization, surgeries, prescription drugs, and preventive care. It enables you to access quality healthcare without worrying about the costs.</>
+    },
+    {
+        title: "Tax Benefits",
+        description: <>Both Life and Health Insurance offer tax benefits under various sections of the Income Tax Act (Old Regime), reducing your taxable income and providing additional savings.</>
+    },
+    {
+        title: "Critical Illness and Disability Riders",
+        description: <>Many insurance plans include riders for critical illness and disability, offering extra coverage for serious health conditions or accidents that could affect your earning ability.</>
+    }
+]
+const AlternativeInvestmentsWhyChooseUsCards = [
+    {
+        title: "Invest in the Future",
+        description: <>Startup Funds offer a direct path to investing in the future of sectors like technology, healthcare, and finance. By supporting early-stage companies, you become part of their growth journey from the ground up, with the potential for substantial returns as these companies scale.</>
+    },
+    {
+        title: "Exclusive Opportunities",
+        description: <>Startup Funds provide access to investment opportunities that are not available in public markets. These funds are SEBI-registered and managed by experts with deep industry insights, ensuring that you invest in the most promising startups with robust growth potential.</>
+    },
+    {
+        title: "Tailored Investment Strategies",
+        description: <>PMSs and AIFs offer personalized portfolios aligned with your investment milestones and volatility tolerance. With professional management focused on achieving superior returns, these funds are ideal for those seeking a bespoke investment approach.</>
+    },
+    {
+        title: "Enhanced Diversification",
+        description: <>Alternate Funds, particularly AIFs, offer diversification into niche markets and asset classes, spreading risk while targeting higher returns. This diversification is essential for sophisticated investors aiming to optimize their portfolio performance.</>
+    }
+]
+
+const FixedIncomeWhyChooseUsCards = [
+    {
+        title: "Stability and Security",
+        description: <>Fixed Deposits and Bonds are low-volatility investment options offering guaranteed income. They are perfect for risk-averse investors who value secure and stable investment avenues.</>
+    },
+    {
+        title: "Regular Income",
+        description: <>These instruments provide regular interest payouts, ensuring a steady income stream. This feature is particularly attractive to retirees and those seeking periodic returns.</>
+    },
+    {
+        title: "Capital Preservation",
+        description: <>FDs and Bonds focus on preserving your capital. Your principal amount remains secure while earning interest, making these options ideal for conservative investors.</>
+    },
+    {
+        title: "Fixed Tenure and Returns",
+        description: <>AWith predetermined tenure and interest rates, FDs and Bonds allow you to plan your investment milestones with certainty. The fixed nature of returns ensures predictability in your investment portfolio.</>
+    }
+]
+
+//---------- why choose us dynamic component End
+
 const ServiceData = [
     {
         id: "mutual-funds",
@@ -164,11 +282,9 @@ const ServiceData = [
         backgroundImage: "/Images/SoulServicesBackgrounds/MUTUALFUNDS.jpg",
         description: (
             <>
-                {/* <div>
-                    <div> */}
                 <AnimatedCards cardsData={PerfectMatchMutualFundsCardsData} />
-                {/* </div>
-                </div> */}
+                <SectionHeading text="Awards and Recognitions" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
+                <AnimatedWhyChooseUsCard WhyChooseUsCards={MutualFundsCardsData} />
             </>
         )
     },
@@ -180,6 +296,8 @@ const ServiceData = [
         description: (
             <>
                 <AnimatedCards cardsData={InsuranceCards} />
+                <SectionHeading text="Awards and Recognitions" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
+                <AnimatedWhyChooseUsCard WhyChooseUsCards={InsuranceWhyChooseUsCards} />
             </>
         )
     },
@@ -191,6 +309,8 @@ const ServiceData = [
         description: (
             <>
                 <AnimatedCards cardsData={AlternativeInvestmentsCards} />
+                <SectionHeading text="Awards and Recognitions" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
+                <AnimatedWhyChooseUsCard WhyChooseUsCards={AlternativeInvestmentsWhyChooseUsCards} />
             </>
         )
     },
@@ -202,6 +322,8 @@ const ServiceData = [
         description: (
             <>
                 <AnimatedCards cardsData={FixedIncomeCards} />
+                <SectionHeading text="Awards and Recognitions" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
+                <AnimatedWhyChooseUsCard WhyChooseUsCards={FixedIncomeWhyChooseUsCards} />
             </>
         )
     }

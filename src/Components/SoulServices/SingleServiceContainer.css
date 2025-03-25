@@ -71,7 +71,32 @@
     font-size: 3rem;
 }
 
+#AnimatedWhyChooseUsCard .ant-row .ant-col:nth-child(even) {
+    padding-left: 20px;
+}
+
+#AnimatedWhyChooseUsCard .ant-row .ant-col:nth-child(odd) {
+    padding-right: 20px;
+}
+
+#AnimatedWhyChooseUsCard .ant-row .ant-col .ContentContainerOurServices {
+    display: flex;
+    justify-content: center;
+}
+
+#AnimatedWhyChooseUsCard .ant-row .ant-col .ContentContainerOurServices h2,
+#AnimatedWhyChooseUsCard .ant-row .ant-col .ContentContainerOurServices p {
+    text-align: center;
+}
+
 @media (max-width:900px) {
+    #AnimatedWhyChooseUsCard .ant-row .ant-col:nth-child(even) {
+        padding-left: 0px;
+    }
+    
+    #AnimatedWhyChooseUsCard .ant-row .ant-col:nth-child(odd) {
+        padding-right: 0px;
+    }
     .Animated3DCard {
         background-color: transparent;
         margin-bottom: 50px;

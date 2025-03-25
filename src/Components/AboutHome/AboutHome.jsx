@@ -59,29 +59,12 @@ const AboutHome = () => {
         };
     }, []);
 
-    // const CardsData = [
-    //     {
-    //         title: "Detailed market analysis for a smoother investment journey",
-    //         tagline: "Our thorough research based on different markets, helps choose right business returns"
-    //     },
-    //     {
-    //         title: "Expert assistance at fingertips to make your future better",
-    //         tagline: "Our Expert advice helps you make tax efficient optimized  decisions"
-    //     },
-    //     {
-    //         title: "Customized financial solutions for a well-built monetary growth",
-    //         tagline: "Understanding your financial picture and managing  investments with risk tolerance and time horizon"
-    //     }
-    // ]
     return (
         <>
             <section id="AboutHomeComponent">
                 <div className=" sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "10px", paddingBottom: "0px" }}>
-                        {/* <SectionHeading text="About SoulFinspire" valueOfBorder="1px solid black" color="black" beforeBgColor="black" /> */}
-                        {/* <div>
-                            <h1 className="PrimaryHeadingStyle" style={{ color: "white" }}>At Innovest, we are committed to fueling the <span className="ColorChangeSpan">growth</span> and <span className="ColorChangeSpan">innovation</span> of visionary <span className="ColorChangeSpan">startups</span> and high-potential <span className="ColorChangeSpan">companies</span>.</h1>
-                        </div> */}
+                     
                         <div className=" PaddingAdjustHeadingContainer">
                             <Row>
                                 <Col lg={12}>
@@ -95,7 +78,8 @@ const AboutHome = () => {
                                                 data-aos-duration="1200"><b>SoulFinspire, led by Mr. Raj Shah,</b> is a top financial advisory firm in Ahmedabad.
                                                 With 25 years of expertise, we specialize in wealth management, loans, and tax planning.
                                                 Our client-centric approach ensures tailored strategies for financial growth and stability.
-                                                We empower individuals and businesses with informed, strategic financial solutions.</p>
+                                                We empower individuals and businesses with informed, strategic financial solutions.
+                                            </p>
                                         </div>
                                     </div>
                                 </Col>
@@ -109,7 +93,7 @@ const AboutHome = () => {
                                         >
                                             <img
                                                 style={{ width: "100%" }}
-                                                src="/Images/IllustrationImages/HomePageIllustratorboy.png"
+                                                src="/Images/IllustrationImages/AboutHomeBoy.png"
                                                 alt=""
                                                 loading="lazy"
                                             />
