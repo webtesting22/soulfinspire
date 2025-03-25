@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useParams } from "react-router-dom";
 import "./SoulServices.css";
 import { ServiceData } from "./SoulServicesData";
@@ -9,7 +9,9 @@ const SoulDynamicSingleService = () => {
     const selectedService = ServiceData.find(item => item.id === serviceId);
 
     if (!selectedService) return <div>Service not found</div>;
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="SingleServicePage">
             <div className="SingleServiceBanner"

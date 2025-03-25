@@ -73,7 +73,7 @@ const SoulServices = () => {
                                                             {/* <br /> */}
                                                             <div className="PrimarybtnContainer" >
                                                                 <Link to={`/soul-services/${item.title.replace(/\s+/g, "-").toLowerCase()}`}>
-                                                                    <button className="ReadMoreButton" style={{ marginTop: "10px" }}>Read More</button>
+                                                                    <button className="ReadMoreButton">Read More</button>
                                                                 </Link>
                                                             </div>
                                                         </div>

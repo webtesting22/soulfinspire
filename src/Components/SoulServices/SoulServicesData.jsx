@@ -89,7 +89,7 @@ const ServiceData = [
     {
         id: "mutual-funds",
         title: "Mutual Funds",
-        tagline: <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem provident eos quisquam adipisci vero corporis illum atque cupiditate aliquid. Molestiae.</>,
+        tagline: <>Mutual Funds: A Must-Have in Your Investment <span>Strategy</span></>,
         topBio: <>At Artham FinoMetry, we believe Mutual Funds are one of the best investment avenues available in India. They offer a diversified, professionally managed investment option that aligns with your investment milestones, whether you're a seasoned investor or just starting out. With transparency, regulation, and a wide range of products, Mutual Funds can cater to investors at any stage of their investment journey.</>,
         backgroundImage: "/Images/SoulServicesBackgrounds/MUTUALFUNDS.jpg",
         description: (
@@ -105,7 +105,7 @@ const ServiceData = [
     {
         id: "insurance",
         title: "Insurance",
-        tagline: <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem provident eos quisquam adipisci vero corporis illum atque cupiditate aliquid. Molestiae.</>,
+        tagline: <>Mutual Funds: A Must-Have in Your Investment <span>Strategy</span></>,
         backgroundImage: "/Images/SoulServicesBackgrounds/INSURANCE.jpg",
         description: (
             <>
@@ -117,7 +117,7 @@ const ServiceData = [
     {
         id: "alternative-investments",
         title: "Alternative Investments",
-        tagline: <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem provident eos quisquam adipisci vero corporis illum atque cupiditate aliquid. Molestiae.</>,
+        tagline: <>Mutual Funds: A Must-Have in Your Investment <span>Strategy</span></>,
         backgroundImage: "/Images/SoulServicesBackgrounds/TaxPlanning.jpg",
         description: (
             <>
@@ -129,7 +129,7 @@ const ServiceData = [
     {
         id: "fixed-income",
         title: "Fixed Income",
-        tagline: <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem provident eos quisquam adipisci vero corporis illum atque cupiditate aliquid. Molestiae.</>,
+        tagline: <>Mutual Funds: A Must-Have in Your Investment <span>Strategy</span></>,
         backgroundImage: "/Images/SoulServicesBackgrounds/FIXEDINCOME.jpg",
         description: (
             <>
