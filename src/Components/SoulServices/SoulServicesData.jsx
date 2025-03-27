@@ -65,7 +65,6 @@ export const AnimatedCards = ({ cardsData }) => {
 export { ServiceData };
 
 
-
 //----------- This is a animated card common component to used every services inside
 
 const PerfectMatchMutualFundsCardsData = [
