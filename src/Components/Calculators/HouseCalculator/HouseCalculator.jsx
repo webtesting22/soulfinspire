@@ -69,16 +69,23 @@ const HouseCalculator = () => {
     const calculateHouseCost = () => {
         const inflationRate = inflation / 100;
         const returnRate = expectedReturns / 100;
-
-        // Calculate future cost considering inflation based on dynamic years
+    
+        // Future value of house after selected years
         const FV = houseCost * Math.pow(1 + inflationRate, years);
         setFutureCost(FV);
-
-        // Calculate SIP and LumpSum planning considering expected returns over the years
-        const totalInvestment = FV * Math.pow(1 + returnRate, years);  // Factor in returns over the years
-        setSipPlanning(totalInvestment * 0.7);
-        setLumpSumPlanning(totalInvestment * 0.3);
+    
+        // SIP Calculation (Monthly Investment)
+        const monthlyRate = returnRate / 12;
+        const totalMonths = years * 12;
+        const sip = FV * monthlyRate / (Math.pow(1 + monthlyRate, totalMonths) - 1);
+    
+        // Lump Sum Calculation (One-time investment)
+        const lumpSum = FV / Math.pow(1 + returnRate, years);
+    
+        setSipPlanning(sip);           // Monthly SIP Amount
+        setLumpSumPlanning(lumpSum);   // One-time Lumpsum
     };
+    
 
     const chartData = {
         labels: ["Current Cost", "Future Cost"],
@@ -282,7 +289,7 @@ const HouseCalculator = () => {
                                     <Col lg={8} md={12} >
                                         <div>
                                             <div>
-                                                <h2>    Dream House Cost (After {years} Years)</h2>
+                                                <h2>Dream House Cost (After {years} Years)</h2>
                                                 <br />
                                                 <div>
                                                     <h2>₹{new Intl.NumberFormat("en-IN").format(futureCost)}</h2>
