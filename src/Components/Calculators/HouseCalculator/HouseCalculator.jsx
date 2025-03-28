@@ -277,7 +277,7 @@ const HouseCalculator = () => {
                         <Box sx={{ maxWidth: "100%", margin: "auto", textAlign: "center", }}>
                             {/* Results */}
                             <Box sx={{ mt: 3, textAlign: "left", padding: "15px", }}>
-                                <h2> House Planning Summary:</h2>
+                                {/* <h2> House Planning Summary:</h2> */}
                                 <Row>
                                     <Col lg={8} md={12} >
                                         <div>

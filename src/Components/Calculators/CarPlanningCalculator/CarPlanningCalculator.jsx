@@ -281,7 +281,7 @@ const CarPlanningCalculator = () => {
                         <Box sx={{ maxWidth: "100%", margin: "auto", textAlign: "center", }}>
                             {/* Results */}
                             <Box sx={{ mt: 3, textAlign: "left", padding: "15px", }}>
-                                <h2> House Planning Summary:</h2>
+                                {/* <h2> House Planning Summary:</h2> */}
                                 <Row>
                                     <Col lg={8} md={12} >
                                         <div>
@@ -346,14 +346,6 @@ const CarPlanningCalculator = () => {
                         </Row>
                     </div>
                 </Col>
-
-
-
-
-
-
-
-
                 {/* Result Cards */}
                 {/* <Col lg={24}>
                     <Row gutter={[16, 16]} style={{ marginTop: "20px" }}>
