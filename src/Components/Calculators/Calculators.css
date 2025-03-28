@@ -31,7 +31,9 @@
 
 .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer,
 .AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer,
-.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer {
+.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer,
+.AllComponentsContainer .HouseCalculatorContainer .ant-row .ant-col .AdjustContainer,
+.AllComponentsContainer .CarPlanningContainer .ant-row .ant-col .AdjustContainer {
     border-bottom: 1px solid #c5c5c5;
     padding: 20px 20px;
     border-left: 1px solid #c5c5c5;
@@ -40,7 +42,9 @@
 
 .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div,
 .AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer>div,
-.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer>div {
+.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer>div,
+.AllComponentsContainer .HouseCalculatorContainer .ant-row .ant-col .AdjustContainer>div,
+.AllComponentsContainer .CarPlanningContainer .ant-row .ant-col .AdjustContainer>div {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -48,13 +52,17 @@
 
 .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .AdjustContainer>div .MuiTextField-root,
 .AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .AdjustContainer>div .MuiTextField-root,
-.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer>div .MuiTextField-root {
+.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .AdjustContainer>div .MuiTextField-root,
+.AllComponentsContainer .HouseCalculatorContainer .ant-row .ant-col .AdjustContainer>div .MuiTextField-root,
+.AllComponentsContainer .CarPlanningContainer .ant-row .ant-col .AdjustContainer>div .MuiTextField-root {
     width: 20%;
 }
 
 .AllComponentsContainer .SIPCalculatorContainer .ant-row .ant-col .CalculateBtn,
 .AllComponentsContainer .LumpSumCalculator .ant-row .ant-col .CalculateBtn,
-.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .CalculateBtn {
+.AllComponentsContainer .RetirementCalculator .ant-row .ant-col .CalculateBtn,
+.AllComponentsContainer .HouseCalculatorContainer .ant-row .ant-col .CalculateBtn,
+.AllComponentsContainer .CarPlanningContainer .ant-row .ant-col .CalculateBtn  {
     max-width: 200px;
 }
 

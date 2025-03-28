@@ -7,6 +7,8 @@ import RetirementCalculator from "./RetirementCalculator/RetirementCalculator";
 import NavigationLinks from "../Navigation/NavigationLinks";
 import "./Calculators.css";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import HouseCalculator from "./HouseCalculator/HouseCalculator";
+import CarPlanningCalculator from "./CarPlanningCalculator/CarPlanningCalculator";
 const { TabPane } = Tabs;
 
 const Calculators = () => {
@@ -63,11 +65,11 @@ const Calculators = () => {
                                     {activeTab === "SIP Planning" && <SIPCalculator />}
                                     {activeTab === "Lumpsum Planning" && <LumpSumCalculator />}
                                     {activeTab === "Retirement Planning" && <RetirementCalculator />}
-                                    {activeTab === "House Planning" && <p>House Planning Calculator Coming Soon...</p>}
+                                    {activeTab === "House Planning" && <HouseCalculator/>}
                                     {activeTab === "Marriage Planning" && <p>Marriage Planning Calculator Coming Soon...</p>}
                                     {activeTab === "Vacation Planning" && <p>Vacation Calculator Coming Soon...</p>}
                                     {activeTab === "Education Planning" && <p>Education Calculator Coming Soon...</p>}
-                                    {activeTab === "Car Planning" && <p>Car Loan Calculator Coming Soon...</p>}
+                                    {activeTab === "Car Planning" && <CarPlanningCalculator/>}
                                 </div>
                             </div>
                         </div>

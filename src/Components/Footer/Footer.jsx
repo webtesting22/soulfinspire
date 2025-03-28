@@ -17,31 +17,13 @@ const Footer = () => {
                 <div className="sectionContainerForSidePadding" style={{backgroundColor:"white"}}>
                     <div className="MaxWidthContainer sliteSectionLikePadding" >
                         <Row>
-                            <Col lg={14}>
+                            <Col lg={18}>
                                 <div className="FooterLogoContainer">
                                     <div>
                                         <img src="/Images/SoulFinspireLogo.png" alt="" loading="lazy"/>
-                                        <p>We put clients first, we lead with exceptional idea, and we believe in doing the right thing</p>
-                                    </div>
-                                </div>
-                            </Col>
-                            <Col lg={4}>
-                                <div className="LinksContainerFooter">
-                                    <div>
-                                        <h2>Links</h2>
-                                        <ul>
-                                            {NavigationLinks.map((item, index) => (
-                                                <li key={index}>{item.link}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </Col>
-                            <Col lg={6}>
-                                <div>
-                                    <div className="FooterContactContainer">
-                                        <h2>Contacts</h2>
-                                        <br />
+                                        <div className="FooterContactContainer">
+                                        {/* <h2>Contacts</h2>
+                                        <br /> */}
                                         <div>
                                             <p><IoLocationOutline style={{ fontSize: "20px" }} />&nbsp;C-1008, The First,
                                                 Behind Keshavbagh Party Plot,
@@ -56,8 +38,27 @@ const Footer = () => {
                                             <p style={{ display: "flex", alignItems: "center" }}><AiOutlineMail style={{ fontSize: "20px" }} />&nbsp;<a href="mailto:info@soulfinspire.com">Info@soulfinspire.com</a></p>
                                         </div>
                                     </div>
+                                        {/* <p>We put clients first, we lead with exceptional idea, and we believe in doing the right thing</p> */}
+                                    </div>
                                 </div>
                             </Col>
+                            <Col lg={6}>
+                                <div className="LinksContainerFooter">
+                                    <div>
+                                        <h2>Links</h2>
+                                        <ul>
+                                            {NavigationLinks.map((item, index) => (
+                                                <li key={index}>{item.link}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </Col>
+                            {/* <Col lg={6}>
+                                <div>
+                                    
+                                </div>
+                            </Col> */}
                         </Row>
                         <br />
                         <hr />

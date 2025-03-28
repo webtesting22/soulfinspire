@@ -64,8 +64,8 @@ const AboutHome = () => {
             <section id="AboutHomeComponent">
                 <div className=" sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "10px", paddingBottom: "0px" }}>
-                     
-                        <div className=" PaddingAdjustHeadingContainer">
+
+                        <div className=" PaddingAdjustHeadingContainer" style={{ paddingTop: "0px" }}>
                             <Row>
                                 <Col lg={12}>
                                     <div>

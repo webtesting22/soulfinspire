@@ -19,16 +19,18 @@ const SoulHome = () => {
 
     // Use our custom hook to add the "animate" class after a delay when visible
     useIntersectionAnimation(containerRef, 100, 0.5, "animate");
+
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
-
+    
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+    
 
     return (
         <>
