@@ -276,29 +276,94 @@ const CarPlanningCalculator = () => {
                         Calculate Now
                     </Button>
                 </Col>
+                <Col lg={24} md={24} style={{ width: "100%" }}>
+                    <div className="AnalysisContainer">
+                        <Box sx={{ maxWidth: "100%", margin: "auto", textAlign: "center", }}>
+                            {/* Results */}
+                            <Box sx={{ mt: 3, textAlign: "left", padding: "15px", }}>
+                                <h2> House Planning Summary:</h2>
+                                <Row>
+                                    <Col lg={8} md={12} >
+                                        <div>
+                                            <div>
+                                                <h2>Your Dream Car Cost</h2>
+                                                <br />
+                                                <div>
+                                                    <h2>₹{new Intl.NumberFormat("en-IN").format(futureCost)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col lg={8} md={12}>
+                                        <div>
+                                            <div>
+                                                <h2>Planning Through SIP</h2>
+                                                <br />
+                                                <div>
+                                                    <h2>₹{new Intl.NumberFormat("en-IN").format(sipAmount)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col lg={8} md={12}>
+                                        <div>
+                                            <div>
+                                                <h2>Planning Through Lumpsum</h2>
+                                                <br />
+                                                <div>
+                                                    <h2>₹{new Intl.NumberFormat("en-IN").format(lumpsumAmount)}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Box>
+
+                            {/* Pie Chart */}
+
+                        </Box>
+                    </div>
+                    <br /><br />
+                    <div className="ChartsContainer">
+                        <Row>
+                            <Col lg={8} style={{ width: "100%" }}>
+                                {/* {totalInvested > 0 && ( */}
+                                <Box sx={{ mt: 3, textAlign: "center" }}>
+                                    <h2>Investment Breakup</h2>
+                                    <br />
+                                    <Pie data={chartData} options={chartOptions} />
+                                </Box>
+                                {/* )} */}
+                            </Col>
+                            <Col lg={16}>
+                                <Box sx={{ mt: 3, textAlign: "center" }}>
+                                    <h2>Car Planning Projection</h2>
+                                    <br />
+                                    <Bar data={investmentChartData} options={investmentChartOptions} />
+
+                                </Box>
+                            </Col>
+                        </Row>
+                    </div>
+                </Col>
+
+
+
+
+
+
+
 
                 {/* Result Cards */}
-                <Col lg={24}>
+                {/* <Col lg={24}>
                     <Row gutter={[16, 16]} style={{ marginTop: "20px" }}>
                         <Col lg={8}><h2>Your Dream Car Cost: ₹{new Intl.NumberFormat("en-IN").format(futureCost)}</h2></Col>
                         <Col lg={8}><h2>Planning Through SIP: ₹{new Intl.NumberFormat("en-IN").format(sipAmount)}</h2></Col>
                         <Col lg={8}><h2>Planning Through Lumpsum: ₹{new Intl.NumberFormat("en-IN").format(lumpsumAmount)}</h2></Col>
                     </Row>
-                </Col>
+                </Col> */}
 
-                {/* Charts */}
-                <Col lg={8}>
-                    <Box sx={{ mt: 3, textAlign: "center" }}>
-                        <h2>Investment Breakup</h2>
-                        <Pie data={chartData} options={chartOptions} />
-                    </Box>
-                </Col>
-                <Col lg={16}>
-                    <Box sx={{ mt: 3, textAlign: "center" }}>
-                        <h2>Car Planning Projection</h2>
-                        <Bar data={investmentChartData} options={investmentChartOptions} />
-                    </Box>
-                </Col>
+               
             </Row>
         </div>
     );
