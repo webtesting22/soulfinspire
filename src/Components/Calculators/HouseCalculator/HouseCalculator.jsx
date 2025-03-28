@@ -41,6 +41,30 @@ const HouseCalculator = () => {
     const [futureCost, setFutureCost] = useState(0);
     const [sipPlanning, setSipPlanning] = useState(0);
     const [lumpSumPlanning, setLumpSumPlanning] = useState(0);
+    const housePerYear = houseCost / years;
+    const lumpSumPerYear = lumpSumPlanning / years;
+    const sipPerYear = sipPlanning / years;
+    const baseYear = new Date().getFullYear();
+    // Generate year labels based on user-selected years
+    const yearLabels = Array.from({ length: years }, (_, i) => baseYear + i);
+
+    // Future house cost calculation
+    const futureValue = houseCost * Math.pow(1 + inflation / 100, years);
+
+    // Calculate year-wise data
+    const principalData = [];
+    const growthData = [];
+    const totalData = [];
+
+    for (let i = 1; i <= years; i++) {
+        const yearlyCost = houseCost * Math.pow(1 + inflation / 100, i);
+        const invested = yearlyCost / Math.pow(1 + expectedReturns / 100, years - i);
+        const growth = yearlyCost - invested;
+
+        principalData.push(invested);
+        growthData.push(growth);
+        totalData.push(yearlyCost);
+    }
 
     const calculateHouseCost = () => {
         const inflationRate = inflation / 100;
@@ -67,47 +91,62 @@ const HouseCalculator = () => {
         ],
     };
     const growthPercentage = ((futureCost - houseCost) / houseCost) * 100;
-    const barChartData = {
-        labels: ["House Cost", "Lump Sum Planning", "SIP Planning"],
+    const newChartData = {
+        labels: yearLabels,
         datasets: [
             {
-                label: "Investment Projection",
-                data: [houseCost, lumpSumPlanning, sipPlanning],
-                backgroundColor: ["#1D402D", "#FF9606", "#3B82F6"],
+                label: "Base Cost",
+                data: principalData,
+                backgroundColor: "#1D402D",
+                borderRadius: 5,
+            },
+            {
+                label: "Growth",
+                data: growthData,
+                backgroundColor: "#FF9606",
+                borderRadius: 5,
+            },
+            {
+                label: "Future Value",
+                data: totalData,
+                type: "line",
+                borderColor: "#FF9606",
+                backgroundColor: "#1D402D",
+                pointRadius: 5,
+                borderWidth: 2,
             },
         ],
     };
-    const barChartOptions = {
+
+
+    const newChartOptions = {
         responsive: true,
         scales: {
+            x: {
+                title: { display: true, text: "Years" },
+            },
             y: {
-                title: {
-                    display: true,
-                    text: "Amount (₹)",
-                },
+                title: { display: true, text: "Amount (₹)" },
                 ticks: {
                     callback: function (value) {
-                        if (value >= 10000000) {
-                            return "₹" + (value / 10000000).toFixed(1) + " Cr";
-                        } else if (value >= 100000) {
-                            return "₹" + (value / 100000).toFixed(1) + " L";
-                        } else if (value >= 1000) {
-                            return "₹" + (value / 1000).toFixed(1) + " K";
-                        } else {
-                            return "₹" + value;
-                        }
+                        if (value >= 10000000) return "₹" + (value / 10000000).toFixed(1) + " Cr";
+                        if (value >= 100000) return "₹" + (value / 100000).toFixed(1) + " L";
+                        if (value >= 1000) return "₹" + (value / 1000).toFixed(1) + " K";
+                        return "₹" + value;
                     },
                 },
             },
         },
         plugins: {
-            legend: { display: false },
+            legend: { display: true, position: "bottom" },
             tooltip: {
                 callbacks: {
-                    label: (context) => {
-                        const value = context.raw;
+                    label: function (tooltipItem) {
+                        const dataset = tooltipItem.dataset;
+                        const dataIndex = tooltipItem.dataIndex;
+                        const value = dataset.data[dataIndex];
                         const formattedValue = new Intl.NumberFormat("en-IN").format(value);
-                        return `${context.dataset.label}: ₹${formattedValue}`;
+                        return `${dataset.label}: ₹${formattedValue}`;
                     },
                 },
             },
@@ -201,7 +240,7 @@ const HouseCalculator = () => {
                     {/* Expected Returns */}
                     <div className="AdjustContainer">
                         <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Expected Returns (%)</Typography>
-                        
+
                         <div>
                             <TextField
                                 value={expectedReturns}
@@ -296,7 +335,8 @@ const HouseCalculator = () => {
                                 <Box sx={{ mt: 3, textAlign: "center" }}>
                                     <h2>Investment Projection</h2>
                                     <br />
-                                    <Bar data={barChartData} options={barChartOptions} />
+                                    <Bar data={newChartData} options={newChartOptions} />
+
                                 </Box>
                             </Col>
                         </Row>
