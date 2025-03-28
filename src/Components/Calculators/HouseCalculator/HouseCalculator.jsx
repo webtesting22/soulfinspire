@@ -8,10 +8,11 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointEleme
 
 const marksReturns = [
     { value: 0, label: "0%" },
-    { value: 5, label: "5%" },
-    { value: 10, label: "10%" },
-    { value: 15, label: "15%" },
     { value: 20, label: "20%" },
+    { value: 40, label: "40%" },
+    { value: 60, label: "60%" },
+    { value: 80, label: "80%" },
+    { value: 100, label: "100%" },
 ];
 
 const marksHouseCost = [
@@ -200,6 +201,7 @@ const HouseCalculator = () => {
                     {/* Expected Returns */}
                     <div className="AdjustContainer">
                         <Typography sx={{ fontWeight: "bold", color: "#1D402D", textAlign: "left" }}>Expected Returns (%)</Typography>
+                        
                         <div>
                             <TextField
                                 value={expectedReturns}
