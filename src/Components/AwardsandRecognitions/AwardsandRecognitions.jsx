@@ -65,14 +65,15 @@ const AwardsandRecognitions = () => {
                                             <br /><br />
                                         </div>
                                     </Col>
-                               
+
                                     <Col lg={24}>
                                         <div>
+                                            
                                             <div>
                                                 <Row>
                                                     {AwardsData.map((item, index) => (
                                                         <Col key={index} lg={6} md={12} data-aos="fade-up"
-                                                            data-aos-duration="800" data-aos-delay={index * 200}>
+                                                            data-aos-duration="500" data-aos-delay={index * 100}>
                                                             <Link to={item.link} target="_blank">
                                                                 <div>
                                                                     <div className="AwardsImageCard">

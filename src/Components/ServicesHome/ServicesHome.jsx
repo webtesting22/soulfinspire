@@ -20,7 +20,7 @@ const ServicesHome = () => {
             content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
         },
         {
-            img: "/Images/ServicesIcons/TaxPlanning.svg",
+            img: "/Images/ServicesIcons/TaxPlanning.png",
             title: "Tax Planning",
             content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
 

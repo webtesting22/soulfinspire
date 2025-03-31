@@ -102,6 +102,7 @@ const AboutUs = () => {
                 </div>
 
                 <div className="sectionContainerForSidePadding" id="OurAchivementsContainer">
+                    <img src="/Images/GrowthArrowImage.jpg" alt="" />
                     <div className="MaxWidthContainer sliteSectionLikePadding">
                         <SectionHeading text="Soulfinspire Achievements" color="white" beforeBgColor="white" />
                         <div >
@@ -110,7 +111,7 @@ const AboutUs = () => {
                                     <Col lg={6} md={8} key={index} data-aos="fade-up"
                                         data-aos-duration="1000" data-aos-delay={index * 200}>
                                         <div className="AchievementsCountersContainer" ref={(el) => countersRef.current[index] = el}>
-                                            <h2 className="CounterFont"><GoArrowUp style={{fontSize:"30px"}}/> {item.prefix} {/* Prefix Icon */}
+                                            <h2 className="CounterFont"><GoArrowUp style={{ fontSize: "30px" }} /> {item.prefix} {/* Prefix Icon */}
                                                 {counts[index]} {/* Animated Counter */}
                                                 {item.suffix} {/* Suffix Text */}</h2>
                                             <br /><br />

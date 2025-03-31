@@ -34,18 +34,18 @@ const SoulHome = () => {
 
     const HomePageTextContentData = [
         {
-            title: <>Equity is a <span>Wealth</span> Creator</>,
-            tag:"Equity",
+            title: <><span>Equity</span> is a Wealth Creator</>,
+            tag: "Equity",
             content: <>Equities possess the potential to generate considerable long-term wealth.</>
         },
         {
-            title: <>Debt is a Wealth <span>Preserver</span></>,
-            tag:"Debt",
+            title: <><span>Debt</span> is a Wealth Preserver</>,
+            tag: "Debt",
             content: <>Debt instruments ensure stability and safeguard wealth during periods of market turbulence.</>
         },
         {
-            title: <>Asset <span>Allocation</span> is Crucial</>,
-            tag:"Asset Allocation",
+            title: <><span>Asset Allocation</span> is Crucial</>,
+            tag: "Asset Allocation",
             content: <>The optimal distribution of assets is essential for balancing risk and reward effectively.</>
         }
     ]
@@ -63,13 +63,17 @@ const SoulHome = () => {
                                 <Col
                                     lg={index === HomePageTextContentData.length - 1 ? 24 : 12}
                                     key={index}
-                                    data-aos={index === HomePageTextContentData.length - 1 ? "fade-up" : "fade-left"}
-                                    data-aos-delay={index === HomePageTextContentData.length - 1 ? "800" : index * 500}
-                                    data-aos-duration="1000"
+                                    data-aos={
+                                        index === 0 ? "fade-right" :
+                                            index === 1 ? "fade-left" :
+                                                "fade-up"
+                                    }
+                                    data-aos-delay={index * 800}
+                                    data-aos-duration="1400"
                                 >
                                     <div>
                                         <div className="homePageHeadingContainer">
-                                            <span className="TagEdit">{item.tag}</span>
+                                            {/* <span className="TagEdit">{item.tag}</span> */}
                                             <h2 className="PrimaryHeadingStyle">{item.title}</h2>
                                             <p>{item.content}</p>
                                         </div>

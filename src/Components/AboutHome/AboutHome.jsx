@@ -76,7 +76,7 @@ const AboutHome = () => {
         <>
             <section id="AboutHomeComponent">
                 <div className=" sectionContainerForSidePadding">
-                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "10px", paddingBottom: "0px",overflow:"unset" }}>
+                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "10px", paddingBottom: "0px", overflow: "unset" }}>
 
                         <div className="PaddingAdjustHeadingContainer" style={{ paddingTop: "0px" }}>
                             <Row>
@@ -88,7 +88,6 @@ const AboutHome = () => {
                                             <br />
                                             <br /> */}
                                             <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
-
                                                 <div >
                                                     <div>
                                                         <Row>
