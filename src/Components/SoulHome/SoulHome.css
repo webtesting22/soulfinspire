@@ -38,6 +38,7 @@
     height: 80vh;
     padding-bottom: 0px;
     padding-top: 0px;
+    position: relative;
 }
 
 #HomePageRow {
@@ -71,37 +72,40 @@
     display: flex;
     justify-content: center;
 }
+
 .AnimatedSlideWhiteLayerAnimation {
     position: relative;
     overflow: hidden;
-  }
-  
-  /* Initially, the white layer simply covers the container */
-  .AnimatedWhiteLayer {
+}
+
+/* Initially, the white layer simply covers the container */
+.AnimatedWhiteLayer {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Or any desired color */
+    background-color: white;
+    /* Or any desired color */
     transform: translateX(0);
     /* No animation here initially */
-  }
-  
-  /* When the parent container gets the "animate" class, trigger the slide animation */
-  .AnimatedSlideWhiteLayerAnimation.animate .AnimatedWhiteLayer {
+}
+
+/* When the parent container gets the "animate" class, trigger the slide animation */
+.AnimatedSlideWhiteLayerAnimation.animate .AnimatedWhiteLayer {
     animation: slideOnce 2s ease-in-out forwards;
-  }
-  
-  /* Slide the layer from left (0) to completely off to the right (100%) */
-  @keyframes slideOnce {
+}
+
+/* Slide the layer from left (0) to completely off to the right (100%) */
+@keyframes slideOnce {
     from {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     to {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
-  }
+}
 
 
 @keyframes smoothFloat {
@@ -123,12 +127,75 @@
     animation: smoothFloat 2s ease-in-out infinite;
 }
 
-@media (max-width:900px) {
-
-#SoulHome .SectionContainer {
-    height: 90vh;
-    padding-bottom: 0px;
+.HomepageContainerPaddingAdjust {
+    height: 100%;
 }
+
+.HomepageContainerPaddingAdjust .ant-col>div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.HomepageContainerPaddingAdjust .ant-col:nth-child(3)>div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    justify-content: center;
+}
+
+.OverlayContainer img {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homePageHeadingContainer p {
+    width: 80%;
+}
+
+.homePageHeadingContainer h2 {
+    margin-top: 15px !important;
+}
+
+/* .homePageHeadingContainer h2,
+.homePageHeadingContainer p{
+    text-align: center;
+} */
+@media (max-width:900px) {
+    .HomepageContainerPaddingAdjust .ant-col:nth-child(3)>div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20px 0px; 
+        justify-content: center;
+    }
+    
+    .HomepageContainerPaddingAdjust .ant-col>div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20px 0px; 
+        justify-content: center;
+        overflow: hidden;
+    }
+    .homePageHeadingContainer p {
+        width: 100%;
+    }
+
+    #SoulHome .SectionContainer {
+        height: 100%;
+        padding-bottom: 0px;
+    }
 
     #HomePageRow .ant-col:last-child {
         margin-top: 40px;
@@ -156,5 +223,15 @@
 
     #HomepageContainerPaddingAdjust {
         padding-top: 0rem;
+    }
+    .OverlayContainer img {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        opacity: 0.1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

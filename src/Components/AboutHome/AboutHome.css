@@ -35,9 +35,7 @@
     align-items: center;
 }
 
-#AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:last-child {
-    padding-left: 10px;
-}
+
 
 .ScrollWord {
     font-size: 50px;
@@ -57,23 +55,36 @@
     gap: 100px;
     transition: .3s;
 }
+.AboutusCardsContainer{
+    overflow: hidden;
+}
 
 .AboutusCardsContainer .ant-row .ant-col span {
     color: #c5c5c5;
     font-size: 4rem;
     font-weight: 400;
 }
-.AboutusCardsContainer .ant-row .ant-col span b{
+
+.AboutusCardsContainer .ant-row .ant-col span b {
     font-weight: 400;
     color: #1E402D;
 }
-.AboutusCardsContainer .ant-row .ant-col{
-    padding: 20px 30px;
-    border-left: 1px solid #c5c5c5;
-}
- .ParallaxZoomImage img{
 
- }
+.AboutusCardsContainer .ant-row .ant-col {
+    padding: 20px 0px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.AboutusCardsContainer .ant-row .ant-col:last-child {
+    padding: 20px 0px;
+    border-bottom: 1px solid transparent;
+}
+
+.AboutHomeSectionImageContainer {
+    position: sticky;
+    top: 30%;
+}
+
 @media (min-width:1500px) and (max-width:4000px) {
     #AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:first-child {
         padding-right: 8rem;
@@ -86,12 +97,10 @@
         padding-right: 0rem;
     }
 
-    #AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:last-child {
-        padding-left: 0px;
-    }
-    .AboutusCardsContainer .ant-row .ant-col{
-        padding: 20px 30px !important;
-        border-left: 1px solid #c5c5c5;
+
+    .AboutusCardsContainer .ant-row .ant-col {
+        padding: 20px 0px !important;
+        border-left: 1px solid transparent;
         margin: 10px 0px;
     }
 
@@ -102,6 +111,4 @@
         overflow: hidden;
         margin-top: 20px;
     }
-
-
 }

@@ -9,7 +9,7 @@ const SoulServices = () => {
     const location = useLocation();
     useEffect(() => {
         if (location.hash) {
-            const sectionId = location.hash.replace("#", ""); // Remove "#" from hash
+            const sectionId = location.hash.replace("#", ""); 
             const section = document.getElementById(sectionId);
             if (section) {
                 const yOffset = -200; // Offset from the top

@@ -23,6 +23,9 @@
 .FooterContactContainer a {
     color: black;
 }
+.FooterContactContainer>div{
+    padding-bottom: 8px;
+}
 
 .CopyrightTextContainer {
     display: flex;

@@ -36,7 +36,7 @@ const SoulNavigation = () => {
                 <div
                     className="StikyContainer"
                     style={{
-                        backgroundColor: scrolled ? "white" : "transparent",
+                        backgroundColor: scrolled ? "white" : "white",
                         boxShadow: scrolled ? "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" : "none",
                     }}
                 >
@@ -76,7 +76,7 @@ const SoulNavigation = () => {
                                 </ul>
                                 <div className="PortfolioLoginBtn">
                                     <div className="PrimarybtnContainer">
-                                        <button style={{marginTop:"0px"}}><FaUser/>&nbsp; Portfolio Login</button>
+                                        <button style={{ marginTop: "0px" }}><FaUser />&nbsp; Portfolio Login</button>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,6 @@ const SoulNavigation = () => {
                     </div>
                 </div>
             ) : (
-                // Mobile Navigation (Drawer + Accordion)
                 <div
                     className="StikyContainer"
                     style={{
@@ -125,9 +124,7 @@ const SoulNavigation = () => {
                                                 </Link>
                                             }
                                             key={index} showArrow={false} onClose={() => setDrawerVisible(false)} className="WithoutSublinkPanel">
-                                            {/* <p>
-                                            <Link to={item.path || "#"}>{item.link}</Link>
-                                        </p> */}
+                                          
                                         </Panel>
                                     )
                                 ))}

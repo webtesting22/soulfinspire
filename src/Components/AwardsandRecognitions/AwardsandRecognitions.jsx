@@ -39,7 +39,7 @@ const AwardsandRecognitions = () => {
             link: "https://www.icicipruamc.com/",
         },
         {
-            img: "/Images/AwardsLogos/9.webp",
+            img: "/Images/AwardsLogos/Aditya_Birla_Group.webp",
             link: "https://mutualfund.adityabirlacapital.com/"
         },
 
@@ -55,21 +55,23 @@ const AwardsandRecognitions = () => {
                             </div>
                             <div className="sectionContainerForSidePadding" style={{ paddingLeft: "0px", paddingRight: "0px" }} id="AwardsContainer">
                                 <Row>
-                                    <Col lg={10}>
+                                    <Col lg={24}>
                                         <div className="LeftSideContentContainer">
                                             <div>
                                                 <h2 className="PrimaryHeadingStyle">A Testament to Our Financial <span>Expertise</span></h2>
                                                 <br />
                                                 <p>At SoulFinspire, our excellence in financial advisory has been recognized through prestigious awards and industry-leading certifications. These accolades reflect our commitment to delivering top-tier wealth management, tax planning, and loan solutions. Our award-winning expertise ensures trusted, strategic, and client-centric financial growth.</p>
                                             </div>
+                                            <br /><br />
                                         </div>
                                     </Col>
-                                    <Col lg={14}>
+                               
+                                    <Col lg={24}>
                                         <div>
                                             <div>
                                                 <Row>
                                                     {AwardsData.map((item, index) => (
-                                                        <Col key={index} lg={8} md={12} data-aos="fade-up"
+                                                        <Col key={index} lg={6} md={12} data-aos="fade-up"
                                                             data-aos-duration="800" data-aos-delay={index * 200}>
                                                             <Link to={item.link} target="_blank">
                                                                 <div>

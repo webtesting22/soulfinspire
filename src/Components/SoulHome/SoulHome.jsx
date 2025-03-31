@@ -24,20 +24,62 @@ const SoulHome = () => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
-    
+
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
-    
+
+
+    const HomePageTextContentData = [
+        {
+            title: <>Equity is a <span>Wealth</span> Creator</>,
+            tag:"Equity",
+            content: <>Equities possess the potential to generate considerable long-term wealth.</>
+        },
+        {
+            title: <>Debt is a Wealth <span>Preserver</span></>,
+            tag:"Debt",
+            content: <>Debt instruments ensure stability and safeguard wealth during periods of market turbulence.</>
+        },
+        {
+            title: <>Asset <span>Allocation</span> is Crucial</>,
+            tag:"Asset Allocation",
+            content: <>The optimal distribution of assets is essential for balancing risk and reward effectively.</>
+        }
+    ]
 
     return (
         <>
             <section id="SoulHome">
                 <div className="SectionContainer">
                     <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust" style={{ overflow: "unset" }}>
-                        <Row id="HomePageRow">
+                        <div className="OverlayContainer">
+                            <img src="/Images/HomePageBannerBackground.jpg" alt="" />
+                        </div>
+                        <Row className="HomepageContainerPaddingAdjust">
+                            {HomePageTextContentData.map((item, index) => (
+                                <Col
+                                    lg={index === HomePageTextContentData.length - 1 ? 24 : 12}
+                                    key={index}
+                                    data-aos={index === HomePageTextContentData.length - 1 ? "fade-up" : "fade-left"}
+                                    data-aos-delay={index === HomePageTextContentData.length - 1 ? "800" : index * 500}
+                                    data-aos-duration="1000"
+                                >
+                                    <div>
+                                        <div className="homePageHeadingContainer">
+                                            <span className="TagEdit">{item.tag}</span>
+                                            <h2 className="PrimaryHeadingStyle">{item.title}</h2>
+                                            <p>{item.content}</p>
+                                        </div>
+                                    </div>
+                                </Col>
+                            ))}
+                        </Row>
+
+
+                        {/* <Row id="HomePageRow">
                             <Col lg={12} >
                                 <div>
                                     <div>
@@ -59,18 +101,9 @@ const SoulHome = () => {
                                         <img src="/Images/IllustrationImages/HomePageStockImage.svg" alt="" loading="lazy" />
                                     </div>
                                 </div>
-                                {/* <div>
-                                    <div>
-                                        <p data-aos="fade-left"
-                                            data-aos-duration="2000" data-aos-delay="300"> Great investments aren't about chasing quick gains—they're about patience, discipline, and steady growth. Like watching grass grow or paint dry, the best strategies take time but yield lasting results. We help you navigate the market with a calm, calculated approach, ensuring your wealth flourishes securely over time. Let your investments grow the right way—with confidence and consistency.</p>
-                                        <div className="PrimarybtnContainer" data-aos="fade-up"
-                                            data-aos-duration="3000" data-aos-delay="800">
-                                            <button>Get In Touch</button>
-                                        </div>
-                                    </div>
-                                </div> */}
+                                
                             </Col>
-                        </Row>
+                        </Row> */}
                     </div>
                 </div>
 

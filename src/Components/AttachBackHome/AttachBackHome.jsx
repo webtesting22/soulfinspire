@@ -71,7 +71,7 @@ const AttachBackHome = () => {
                         <div className="ContentContainerAttachBack">
                             <div>
                                 <Row>
-                                    <Col lg={12}>
+                                    <Col lg={16}>
                                         <div data-aos="fade-up"
                                             data-aos-duration="1200">
                                             <div>
@@ -95,7 +95,7 @@ const AttachBackHome = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" sectionContainerForSidePadding">
+                {/* <div className=" sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding">
                         <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
 
@@ -121,7 +121,7 @@ const AttachBackHome = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </>
     )

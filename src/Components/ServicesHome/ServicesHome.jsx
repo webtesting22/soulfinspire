@@ -9,11 +9,38 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 import { IoArrowForward } from "react-icons/io5";
-import { Row,Col } from 'antd';
+import { Row, Col } from 'antd';
 const ServicesHome = () => {
     const swiperRef = useRef(null);
 
     const ServicesCarousal = [
+        {
+            img: "/Images/ServicesIcons/WealthManagement.png",
+            title: "Wealth Management ",
+            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+        },
+        {
+            img: "/Images/ServicesIcons/TaxPlanning.svg",
+            title: "Tax Planning",
+            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+
+        },
+        {
+            img: "/Images/ServicesIcons/PortFolioManagement.png",
+            title: "Portfolio Management",
+            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+
+        },
+        {
+            img: "/Images/ServicesIcons/LoadAcquisitions.png",
+            title: "Load Acquisitions",
+            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+
+        },
+
+    ]
+
+    const ProductsCarousal = [
         {
             img: "/Images/ServicesIcons/FinancialIncome.svg",
             title: "Financial Planning",
@@ -67,7 +94,7 @@ const ServicesHome = () => {
             swiperRef.current.slideNext();
         }
     };
-    
+
     return (
         <>
             <section>
@@ -75,19 +102,20 @@ const ServicesHome = () => {
                     <div className="MaxWidthContainer sliteSectionLikePadding">
                         <SectionHeading text="Services SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
                         <div>
-                            <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
-                                data-aos-duration="1200">Empowering <span>Innovation</span>. Fueling Future <span>Growth</span>.</h1>
+                            <h1 className="PrimaryHeadingStyle" style={{ color: "black", marginTop: "0px" }} data-aos="fade-up"
+                                data-aos-duration="1200">Empowering <span>Investment</span>. Fueling Future <span>Growth</span>.</h1>
                         </div>
-                        <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding">
+                        <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding" style={{ padding: "0px" }}>
                             <div className="InfiniteCarousalForServices PaddingAdjustHeadingContainer" onMouseMove={handleMouseMove}>
                                 <Swiper
+                                    dir="rtl"
                                     slidesPerView={3}
                                     spaceBetween={30}
                                     freeMode={true}
                                     loop={true}
                                     speed={800}
                                     autoplay={{
-                                        delay: 2500,
+                                        delay: 2000,
                                         disableOnInteraction: false,
                                     }}
                                     breakpoints={{
@@ -117,7 +145,76 @@ const ServicesHome = () => {
                                             <div className="PaddingAdjustHeadingContainer">
                                                 <div>
                                                     <div className="CarousalImageContainer">
-                                                        <img src={item.img} alt="" loading="lazy"/>
+                                                        <img src={item.img} alt="" loading="lazy" />
+                                                    </div>
+                                                    <br />
+                                                    <div>
+                                                        <h2 style={{ textAlign: "end" }}>{item.title}</h2>
+                                                        <br />
+                                                        <p style={{ textAlign: "end" }}>{item.content}</p>
+                                                    </div>
+                                                    <div className='SwiperReadMoreBtnContainer' style={{ display: "flex", justifyContent: "end" }}>
+                                                        <button >Read More <IoArrowForward /></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="sectionContainerForSidePadding">
+                    <div className="MaxWidthContainer sliteSectionLikePadding">
+                        <SectionHeading text="Products SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
+                        <div>
+                            <h1 className="PrimaryHeadingStyle" style={{ color: "black", marginTop: "0px" }} data-aos="fade-up"
+                                data-aos-duration="1200">Building Wealth. <span>Securing</span> Tomorrow.</h1>
+                        </div>
+                        <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding" style={{ padding: "0px" }}>
+                            <div className="InfiniteCarousalForServices PaddingAdjustHeadingContainer" onMouseMove={handleMouseMove}>
+                                <Swiper
+                                    slidesPerView={3}
+                                    spaceBetween={30}
+                                    freeMode={true}
+                                    loop={true}
+                                    speed={800}
+                                    autoplay={{
+                                        delay: 2000,
+                                        disableOnInteraction: false,
+                                    }}
+                                    breakpoints={{
+                                        320: { // Small screens (phones)
+                                            slidesPerView: 1,
+                                            spaceBetween: 10,
+                                        },
+                                        480: { // Slightly larger phones
+                                            slidesPerView: 1,
+                                            spaceBetween: 20,
+                                        },
+                                        768: { // Tablets
+                                            slidesPerView: 2,
+                                            spaceBetween: 20,
+                                        },
+                                        1024: { // Small laptops
+                                            slidesPerView: 3,
+                                            spaceBetween: 30,
+                                        },
+                                    }}
+                                    modules={[Autoplay, FreeMode, Pagination]}
+                                    className="mySwiper"
+                                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                                >
+                                    {ProductsCarousal.map((item, index) => (
+                                        <SwiperSlide key={index}>
+                                            <div className="PaddingAdjustHeadingContainer">
+                                                <div>
+                                                    <div className="CarousalImageContainer">
+                                                        <img src={item.img} alt="" loading="lazy" />
                                                     </div>
                                                     <br />
                                                     <div>
@@ -135,7 +232,7 @@ const ServicesHome = () => {
                                 </Swiper>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>

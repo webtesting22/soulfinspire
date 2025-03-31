@@ -58,34 +58,69 @@ const AboutHome = () => {
             }
         };
     }, []);
-
+    const CardsData = [
+        {
+            title: "Detailed market analysis for a smoother investment journey",
+            tagline: "Our thorough research based on different markets, helps choose right business returns"
+        },
+        {
+            title: "Expert assistance at fingertips to make your future better",
+            tagline: "Our Expert advice helps you make tax efficient optimized  decisions"
+        },
+        {
+            title: "Customized financial solutions for a well-built monetary growth",
+            tagline: "Understanding your financial picture and managing  investments with risk tolerance and time horizon"
+        }
+    ]
     return (
         <>
             <section id="AboutHomeComponent">
                 <div className=" sectionContainerForSidePadding">
-                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "10px", paddingBottom: "0px" }}>
+                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "10px", paddingBottom: "0px",overflow:"unset" }}>
 
-                        <div className=" PaddingAdjustHeadingContainer" style={{ paddingTop: "0px" }}>
+                        <div className="PaddingAdjustHeadingContainer" style={{ paddingTop: "0px" }}>
                             <Row>
                                 <Col lg={12}>
                                     <div>
                                         <div>
-                                            <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
+                                            {/* <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
                                                 data-aos-duration="1100">At Innovest, we believe in <span>unlocking</span> potential.</h1>
                                             <br />
-                                            <br />
-                                            <p data-aos="fade-up"
+                                            <br /> */}
+                                            <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
+
+                                                <div >
+                                                    <div>
+                                                        <Row>
+                                                            {CardsData.map((item, index) => (
+                                                                <Col lg={24} data-aos="fade-right"
+                                                                    data-aos-duration="1000" data-aos-delay={index * 300} key={index}>
+                                                                    <div>
+                                                                        <div>
+                                                                            <span>0<b>{index + 1}</b></span>
+                                                                            <br /><br />
+                                                                            <h2>{item.title}</h2>
+                                                                            <br />
+                                                                            <p>{item.tagline}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </Col>
+                                                            ))}
+                                                        </Row>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/* <p data-aos="fade-up"
                                                 data-aos-duration="1200"><b>SoulFinspire, led by Mr. Raj Shah,</b> is a top financial advisory firm in Ahmedabad.
                                                 With 25 years of expertise, we specialize in wealth management, loans, and tax planning.
                                                 Our client-centric approach ensures tailored strategies for financial growth and stability.
                                                 We empower individuals and businesses with informed, strategic financial solutions.
-                                            </p>
+                                            </p> */}
                                         </div>
                                     </div>
                                 </Col>
                                 <Col lg={12} style={{ width: "100%" }}>
-                                    <div className="AboutHomeSectionImageContainer" data-aos="fade-left"
-                                        data-aos-duration="1200">
+                                    <div className="AboutHomeSectionImageContainer" >
                                         <div
                                             ref={imageRef}
                                             className="ParallaxZoomImage"

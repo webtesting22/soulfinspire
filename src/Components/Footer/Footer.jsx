@@ -14,30 +14,30 @@ const Footer = () => {
     return (
         <>
             <section id="FooterContainer">
-                <div className="sectionContainerForSidePadding" style={{backgroundColor:"white"}}>
+                <div className="sectionContainerForSidePadding" style={{ backgroundColor: "white" }}>
                     <div className="MaxWidthContainer sliteSectionLikePadding" >
                         <Row>
                             <Col lg={18}>
                                 <div className="FooterLogoContainer">
                                     <div>
-                                        <img src="/Images/SoulFinspireLogo.png" alt="" loading="lazy"/>
+                                        <img src="/Images/SoulFinspireLogo.png" alt="" loading="lazy" />
                                         <div className="FooterContactContainer">
-                                        {/* <h2>Contacts</h2>
+                                            {/* <h2>Contacts</h2>
                                         <br /> */}
-                                        <div>
-                                            <p><IoLocationOutline style={{ fontSize: "20px" }} />&nbsp;C-1008, The First,
-                                                Behind Keshavbagh Party Plot,
-                                                Bodakdev, Ahmedabad, Gujarat-380015</p>
+                                            <div>
+                                                <p><IoLocationOutline style={{ fontSize: "20px" }} />&nbsp;C-1008, The First,
+                                                    Behind Keshavbagh Party Plot,
+                                                    Bodakdev, Ahmedabad, Gujarat-380015</p>
+                                            </div>
+
+                                            <div>
+                                                <p style={{ display: "flex", alignItems: "center" }}><MdLocalPhone style={{ fontSize: "20px" }} />&nbsp;<a href="tel:+91 96625 97197">+91 96625 97197</a></p>
+                                            </div>
+
+                                            <div>
+                                                <p style={{ display: "flex", alignItems: "center" }}><AiOutlineMail style={{ fontSize: "20px" }} />&nbsp;<a href="mailto:info@soulfinspire.com">Info@soulfinspire.com</a></p>
+                                            </div>
                                         </div>
-                                        <br />
-                                        <div>
-                                            <p style={{ display: "flex", alignItems: "center" }}><MdLocalPhone style={{ fontSize: "20px" }} />&nbsp;<a href="tel:+91 96625 97197">+91 96625 97197</a></p>
-                                        </div>
-                                        <br />
-                                        <div>
-                                            <p style={{ display: "flex", alignItems: "center" }}><AiOutlineMail style={{ fontSize: "20px" }} />&nbsp;<a href="mailto:info@soulfinspire.com">Info@soulfinspire.com</a></p>
-                                        </div>
-                                    </div>
                                         {/* <p>We put clients first, we lead with exceptional idea, and we believe in doing the right thing</p> */}
                                     </div>
                                 </div>

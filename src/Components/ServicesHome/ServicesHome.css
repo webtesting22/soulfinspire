@@ -12,7 +12,9 @@
     object-fit: contain;
     transition: .5s;
 }
-
+.InfiniteCarousalForServices{
+    padding-bottom: 0px !important;
+}
 .InfiniteCarousalForServices .PaddingAdjustHeadingContainer {
     border-left: 1px solid #c5c5c5;
     padding: 20px 30px;
