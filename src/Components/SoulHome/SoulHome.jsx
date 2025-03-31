@@ -55,9 +55,9 @@ const SoulHome = () => {
             <section id="SoulHome">
                 <div className="SectionContainer">
                     <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust" style={{ overflow: "unset" }}>
-                        <div className="OverlayContainer">
+                        {/* <div className="OverlayContainer">
                             <img src="/Images/HomePageBannerBackground.jpg" alt="" />
-                        </div>
+                        </div> */}
                         <Row className="HomepageContainerPaddingAdjust">
                             {HomePageTextContentData.map((item, index) => (
                                 <Col

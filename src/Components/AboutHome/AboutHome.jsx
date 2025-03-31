@@ -58,18 +58,32 @@ const AboutHome = () => {
             }
         };
     }, []);
+    // const CardsData = [
+    //     {
+    //         title: "Detailed market analysis for a smoother investment journey",
+    //         tagline: "Our thorough research based on different markets, helps choose right business returns"
+    //     },
+    //     {
+    //         title: "Expert assistance at fingertips to make your future better",
+    //         tagline: "Our Expert advice helps you make tax efficient optimized  decisions"
+    //     },
+    //     {
+    //         title: "Customized financial solutions for a well-built monetary growth",
+    //         tagline: "Understanding your financial picture and managing  investments with risk tolerance and time horizon"
+    //     }
+    // ]
     const CardsData = [
         {
-            title: "Detailed market analysis for a smoother investment journey",
-            tagline: "Our thorough research based on different markets, helps choose right business returns"
+            title: "Competitive Advantage",
+            tagline: "Our experienced investment team through in-depth primary research constructs a portfolio suitable to the needs."
         },
         {
-            title: "Expert assistance at fingertips to make your future better",
-            tagline: "Our Expert advice helps you make tax efficient optimized  decisions"
+            title: "Customized Solutions",
+            tagline: "We focus on understanding your financial landscape and managing investments based on your risk tolerance and time horizon."
         },
         {
-            title: "Customized financial solutions for a well-built monetary growth",
-            tagline: "Understanding your financial picture and managing  investments with risk tolerance and time horizon"
+            title: "Collaborative Approach",
+            tagline: "We regularly monitor, track, and analyze your portfolio to ensure it stays aligned with your financial goals."
         }
     ]
     return (

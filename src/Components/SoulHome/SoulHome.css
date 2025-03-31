@@ -103,7 +103,7 @@
     }
 
     to {
-        transform: translateX(100%);
+        transform: translateX(102%);
     }
 }
 
@@ -176,18 +176,19 @@
         height: 100%;
         display: flex;
         align-items: center;
-        padding: 20px 0px; 
+        padding: 20px 0px;
         justify-content: center;
     }
-    
+
     .HomepageContainerPaddingAdjust .ant-col>div {
         height: 100%;
         display: flex;
         align-items: center;
-        padding: 20px 0px; 
+        padding: 20px 0px;
         justify-content: center;
         overflow: hidden;
     }
+
     .homePageHeadingContainer p {
         width: 100%;
     }
@@ -224,6 +225,7 @@
     #HomepageContainerPaddingAdjust {
         padding-top: 0rem;
     }
+
     .OverlayContainer img {
         position: absolute;
         left: 0px;
