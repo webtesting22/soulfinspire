@@ -47,7 +47,7 @@ const AwardsandRecognitions = () => {
             link: "https://mutualfund.adityabirlacapital.com/"
         },
         {
-            img: "/Images/AwardsLogos/HDFCLogo.png",
+            img: "/Images/AwardsLogos/Hdfcmutualfunds.jpg",
             link: "https://www.hdfcbank.com/"
         },
         {

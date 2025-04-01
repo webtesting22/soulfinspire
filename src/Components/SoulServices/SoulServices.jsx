@@ -60,8 +60,7 @@ const SoulServices = () => {
                                                 data-aos-duration="3000">Our Soulfinspire Services</span> */}
                                             <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
                                                 data-aos-duration="2000" data-aos-delay="200">
-                                               Our <span>Products</span>
-
+                                                Our <span>Products</span>
                                             </h1>
                                         </div>
                                     </Col>
