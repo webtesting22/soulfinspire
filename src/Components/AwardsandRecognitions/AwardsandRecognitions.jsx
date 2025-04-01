@@ -54,7 +54,7 @@ const AwardsandRecognitions = () => {
             img: "/Images/AwardsLogos/MotilaluswalLog.webp",
             link: "https://www.motilaloswal.com/"
         },
-       
+
 
     ]
     return (
