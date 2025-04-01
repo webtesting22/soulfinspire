@@ -120,7 +120,6 @@ const SoulHome = () => {
                     </div>
                 </div>
 
-                <br />
                 <div className="HomePageImageContainer">
                     <div className="AnimatedSlideWhiteLayerAnimation" ref={containerRef} >
                         <div className="AnimatedWhiteLayer">

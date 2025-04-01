@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Button, Modal, Input, Form, message,notification } from "antd";
+import { Row, Col, Button, Modal, Input, Form, message, notification } from "antd";
 import "./LoginPortal.css";
 import "./LoginPage.css";
 
@@ -85,7 +85,7 @@ const LoginPortal = () => {
 
                 // Show the notification after a delay of 5-6 seconds
                 // setTimeout(() => {
-                    
+
                 // }, 100); // Delay for 5 seconds before showing the notification
             } else {
                 message.error(data.message || "Error during form submission.");
@@ -123,8 +123,8 @@ const LoginPortal = () => {
                                     <p style={{ textAlign: "center" }}>Fill all the Fields and Get <b>Dashboard Credentials</b></p>
                                 </div>
                                 <br />
-                                <div style={{ display: "flex", justifyContent: "center" }}>
-                                    <Button type="primary" onClick={showModal}>Sign Up</Button>
+                                <div style={{ display: "flex", justifyContent: "center" }} className="PrimarybtnContainer">
+                                    <Button type="primary" className="" onClick={showModal}>Sign Up</Button>
                                 </div>
                             </div>
                         </div>

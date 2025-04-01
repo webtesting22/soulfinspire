@@ -7,15 +7,15 @@
     position: absolute;
     left: -30%;
 } */
-#OurApproachContainer .ant-row .ant-col:last-child{
-    padding-left: 4rem;
-}
-.FlexContainer{
+
+.FlexContainer {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    /* gap: 60px; */
+    position: relative;
 }
-.OurApproachImagesContainer{
+
+.OurApproachImagesContainer {
     background-image: url("https://images.unsplash.com/photo-1738737271801-d404a575d870?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: 69%;
     background-attachment: fixed;
@@ -27,22 +27,26 @@
 
     /* background-position: center; */
 }
-.OurApprochCardContainer img{
+
+.OurApprochCardContainer img {
     width: 50%;
     transition: .5s;
     margin-bottom: 20px;
 }
-.OurApprochCardContainer{
+
+.OurApprochCardContainer {
     border-bottom: 1px solid #1E402D;
-    padding-bottom: 20px;
+    padding-bottom: 20px !important;
     position: relative;
+    padding: 2rem 0rem;
 }
 
-.OurApprochCardContainer:hover img{
+.OurApprochCardContainer:hover img {
     transform: scale(1.1);
     transition: .5s;
 }
-.OurApprochCardContainer::before{
+
+.OurApprochCardContainer::before {
     content: "";
     width: 20px;
     background-color: #1E402D;
@@ -51,7 +55,8 @@
     bottom: -1.5px;
     transition: .5s;
 }
-.OurApprochCardContainer:hover::before{
+
+.OurApprochCardContainer:hover::before {
     content: "";
     width: 100%;
     background-color: #1E402D;
@@ -60,11 +65,47 @@
     bottom: -1.5px;
     transition: .5s;
 }
-@media (max-width:900px){
-    #OurApproachContainer .ant-row .ant-col:last-child{
-        padding-left: 0rem;
-    }
-    .OurApprochCardContainer img{
+
+.timelineAnimatedLine {
+    background-color: #1E402D;
+    height: 100%;
+    /* width: 100%; */
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.NumberingContainer div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    border: 2px solid #1E402D;
+
+}
+
+.NumberingContainer div span {
+    background: green;
+    /* padding: 11px; */
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+@media (max-width:900px) {
+
+    .OurApprochCardContainer img {
         width: 100%;
         transition: .5s;
         margin-bottom: 20px;

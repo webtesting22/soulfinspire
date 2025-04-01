@@ -128,8 +128,9 @@ const AboutUs = () => {
                 </div>
             </section>
             <SoulTeam />
-            <MainPrinciples />
+
             <OurApproach />
+            <MainPrinciples />
         </>
     );
 };
