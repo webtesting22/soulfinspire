@@ -76,7 +76,7 @@ const SoulNavigation = () => {
                                 </ul>
                                 <div className="PortfolioLoginBtn">
                                     <div className="PrimarybtnContainer">
-                                        <button style={{ marginTop: "0px" }}><FaUser />&nbsp; Portfolio Login</button>
+                                        <Link to="/login-portal"><button style={{ marginTop: "0px" }}><FaUser />&nbsp; Portfolio Login</button></Link>
                                     </div>
                                 </div>
                             </div>

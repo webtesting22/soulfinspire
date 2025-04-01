@@ -35,7 +35,7 @@
 }
 
 #SoulHome .SectionContainer {
-    height: 80vh;
+    /* height: 80vh; */
     padding-bottom: 0px;
     padding-top: 0px;
     position: relative;
@@ -167,11 +167,29 @@
     margin-top: 15px !important;
 }
 
-/* .homePageHeadingContainer h2,
-.homePageHeadingContainer p{
+.HomePageAnimatedHeading {
+    display: flex;
+    justify-content: center;
+}
+
+.HomePageAnimatedHeading div h2 {
     text-align: center;
-} */
+    margin-right: 0px !important;
+
+}
+
+.HomePageAnimatedHeading div {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
 @media (max-width:900px) {
+    .HomePageAnimatedHeading div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     .HomepageContainerPaddingAdjust .ant-col:nth-child(3)>div {
         height: 100%;
         display: flex;

@@ -7,7 +7,7 @@ const SectionHeading = ({ text, color = "white", valueOfBorder = "1px solid whit
 
 
             <div className="PaddingAdjustHeadingContainer">
-                <div className="HeadingContainerDynamic" style={{ borderTop: valueOfBorder }} data-aos="fade-left"
+                <div className="HeadingContainerDynamic"  data-aos="fade-left"
                     data-aos-duration="1000">
                     <h2 style={{ color }} className={`before-color-${beforeBgColor.replace("#", "")}`} data-aos="fade-left"
                         data-aos-duration="1200" data-aos-delay="400">{text}</h2>

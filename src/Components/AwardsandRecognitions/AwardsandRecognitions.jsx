@@ -23,8 +23,8 @@ const AwardsandRecognitions = () => {
             link: "https://www.ltfs.com/"
         },
         {
-            img: "/Images/AwardsLogos/5.webp",
-            link: "https://www.icicipruamc.com/"
+            img: "/Images/AwardsLogos/360oneLoog.svg",
+            link: "https://www.360.one/"
         },
         {
             img: "/Images/AwardsLogos/6.webp",
@@ -41,6 +41,14 @@ const AwardsandRecognitions = () => {
         {
             img: "/Images/AwardsLogos/Aditya_Birla_Group.webp",
             link: "https://mutualfund.adityabirlacapital.com/"
+        },
+        {
+            img: "/Images/AwardsLogos/HDFCLogo.png",
+            link: "https://www.hdfcbank.com/"
+        },
+        {
+            img: "/Images/AwardsLogos/MotilaluswalLog.webp",
+            link: "https://www.motilaloswal.com/"
         },
 
     ]
@@ -68,11 +76,11 @@ const AwardsandRecognitions = () => {
 
                                     <Col lg={24}>
                                         <div>
-                                            
+
                                             <div>
                                                 <Row>
                                                     {AwardsData.map((item, index) => (
-                                                        <Col key={index} lg={6} md={12} data-aos="fade-up"
+                                                        <Col key={index} lg={4} md={12} data-aos="fade-up"
                                                             data-aos-duration="500" data-aos-delay={index * 100}>
                                                             <Link to={item.link} target="_blank">
                                                                 <div>

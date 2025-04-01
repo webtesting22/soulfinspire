@@ -57,6 +57,7 @@
 }
 .AboutusCardsContainer{
     overflow: hidden;
+    margin-top: 4rem;
 }
 
 .AboutusCardsContainer .ant-row .ant-col span {
@@ -71,13 +72,13 @@
 }
 
 .AboutusCardsContainer .ant-row .ant-col {
-    padding: 20px 0px;
-    border-bottom: 1px solid #c5c5c5;
+    padding: 20px 20px;
+    border-left: 1px solid #c5c5c5;
 }
 
 .AboutusCardsContainer .ant-row .ant-col:last-child {
-    padding: 20px 0px;
-    border-bottom: 1px solid transparent;
+    padding: 20px 20px;
+    border-left: 1px solid #c5c5c5;
 }
 
 .AboutHomeSectionImageContainer {
@@ -93,6 +94,12 @@
 }
 
 @media (max-width:900px) {
+
+.AboutusCardsContainer .ant-row .ant-col:last-child {
+    padding: 20px 20px;
+    border-left: none;
+}
+
     #AboutHomeComponent .PaddingAdjustHeadingContainer .ant-row .ant-col:first-child {
         padding-right: 0rem;
     }

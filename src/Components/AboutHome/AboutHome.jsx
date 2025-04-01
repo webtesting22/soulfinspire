@@ -97,11 +97,11 @@ const AboutHome = () => {
                                 <Col lg={12}>
                                     <div>
                                         <div>
-                                            {/* <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
-                                                data-aos-duration="1100">At Innovest, we believe in <span>unlocking</span> potential.</h1>
+                                            <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
+                                                data-aos-duration="1100">Simplifying Wealth with Trust, <span>Transparency & Expertise</span></h1>
                                             <br />
-                                            <br /> */}
-                                            <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
+                                            <br />
+                                            {/* <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
                                                 <div >
                                                     <div>
                                                         <Row>
@@ -122,13 +122,10 @@ const AboutHome = () => {
                                                         </Row>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            {/* <p data-aos="fade-up"
-                                                data-aos-duration="1200"><b>SoulFinspire, led by Mr. Raj Shah,</b> is a top financial advisory firm in Ahmedabad.
-                                                With 25 years of expertise, we specialize in wealth management, loans, and tax planning.
-                                                Our client-centric approach ensures tailored strategies for financial growth and stability.
-                                                We empower individuals and businesses with informed, strategic financial solutions.
-                                            </p> */}
+                                            </div> */}
+                                            <p data-aos="fade-up"
+                                                data-aos-duration="1200">At <b>SoulFinspire LLP</b>, we make wealth creation simple, accessible, and effective. With a commitment to trust, transparency, and efficiency, we provide tailored financial strategies that drive growth and stability. Our client-centric approach ensures personalized solutions, empowering individuals and businesses to achieve long-term financial <b>success with confidence</b>.
+                                            </p>
                                         </div>
                                     </div>
                                 </Col>
@@ -145,6 +142,30 @@ const AboutHome = () => {
                                                 alt=""
                                                 loading="lazy"
                                             />
+                                        </div>
+                                    </div>
+                                </Col>
+                                <Col lg={24}>
+                                    <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
+                                        <div >
+                                            <div>
+                                                <Row>
+                                                    {CardsData.map((item, index) => (
+                                                        <Col lg={8} data-aos="fade-right"
+                                                            data-aos-duration="1000" data-aos-delay={index * 300} key={index}>
+                                                            <div>
+                                                                <div>
+                                                                    <span>0<b>{index + 1}</b></span>
+                                                                    <br /><br />
+                                                                    <h2>{item.title}</h2>
+                                                                    <br />
+                                                                    <p>{item.tagline}</p>
+                                                                </div>
+                                                            </div>
+                                                        </Col>
+                                                    ))}
+                                                </Row>
+                                            </div>
                                         </div>
                                     </div>
                                 </Col>

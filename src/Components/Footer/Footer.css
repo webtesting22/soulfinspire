@@ -1,6 +1,7 @@
 #FooterContainer {
-    background-color: rgb(236, 236, 236);
+    /* background-color: rgb(236, 236, 236); */
     /* padding: 5px; */
+    padding-top: 30px;
     /* color: white; */
 }
 

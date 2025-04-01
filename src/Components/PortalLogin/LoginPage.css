@@ -27,3 +27,12 @@
     align-items: center;
     justify-content: center;
 }
+.ant-form{
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.ant-form-item{
+    width: 50%;
+    padding: 0px 10px;
+}

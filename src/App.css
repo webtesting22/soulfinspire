@@ -59,6 +59,7 @@ h6 {
   width: 90%;
   overflow: hidden;
   padding: 20px 0px;
+  padding-top: 0px !important;
 }
 
 .PrimaryHeadingStyle {

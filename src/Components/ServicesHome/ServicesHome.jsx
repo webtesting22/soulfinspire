@@ -17,44 +17,40 @@ const ServicesHome = () => {
         {
             img: "/Images/ServicesIcons/WealthManagement.png",
             title: "Wealth Management ",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+            content: <>Wealth management is about building the life you want, not just growing money. We provide strategic, personalized guidance to simplify finances and help you achieve your goals</>
         },
         {
             img: "/Images/ServicesIcons/TaxPlanning.png",
             title: "Tax Planning",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+            content: <>Tax planning is about maximizing your earnings, not just saving money. We simplify the process with smart strategies that minimize liabilities and turn taxes into a wealth-building tool</>
 
         },
         {
             img: "/Images/ServicesIcons/PortFolioManagement.png",
             title: "Portfolio Management",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+            content: <>Portfolio management is about aligning investments with your goals and risk tolerance. We create personalized strategies to optimize growth, stability, and long-term wealth</>
 
         },
         {
             img: "/Images/ServicesIcons/LoadAcquisitions.png",
             title: "Load Acquisitions",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+            content: <>Getting a loan isn’t just about approval—it’s about securing the best terms for your goals. We simplify the process with expert guidance, tailored solutions, and strategic financing</>
 
         },
+        {
+            img: "/Images/ServicesIcons/PrivateWealth.png",
+            title: "Private Wealth",
+            content: <>We provide expert guidance, bespoke solutions, and insights for informed decision-making. Our strategies ensure long-term security and success
+            </>
+
+        }
 
     ]
 
     const ProductsCarousal = [
         {
-            img: "/Images/ServicesIcons/FinancialIncome.svg",
-            title: "Financial Planning",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
-        },
-        {
-            img: "/Images/ServicesIcons/TaxPlanning.svg",
-            title: "Tax Planning",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
-
-        },
-        {
             img: "/Images/ServicesIcons/Loan.svg",
-            title: "Loans",
+            title: "Alternative Investments",
             content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
 
         },
@@ -101,10 +97,10 @@ const ServicesHome = () => {
                 <div className="sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding">
                         <SectionHeading text="Services SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
-                        <div>
+                        {/* <div>
                             <h1 className="PrimaryHeadingStyle" style={{ color: "black", marginTop: "0px" }} data-aos="fade-up"
                                 data-aos-duration="1200">Empowering <span>Investment</span>. Fueling Future <span>Growth</span>.</h1>
-                        </div>
+                        </div> */}
                         <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding" style={{ padding: "0px" }}>
                             <div className="InfiniteCarousalForServices PaddingAdjustHeadingContainer" onMouseMove={handleMouseMove}>
                                 <Swiper
@@ -153,9 +149,9 @@ const ServicesHome = () => {
                                                         <br />
                                                         <p style={{ textAlign: "end" }}>{item.content}</p>
                                                     </div>
-                                                    <div className='SwiperReadMoreBtnContainer' style={{ display: "flex", justifyContent: "end" }}>
+                                                    {/* <div className='SwiperReadMoreBtnContainer' style={{ display: "flex", justifyContent: "end" }}>
                                                         <button >Read More <IoArrowForward /></button>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                         </SwiperSlide>
@@ -169,12 +165,12 @@ const ServicesHome = () => {
             </section>
             <section>
                 <div className="sectionContainerForSidePadding">
-                    <div className="MaxWidthContainer sliteSectionLikePadding">
+                    <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "0px" }}>
                         <SectionHeading text="Products SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
-                        <div>
+                        {/* <div>
                             <h1 className="PrimaryHeadingStyle" style={{ color: "black", marginTop: "0px" }} data-aos="fade-up"
                                 data-aos-duration="1200">Building Wealth. <span>Securing</span> Tomorrow.</h1>
-                        </div>
+                        </div> */}
                         <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding" style={{ padding: "0px" }}>
                             <div className="InfiniteCarousalForServices PaddingAdjustHeadingContainer" onMouseMove={handleMouseMove}>
                                 <Swiper
@@ -222,9 +218,9 @@ const ServicesHome = () => {
                                                         <br />
                                                         <p>{item.content}</p>
                                                     </div>
-                                                    <div className='SwiperReadMoreBtnContainer'>
+                                                    {/* <div className='SwiperReadMoreBtnContainer'>
                                                         <button>Read More <IoArrowForward /></button>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
                                         </SwiperSlide>

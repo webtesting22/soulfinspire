@@ -58,7 +58,7 @@ const SoulHome = () => {
                         {/* <div className="OverlayContainer">
                             <img src="/Images/HomePageBannerBackground.jpg" alt="" />
                         </div> */}
-                        <Row className="HomepageContainerPaddingAdjust">
+                        {/* <Row className="HomepageContainerPaddingAdjust">
                             {HomePageTextContentData.map((item, index) => (
                                 <Col
                                     lg={index === HomePageTextContentData.length - 1 ? 24 : 12}
@@ -73,13 +73,22 @@ const SoulHome = () => {
                                 >
                                     <div>
                                         <div className="homePageHeadingContainer">
-                                            {/* <span className="TagEdit">{item.tag}</span> */}
                                             <h2 className="PrimaryHeadingStyle">{item.title}</h2>
                                             <p>{item.content}</p>
                                         </div>
                                     </div>
                                 </Col>
                             ))}
+                        </Row> */}
+                        <Row>
+                            <Col lg={24}>
+                                <div className="HomePageAnimatedHeading">
+                                    <div  data-aos="fade-right" 
+                                    data-aos-duration="2000">
+                                        <h2 className="PrimaryHeadingStyle"><span>Mountains</span> and <span>Markets</span> - reward the <span>Persistent</span>.</h2>
+                                    </div>
+                                </div>
+                            </Col>
                         </Row>
 
 

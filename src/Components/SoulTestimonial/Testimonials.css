@@ -94,7 +94,7 @@
 #SwiperContainerAdjust {
     display: flex;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .CustomNavigationButtons {
@@ -107,7 +107,7 @@
 
 #TestimonialsContainerRow .ant-row .ant-col:first-child{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 @media (max-width:900px) {
     .CustomNavigationButtons {

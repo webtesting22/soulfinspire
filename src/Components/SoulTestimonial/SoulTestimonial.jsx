@@ -64,6 +64,7 @@ const SoulTestimonial = () => {
     const ClientReviewData = [
         {
             name: "Mr. Dev Aneja",
+            image: "/Images/ReviewPhotos/dev-juneja-soul-inc.png",
             position: "Assistant Vice President - Invest India",
             postionPost: "Ministry of Commerce",
             content: (
@@ -80,6 +81,7 @@ const SoulTestimonial = () => {
         },
         {
             name: "Mr. Amit Raturi",
+            image: "/Images/ReviewPhotos/amit-soul-inc.png",
             position: "Export Head",
             postionPost: "",
             content: (
@@ -92,6 +94,7 @@ const SoulTestimonial = () => {
         },
         {
             name: "Mr. Hitesh Trivedi ",
+            image: "/Images/ReviewPhotos/hitesh-trivedi-soul-inc.png",
             position: "Businessman",
             postionPost: "",
             content: (
@@ -112,6 +115,7 @@ const SoulTestimonial = () => {
         },
         {
             name: "Ms. Ratna Shah",
+            image: "/Images/ReviewPhotos/ratna-shah.png",
             position: "Manager",
             postionPost: "Flamingo Transworld Pvt. Ltd.",
             content: (
@@ -137,7 +141,7 @@ const SoulTestimonial = () => {
                     />
                     <div id="TestimonialsContainerRow">
                         <Row>
-                            <Col lg={14}>
+                            <Col lg={24}>
                                 <div style={{ width: "100%" }}>
                                     <div>
                                         <h2
@@ -148,11 +152,6 @@ const SoulTestimonial = () => {
                                         >
                                             What our <span>Customers</span> Say?
                                         </h2>
-                                        <br />
-                                        <p>
-                                            We value the trust of our clients and always strive to
-                                            provide the best financial solutions for them.
-                                        </p>
                                     </div>
                                     <div className="PaddingAdjustHeadingContainer" id="SwiperContainerAdjust">
                                         <div className="ReviewSwiperContentContainer PaddingAdjustHeadingContainer" style={{ paddingBottom: "0px" }}>
@@ -161,8 +160,9 @@ const SoulTestimonial = () => {
                                                 centeredSlides={true}
                                                 loop={true}
                                                 autoplay={{
-                                                    delay: 2500,
+                                                    delay: 2000,
                                                     disableOnInteraction: false,
+                                                    pauseOnMouseEnter: true,
                                                 }}
                                                 speed={800}
                                                 modules={[Autoplay, Pagination, Navigation]}
@@ -185,10 +185,16 @@ const SoulTestimonial = () => {
                                             <div className="NameAboutDetailsContainer">
                                                 <Row>
                                                     <Col lg={18} md={24} style={{ width: "100%" }}>
-                                                        <div>
-                                                            <div>
-                                                                <h2>{ClientReviewData[activeIndex].name} ({ClientReviewData[activeIndex].position})</h2>
-                                                                <p>{ClientReviewData[activeIndex].postionPost}</p>
+                                                        <div style={{ width: "100%" }}>
+                                                            <div style={{ width: "100%" }}>
+                                                                <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+                                                                    <div>
+                                                                        <h2>{ClientReviewData[activeIndex].name} ({ClientReviewData[activeIndex].position})</h2>
+                                                                        <p>{ClientReviewData[activeIndex].postionPost}</p>
+                                                                    </div>
+                                                                    <img src={ClientReviewData[activeIndex].image} alt="" style={{ width: "70px", height: "70px" }} />
+                                                                </div>
+
                                                             </div>
                                                         </div>
                                                     </Col>
@@ -211,7 +217,7 @@ const SoulTestimonial = () => {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={10}>
+                            {/* <Col lg={10}>
                                 <div className="TestimonialsSectionImage" ref={countRef}>
                                     <div>
                                         <div className="AbsoluteContentContainer">
@@ -222,11 +228,11 @@ const SoulTestimonial = () => {
                                             <div className="AnimatedWhiteLayer">
 
                                             </div>
-                                            <img src="https://cdn.prod.website-files.com/67765ad592aee8ab80237e9b/677df7303175761c2bfd1181_review-img.jpg" alt="" style={{ width: "100%" }} loading="lazy"/>
+                                            <img src="https://cdn.prod.website-files.com/67765ad592aee8ab80237e9b/677df7303175761c2bfd1181_review-img.jpg" alt="" style={{ width: "100%" }} loading="lazy" />
                                         </div>
                                     </div>
                                 </div>
-                            </Col>
+                            </Col> */}
                         </Row>
                     </div>
                 </div>
