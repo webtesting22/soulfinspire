@@ -9,7 +9,7 @@ const SoulServices = () => {
     const location = useLocation();
     useEffect(() => {
         if (location.hash) {
-            const sectionId = location.hash.replace("#", ""); 
+            const sectionId = location.hash.replace("#", "");
             const section = document.getElementById(sectionId);
             if (section) {
                 const yOffset = -200; // Offset from the top
@@ -59,12 +59,12 @@ const SoulServices = () => {
                                 <div className="PaddingAdjustHeadingContainer" style={{ paddingBottom: "0px" }}>
                                     <Row id="ServicesCardAdjust">
                                         {ServiceData.map((item, index) => (
-                                            <Col lg={12} key={index} id={item.title.replace(/\s+/g, "").toLowerCase()} data-aos="fade-up"
+                                            <Col lg={24} key={index} id={item.title.replace(/\s+/g, "").toLowerCase()} data-aos="fade-up"
                                                 data-aos-duration="800" data-aos-delay={index * 200}>
                                                 <div className="OurServicesCardsContainer">
-                                                    <div className="OverlayImage">
+                                                    {/* <div className="OverlayImage">
                                                         <img src={item.backgroundImage} alt="" loading="lazy" />
-                                                    </div>
+                                                    </div> */}
                                                     <div className="ContentContainerOurServices">
                                                         <div>
                                                             <h2 style={{ textTransform: "uppercase" }}>{item.title}</h2>

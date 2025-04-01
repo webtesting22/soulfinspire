@@ -124,7 +124,7 @@ const LoginPortal = () => {
                                 </div>
                                 <br />
                                 <div style={{ display: "flex", justifyContent: "center" }} className="PrimarybtnContainer">
-                                    <Button type="primary" className="" onClick={showModal}>Sign Up</Button>
+                                    <Button type="primary" onClick={showModal}>Sign Up</Button>
                                 </div>
                             </div>
                         </div>
@@ -523,7 +523,7 @@ const LoginPortal = () => {
                         >
                             <Input placeholder="Enter your Nominee PAN2" />
                         </Form.Item>
-                        <div style={{ display: "flex", justifyContent: "space-between" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between" }} className="PrimarybtnContainer">
                             <Button onClick={handleCancel}>Cancel</Button>
                             <Form.Item>
                                 <Button type="primary" htmlType="submit">

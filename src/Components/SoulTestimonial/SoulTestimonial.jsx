@@ -133,12 +133,12 @@ const SoulTestimonial = () => {
         <section>
             <div className="sectionContainerForSidePadding">
                 <div className="MaxWidthContainer sliteSectionLikePadding">
-                    <SectionHeading
+                    {/* <SectionHeading
                         text="Reviews"
                         color="black"
                         valueOfBorder="1px solid black"
                         beforeBgColor="brand"
-                    />
+                    /> */}
                     <div id="TestimonialsContainerRow">
                         <Row>
                             <Col lg={24}>

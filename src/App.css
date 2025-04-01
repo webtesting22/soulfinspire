@@ -59,7 +59,7 @@ h6 {
   width: 90%;
   overflow: hidden;
   padding: 20px 0px;
-  padding-top: 10px !important;
+  /* padding-top: 10px !important; */
 }
 
 .PrimaryHeadingStyle {
@@ -69,6 +69,7 @@ h6 {
   font-family: 'Spline Sans', sans-serif;
   margin-top: 30px;
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .PrimaryHeadingStyle span {

@@ -96,11 +96,11 @@ const ServicesHome = () => {
             <section>
                 <div className="sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding">
-                        <SectionHeading text="Services SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
-                        {/* <div>
+                        {/* <SectionHeading text="Services SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" /> */}
+                        <div>
                             <h1 className="PrimaryHeadingStyle" style={{ color: "black", marginTop: "0px" }} data-aos="fade-up"
-                                data-aos-duration="1200">Empowering <span>Investment</span>. Fueling Future <span>Growth</span>.</h1>
-                        </div> */}
+                                data-aos-duration="1200">Our <span>Services</span></h1>
+                        </div>
                         <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding" style={{ padding: "0px" }}>
                             <div className="InfiniteCarousalForServices PaddingAdjustHeadingContainer" onMouseMove={handleMouseMove}>
                                 <Swiper
@@ -166,11 +166,11 @@ const ServicesHome = () => {
             <section>
                 <div className="sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding" style={{ paddingTop: "0px" }}>
-                        <SectionHeading text="Products SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
-                        {/* <div>
+                        {/* <SectionHeading text="Products SoulFinspire" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" /> */}
+                        <div>
                             <h1 className="PrimaryHeadingStyle" style={{ color: "black", marginTop: "0px" }} data-aos="fade-up"
-                                data-aos-duration="1200">Building Wealth. <span>Securing</span> Tomorrow.</h1>
-                        </div> */}
+                                data-aos-duration="1200">Our <span>Products</span></h1>
+                        </div>
                         <div className="PaddingAdjustHeadingContainer sliteSectionLikePadding" style={{ padding: "0px" }}>
                             <div className="InfiniteCarousalForServices PaddingAdjustHeadingContainer" onMouseMove={handleMouseMove}>
                                 <Swiper

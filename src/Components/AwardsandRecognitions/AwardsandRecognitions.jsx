@@ -39,6 +39,10 @@ const AwardsandRecognitions = () => {
             link: "https://www.icicipruamc.com/",
         },
         {
+            img: "/Images/AwardsLogos/icicaccostmanagement.jpg",
+            link: "https://www.icicibank.com/"
+        },
+        {
             img: "/Images/AwardsLogos/Aditya_Birla_Group.webp",
             link: "https://mutualfund.adityabirlacapital.com/"
         },
@@ -50,6 +54,7 @@ const AwardsandRecognitions = () => {
             img: "/Images/AwardsLogos/MotilaluswalLog.webp",
             link: "https://www.motilaloswal.com/"
         },
+       
 
     ]
     return (
@@ -58,9 +63,9 @@ const AwardsandRecognitions = () => {
                 <div className="sectionContainerForSidePadding">
                     <div className="MaxWidthContainer">
                         <div>
-                            <div>
+                            {/* <div>
                                 <SectionHeading text="Awards and Recognitions" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
-                            </div>
+                            </div> */}
                             <div className="sectionContainerForSidePadding" style={{ paddingLeft: "0px", paddingRight: "0px" }} id="AwardsContainer">
                                 <Row>
                                     <Col lg={24}>
