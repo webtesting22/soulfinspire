@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Button, Modal, Input, Form, message, notification } from "antd";
 import "./LoginPortal.css";
 import "./LoginPage.css";
 
 const LoginPortal = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
     const [form] = Form.useForm(); // Ant Design's form instance to manage the form
 
     // Handle form submit
@@ -78,7 +79,7 @@ const LoginPortal = () => {
 
                 console.log("ghsduhfiwfh")
                 setIsModalOpen(false); // Close the modal
-
+                setIsSuccessModalOpen(true);
                 notification.success({
                     message: "Form Successfully Submitted",
                 });
@@ -100,7 +101,10 @@ const LoginPortal = () => {
 
     const showModal = () => setIsModalOpen(true);
     const handleCancel = () => setIsModalOpen(false);
-
+    const handleSuccessModalCancel = () => setIsSuccessModalOpen(false); 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <div id="LoginPage">
@@ -134,11 +138,12 @@ const LoginPortal = () => {
                 {/* Modal for Sign Up */}
                 <Modal
                     width={800}
-                    title="Sign Up"
+                    title="SoulfinSpire"
                     open={isModalOpen}
                     onCancel={handleCancel}
                     footer={null}
                 >
+                    <br />
                     <Form layout="vertical" form={form} onFinish={handleSubmit}>
                         <Form.Item
                             label="Client Code (UCC)"
@@ -532,6 +537,20 @@ const LoginPortal = () => {
                             </Form.Item>
                         </div>
                     </Form>
+                </Modal>
+                <Modal
+                    width={400}
+                    title="Submission Successful"
+                    open={isSuccessModalOpen}
+                    onCancel={handleSuccessModalCancel}
+                    footer={null}
+                >
+                    <div className="PrimarybtnContainer">
+                        <h3>Your form has been successfully submitted!</h3>
+                        <Button type="primary" onClick={handleSuccessModalCancel}>
+                            OK
+                        </Button>
+                    </div>
                 </Modal>
             </div>
         </>

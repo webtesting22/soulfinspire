@@ -48,7 +48,7 @@
 
 .AnimatedInsideImageContainer {
     width: 40%;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100%;
     display: flex;
     justify-content: center;
@@ -57,6 +57,7 @@
 .AnimatedInsideImageContainer img {
     width: 70%;
     height: 100%;
+    filter: drop-shadow(0 15px 0.75rem #00000040);
     object-fit: cover;
 }
 
@@ -68,10 +69,12 @@
 
 .AnimatedContentContainer .PrimaryHeadingStyle {
     color: #1E402D;
+    margin-top: 10px !important;
 }
 
 .CountCards span {
     font-size: 3rem;
+    opacity: 0.3;
 }
 
 #AnimatedWhyChooseUsCard .ant-row .ant-col:nth-child(even) {

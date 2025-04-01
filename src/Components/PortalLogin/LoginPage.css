@@ -30,9 +30,17 @@
 .ant-form{
     display: flex;
     flex-wrap: wrap;
+    justify-content: end;
 } 
 
 .ant-form-item{
     width: 50%;
     padding: 0px 10px;
+}
+
+@media (max-width:900px){
+    .ant-form-item{
+        width: 100%;
+        padding: 0px 10px;
+    }
 }
