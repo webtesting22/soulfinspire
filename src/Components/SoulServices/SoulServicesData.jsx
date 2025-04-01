@@ -51,7 +51,7 @@ export const AnimatedCards = ({ cardsData }) => {
                                     <p>{item.content}</p>
                                 </div>
                                 <div className="AnimatedInsideImageContainer">
-                                    <img src="https://images.unsplash.com/photo-1506751470038-e579eb91f580?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                    <img src={item.img} alt="" />
                                 </div>
                             </div>
                         </Col>

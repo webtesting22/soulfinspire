@@ -66,6 +66,7 @@
     min-height: 300px;
     display: flex;
     align-items: center;
+    color: black;
 }
 
 .ContentContainerOurServices>div {
@@ -76,12 +77,12 @@
     padding-right: 40px;
 }
 
-.ContentContainerOurServices .PrimarybtnContainer .ReadMoreButton {
+/* .ContentContainerOurServices .PrimarybtnContainer .ReadMoreButton {
     background-color: white;
     color: black;
     padding: 10px 20px;
     cursor: pointer;
-}
+} */
 
 @media (max-width:900px) {
     .OurServicesCardsContainer {

@@ -76,7 +76,7 @@ const SoulNavigation = () => {
                                 </ul>
                                 <div className="PortfolioLoginBtn">
                                     <div className="PrimarybtnContainer">
-                                        <Link to="/login-portal"><button style={{ marginTop: "0px",cursor:"pointer"}}><FaUser />&nbsp; Portfolio Login</button></Link>
+                                        <Link to="/login-portal"><button style={{ marginTop: "0px", cursor: "pointer" }}><FaUser />&nbsp; Portfolio Login</button></Link>
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@ const SoulNavigation = () => {
                                                 </Link>
                                             }
                                             key={index} showArrow={false} onClose={() => setDrawerVisible(false)} className="WithoutSublinkPanel">
-                                          
+
                                         </Panel>
                                     )
                                 ))}

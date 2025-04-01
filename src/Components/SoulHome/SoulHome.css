@@ -173,15 +173,15 @@
 }
 
 .HomePageAnimatedHeading div h2 {
-    text-align: center;
+    /* text-align: center; */
     margin-right: 0px !important;
 
 }
 
 .HomePageAnimatedHeading div {
     display: flex;
-    justify-content: center;
-    width: 60%;
+    /* justify-content: center; */
+    width: 80%;
 }
 
 @media (max-width:900px) {
@@ -190,6 +190,7 @@
         justify-content: center;
         width: 100%;
     }
+
     .HomepageContainerPaddingAdjust .ant-col:nth-child(3)>div {
         height: 100%;
         display: flex;

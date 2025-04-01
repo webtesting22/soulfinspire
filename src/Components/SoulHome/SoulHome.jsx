@@ -90,8 +90,6 @@ const SoulHome = () => {
                                 </div>
                             </Col>
                         </Row>
-
-
                         {/* <Row id="HomePageRow">
                             <Col lg={12} >
                                 <div>

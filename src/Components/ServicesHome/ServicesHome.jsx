@@ -52,7 +52,6 @@ const ServicesHome = () => {
             img: "/Images/ServicesIcons/Loan.svg",
             title: "Alternative Investments",
             content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
-
         },
         {
             img: "/Images/ServicesIcons/MutualFund.svg",
