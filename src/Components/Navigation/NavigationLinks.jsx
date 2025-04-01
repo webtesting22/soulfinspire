@@ -15,7 +15,7 @@ const NavigationLinks = [
             { link: "Alternative Investments", path: "/soul-services#alternativeinvestments" },
             { link: "Fixed Income", path: "/soul-services#fixedincome" }
         ],
-        path: "/about-us"
+        path: "/soul-services"
     },
     {
         link: "Services",

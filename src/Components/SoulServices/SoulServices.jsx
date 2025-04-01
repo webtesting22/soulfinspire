@@ -56,11 +56,11 @@ const SoulServices = () => {
                                 <Row>
                                     <Col lg={24}>
                                         <div>
-                                            <span className="TagEdit" data-aos="fade-up"
-                                                data-aos-duration="3000">Our Soulfinspire Services</span>
+                                            {/* <span className="TagEdit" data-aos="fade-up"
+                                                data-aos-duration="3000">Our Soulfinspire Services</span> */}
                                             <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
                                                 data-aos-duration="2000" data-aos-delay="200">
-                                                Soulfinspire <span>Provides</span>
+                                               Our <span>Products</span>
 
                                             </h1>
                                         </div>
