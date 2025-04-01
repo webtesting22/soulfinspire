@@ -77,8 +77,8 @@ const AboutUs = () => {
                             <Row>
                                 <Col lg={24}>
                                     <div>
-                                        <span className="TagEdit" data-aos="fade-up"
-                                            data-aos-duration="3000">About Soulfinspire</span>
+                                        {/* <span className="TagEdit" data-aos="fade-up"
+                                            data-aos-duration="3000">About Soulfinspire</span> */}
                                         <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
                                             data-aos-duration="2000" data-aos-delay="200">
                                             Discover Our <span>Vision</span>, Trust Our <span>Expertise</span>.
@@ -104,7 +104,11 @@ const AboutUs = () => {
                 <div className="sectionContainerForSidePadding" id="OurAchivementsContainer">
                     <img src="/Images/GrowthArrowImage.jpg" alt="" />
                     <div className="MaxWidthContainer sliteSectionLikePadding">
-                        <SectionHeading text="Soulfinspire Achievements" color="white" beforeBgColor="white" />
+                        {/* <SectionHeading text="Soulfinspire Achievements" color="white" beforeBgColor="white" /> */}
+                        <div>
+                                    <h2 className="PrimaryHeadingStyle" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="200">Our Achievements</h2>
+                                </div>
                         <div >
                             <Row className="PaddingAdjustHeadingContainer" style={{ paddingBottom: "0px" }}>
                                 {OurAchievementsData.map((item, index) => (

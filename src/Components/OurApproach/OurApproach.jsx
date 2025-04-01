@@ -51,11 +51,16 @@ const OurApproach = () => {
                     <div className="MaxWidthContainer sliteSectionLikePadding" style={{ overflow: "unset" }}>
                         <div style={{ position: "relative" }}>
                             <div>
-                                <SectionHeading text="Our Approach" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
+                                {/* <SectionHeading text="Our Approach" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" /> */}
+                                <div>
+                                    <h2 className="PrimaryHeadingStyle" data-aos="fade-up"
+                                        data-aos-duration="2000" data-aos-delay="200">Our <span>Approach</span></h2>
+                                </div>
+                                <br /><br />
                                 <div className="FlexContainer">
                                     {OurApproachData.map((item, index) => (
                                         <Row key={index} gutter={[16, 16]}>
-                                            <Col lg={11} style={{ opacity: index % 2 === 0 ? '1' : '0', transition: 'opacity 0.5s ease' }}>
+                                            <Col lg={11} style={{ opacity: index % 2 === 0 ? '1' : '0', transition: 'opacity 0.5s ease' }} className="DisplayProperty">
                                                 <div
                                                     className="OurApprochCardContainer"
                                                     data-aos="fade-left"
@@ -86,7 +91,7 @@ const OurApproach = () => {
                                                     </div>
                                                 </div>
                                             </Col>
-                                            <Col lg={11} style={{ opacity: index % 2 !== 0 ? '1' : '0', transition: 'opacity 0.5s ease' }}>
+                                            <Col lg={11} style={{ opacity: index % 2 !== 0 ? '1' : '0', transition: 'opacity 0.5s ease' }} className="DisplayProperty">
                                                 <div
                                                     className="OurApprochCardContainer"
                                                     data-aos="fade-left"

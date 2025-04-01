@@ -110,4 +110,34 @@
         transition: .5s;
         margin-bottom: 20px;
     }
+
+    .FlexContainer .ant-row:nth-child(1) .DisplayProperty:nth-child(3) {
+        background-color: red;
+        opacity: 1;
+        display: none;
+    }
+
+    .FlexContainer .ant-row:nth-child(2) .DisplayProperty:nth-child(1) {
+        background-color: red;
+        opacity: 1;
+        display: none;
+    }
+
+    .FlexContainer .ant-row:nth-child(3) .DisplayProperty:nth-child(3) {
+        background-color: red;
+        opacity: 1;
+        display: none;
+    }
+
+    .OurApprochCardContainer h2 {
+        text-align: start !important;
+    }
+
+    .OurApprochCardContainer p {
+        text-align: start !important;
+    }
+    .timelineAnimatedLine{
+        display: none !important;
+    }
+
 }

@@ -27,14 +27,14 @@ const MainPrinciples = () => {
             <section id="MainPrinciples">
                 <div className="sectionContainerForSidePadding">
                     <div className="MaxWidthContainer sliteSectionLikePadding">
-                        <SectionHeading text="Main Principles" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" />
+                        {/* <SectionHeading text="Main Principles" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" /> */}
                         <div>
                             <Row>
                                 <Col lg={12}>
                                     <div>
                                         <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
                                             data-aos-duration="1000">
-                                            Investment Solutions with <span>Trust</span> and <span>Transparency</span>
+                                            Main <span>Principles</span>
                                         </h1>
                                         <br /><br />
                                         <p data-aos="fade-up"
