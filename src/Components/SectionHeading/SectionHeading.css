@@ -1,11 +1,11 @@
 .PaddingAdjustHeadingContainer {
     padding: 2rem 0rem;
     width: 100%;
-    padding-top: 0.5rem !important;
+    padding-top: 0.5rem;
 }
 
 .HeadingContainerDynamic {
-    border-top: 1px solid white;
+    /* border-top: 1px solid white; */
     padding: 1rem 0rem;
 }
 
