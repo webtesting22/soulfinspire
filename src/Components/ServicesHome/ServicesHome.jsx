@@ -16,7 +16,7 @@ const ServicesHome = () => {
     const ServicesCarousal = [
         {
             img: "/Images/ServicesIcons/WealthManagement.png",
-            title: "Wealth Management ",
+            title: "360-Degree Financial Planning",
             content: <>Wealth management is about building the life you want, not just growing money. We provide strategic, personalized guidance to simplify finances and help you achieve your goals</>
         },
         {
@@ -27,19 +27,19 @@ const ServicesHome = () => {
         },
         {
             img: "/Images/ServicesIcons/PortFolioManagement.png",
-            title: "Portfolio Management",
+            title: "Family Offices",
             content: <>Portfolio management is about aligning investments with your goals and risk tolerance. We create personalized strategies to optimize growth, stability, and long-term wealth</>
 
         },
         {
             img: "/Images/ServicesIcons/LoadAcquisitions.png",
-            title: "Load Acquisitions",
+            title: "⁠⁠Loan syndications",
             content: <>Getting a loan isn’t just about approval—it’s about securing the best terms for your goals. We simplify the process with expert guidance, tailored solutions, and strategic financing</>
 
         },
         {
             img: "/Images/ServicesIcons/PrivateWealth.png",
-            title: "Private Wealth",
+            title: "Portfolio Management",
             content: <>We provide expert guidance, bespoke solutions, and insights for informed decision-making. Our strategies ensure long-term security and success
             </>
 
