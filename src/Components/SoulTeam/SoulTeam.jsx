@@ -11,7 +11,7 @@ const SoulTeam = () => {
     useIntersectionAnimation(founderRef, 100, 0.5, "animate");
     const SoulTeamInfo = [
         {
-            image: "https://plus.unsplash.com/premium_photo-1690366911099-0c0e170c9a51?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: "/Images/TeamPhotos/FounderPhoto.jpeg",
             content: <>
                 {/* <h2 className="PrimaryHeadingStyle" style={{ margin: "0px" }}>Trusted Partner
 
@@ -32,7 +32,7 @@ const SoulTeam = () => {
     ]
     const TeamMembers = [
         {
-            image: "https://plus.unsplash.com/premium_photo-1690366911099-0c0e170c9a51?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: "/Images/TeamPhotos/ShanayShah.jpeg",
             content: <>
                 <p><b>Shanay Sir</b></p>
             </>
@@ -75,33 +75,7 @@ const SoulTeam = () => {
                                     </Row>
                                 ))}
                             </div>
-                            <div className="TeamMembersCards">
-                                <div>
-                                    <Row>
-                                        {TeamMembers.map((item, index) => {
-                                            const ref = useRef(null);
-                                            teamRefs.current[index] = ref;
 
-                                            // Apply animation to each team member's image
-                                            useIntersectionAnimation(ref, 100, 0.5, "animate");
-
-                                            return (
-                                                <Col key={index} lg={12}>
-                                                    <div className="FounderImageContainer">
-                                                        <div className="AnimatedSlideWhiteLayerAnimation" ref={ref}>
-                                                            <div className="AnimatedWhiteLayer"></div>
-                                                            <img src={item.image} alt={item.name} loading="lazy" />
-                                                        </div>
-                                                        <div className="ContentContainerFounder">
-                                                            {item.content}
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                            );
-                                        })}
-                                    </Row>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
