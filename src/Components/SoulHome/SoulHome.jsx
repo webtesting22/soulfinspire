@@ -83,9 +83,9 @@ const SoulHome = () => {
                         <Row>
                             <Col lg={24}>
                                 <div className="HomePageAnimatedHeading">
-                                    <div  data-aos="fade-right" 
-                                    data-aos-duration="2000">
-                                        <h2 className="PrimaryHeadingStyle"><span>Mountains</span> and <span>Markets</span> - reward the <span>Persistent</span>.</h2>
+                                    <div data-aos="fade-right"
+                                        data-aos-duration="2000">
+                                        <h2 className="PrimaryHeadingStyle" style={{ fontFamily: '"Satisfy", cursive' }}><span>Mountains</span> and <span>Markets</span> - reward the <span>Persistent</span>.</h2>
                                     </div>
                                 </div>
                             </Col>
