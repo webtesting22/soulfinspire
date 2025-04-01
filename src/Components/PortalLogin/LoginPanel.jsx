@@ -101,7 +101,7 @@ const LoginPortal = () => {
 
     const showModal = () => setIsModalOpen(true);
     const handleCancel = () => setIsModalOpen(false);
-    const handleSuccessModalCancel = () => setIsSuccessModalOpen(false); 
+    const handleSuccessModalCancel = () => setIsSuccessModalOpen(false);
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -545,11 +545,25 @@ const LoginPortal = () => {
                     onCancel={handleSuccessModalCancel}
                     footer={null}
                 >
+                    <br />
                     <div className="PrimarybtnContainer">
-                        <h3>Your form has been successfully submitted!</h3>
-                        <Button type="primary" onClick={handleSuccessModalCancel}>
+                        <div>
+                            <div>
+                                <p>  Dear User,</p>
+
+                                <br />
+                                <p>Thank you for providing the details! Your provided details are currently under review.</p>
+                                <br />
+                                <p>You shall receive a confirmation email shortly on your registered email ID, following which transactions will be enabled on your account.</p>
+                                <br />
+                                <p>  In case of any queries, please contact Team Soul Finspire.</p>
+                            </div>
+                        </div>
+                       <div style={{display:"flex",justifyContent:"end"}}>
+                       <Button type="primary" onClick={handleSuccessModalCancel}>
                             OK
                         </Button>
+                       </div>
                     </div>
                 </Modal>
             </div>

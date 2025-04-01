@@ -51,9 +51,9 @@ const SoulTeam = () => {
                     <div className="MaxWidthContainer sliteSectionLikePadding" style={{ overflow: "unset" }}>
                         {/* <SectionHeading text="Our Team" color="black" valueOfBorder="1px solid black" beforeBgColor="brand" /> */}
                         <div>
-                                    <h2 className="PrimaryHeadingStyle" data-aos="fade-up"
-                                        data-aos-duration="2000" data-aos-delay="200">Our <span>Team</span></h2>
-                                </div>
+                            <h2 className="PrimaryHeadingStyle" data-aos="fade-up"
+                                data-aos-duration="2000" data-aos-delay="200">Our <span>Team</span></h2>
+                        </div>
                         <div className="FounderCardsContainer">
                             <div className="FounderRowStick">
                                 {SoulTeamInfo.map((item, index) => (
@@ -78,7 +78,20 @@ const SoulTeam = () => {
                                     </Row>
                                 ))}
                             </div>
+                        </div>
+                        <div className="TeamMemberCards">
+                            <div>
+                                <Row>
+                                    {/* {TeamMembers.map((item, index))}
+                                    <Col lg={8} md={12}>
+                                        <div>
+                                            <div>
 
+                                            </div>
+                                        </div>
+                                    </Col> */}
+                                </Row>
+                            </div>
                         </div>
                     </div>
                 </div>

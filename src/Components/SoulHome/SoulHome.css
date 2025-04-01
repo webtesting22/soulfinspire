@@ -184,7 +184,14 @@
     width: 80%;
 }
 
+.HomePageImageContainer{
+    min-height: 80vh;
+    position: relative;
+}
 @media (max-width:900px) {
+    .HomePageImageContainer{
+        min-height: unset;
+    }
     .HomePageAnimatedHeading div {
         display: flex;
         justify-content: center;

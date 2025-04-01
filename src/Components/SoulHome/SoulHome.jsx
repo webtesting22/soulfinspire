@@ -53,12 +53,12 @@ const SoulHome = () => {
     return (
         <>
             <section id="SoulHome">
-                <div className="SectionContainer">
-                    <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust" style={{ overflow: "unset" }}>
-                        {/* <div className="OverlayContainer">
+                {/* <div className="SectionContainer">
+                    <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust" style={{ overflow: "unset" }}> */}
+                {/* <div className="OverlayContainer">
                             <img src="/Images/HomePageBannerBackground.jpg" alt="" />
                         </div> */}
-                        {/* <Row className="HomepageContainerPaddingAdjust">
+                {/* <Row className="HomepageContainerPaddingAdjust">
                             {HomePageTextContentData.map((item, index) => (
                                 <Col
                                     lg={index === HomePageTextContentData.length - 1 ? 24 : 12}
@@ -80,7 +80,7 @@ const SoulHome = () => {
                                 </Col>
                             ))}
                         </Row> */}
-                        <Row>
+                {/* <Row>
                             <Col lg={24}>
                                 <div className="HomePageAnimatedHeading">
                                     <div data-aos="fade-right"
@@ -89,8 +89,8 @@ const SoulHome = () => {
                                     </div>
                                 </div>
                             </Col>
-                        </Row>
-                        {/* <Row id="HomePageRow">
+                        </Row> */}
+                {/* <Row id="HomePageRow">
                             <Col lg={12} >
                                 <div>
                                     <div>
@@ -115,16 +115,50 @@ const SoulHome = () => {
                                 
                             </Col>
                         </Row> */}
-                    </div>
-                </div>
+                {/* </div>
+                </div> */}
 
-                <div className="HomePageImageContainer">
+                <div className="HomePageImageContainer" >
                     <div className="AnimatedSlideWhiteLayerAnimation" ref={containerRef} >
                         <div className="AnimatedWhiteLayer">
 
                         </div>
-                        <img src="/Images/IllustrationImages/HomePageIllustratorGraph1.png" alt="" style={{ width: "100%" }} loading="lazy" />
+                        <img
+                            src="/Images/IllustrationImages/Mountains.png"
+                            alt="Mountains"
+                            style={{ width: '100%', position: 'static' }}
+                            loading="lazy"
+                        />
                     </div>
+                    <img
+                        src="/Images/IllustrationImages/Birds.png"
+                        alt="Birds"
+                        style={{ width: '100%', position: 'absolute', top: "0px" }}
+                        loading="lazy"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        data-aos-delay="3000" // 3 seconds delay
+                    />
+
+                    <img
+                        src="/Images/IllustrationImages/RewardsPersistent.png"
+                        alt="Rewards Persistent"
+                        style={{ width: '100%', position: 'absolute', top: "0px" }}
+                        loading="lazy"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        data-aos-delay="2000"  // 6 seconds delay
+                    />
+
+                    <img
+                        src="/Images/IllustrationImages/mountainsMarkets.png"
+                        alt="Mountains Markets"
+                        style={{ width: '100%', position: 'absolute', top: "0px" }}
+                        loading="lazy"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        data-aos-delay="4000" // 8 seconds delay
+                    />
                     {/* <div>
                         <Swiper
                             spaceBetween={30}
