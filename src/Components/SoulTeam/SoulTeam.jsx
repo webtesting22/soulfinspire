@@ -3,6 +3,8 @@ import "./SoulTeam.css"
 import { Row, Col } from "antd";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import useIntersectionAnimation from "../SoulHome/useIntersectionAnimation";
+import { FaLinkedin } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 const SoulTeam = () => {
     const founderRef = useRef(null);
     const teamRefs = useRef([]);
@@ -27,6 +29,10 @@ const SoulTeam = () => {
                 <br />
                 <p><b>Mr. Raj</b></p>
                 <p>Founder of SOULFINSPIRE</p>
+                <br />
+                <div>
+                    <Link to="https://www.linkedin.com/in/raj-shah-324a12298/" target="_blank"><FaLinkedin style={{color:"white",fontSize:"25px"}}/></Link>
+                </div>
             </>
         }
     ]
