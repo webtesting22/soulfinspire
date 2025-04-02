@@ -17,30 +17,30 @@ const ServicesHome = () => {
         {
             img: "/Images/ServicesIcons/WealthManagement.png",
             title: <>360°Financial Planning</>,
-            content: <>Wealth management is about building the life you want, not just growing money. We provide strategic, personalized guidance to simplify finances and help you achieve your goals</>
+            content: <>​360 Financial Planning offers personalized wealth management to help you make informed decisions aligned with your goals, simplifying complexities and guiding you toward financial <span>clarity</span> </>
         },
         {
             img: "/Images/ServicesIcons/TaxPlanning.png",
             title: "Tax Planning",
-            content: <>Tax planning is about maximizing your earnings, not just saving money. We simplify the process with smart strategies that minimize liabilities and turn taxes into a wealth-building tool</>
+            content: <>Effective tax planning helps retain more earnings by minimizing liabilities and maximizing opportunities, turning taxes into tools for wealth <span>building</span></>
 
         },
         {
             img: "/Images/ServicesIcons/PortFolioManagement.png",
             title: "Family Offices",
-            content: <>Portfolio management is about aligning investments with your goals and risk tolerance. We create personalized strategies to optimize growth, stability, and long-term wealth</>
+            content: <>​Family Offices provide personalized, holistic wealth management services to preserve and grow generational wealth, aligning with your family's values and long-term <span>vision</span> </>
 
         },
         {
             img: "/Images/ServicesIcons/LoadAcquisitions.png",
             title: "⁠⁠Loan syndications",
-            content: <>Getting a loan isn’t just about approval—it’s about securing the best terms for your goals. We simplify the process with expert guidance, tailored solutions, and strategic financing</>
+            content: <>​Loan syndication involves multiple lenders collaborating to provide a single borrower with a substantial loan, distributing the risk among the participating <span>lenders</span> </>
 
         },
         {
             img: "/Images/ServicesIcons/PrivateWealth.png",
             title: "Portfolio Management",
-            content: <>We provide expert guidance, bespoke solutions, and insights for informed decision-making. Our strategies ensure long-term security and success
+            content: <>​Portfolio management involves creating and overseeing an investment mix that aligns with your financial goals and risk tolerance to optimize <span>returns</span>
             </>
 
         }
@@ -51,24 +51,24 @@ const ServicesHome = () => {
         {
             img: "/Images/ServicesIcons/Loan.svg",
             title: "Alternative Investments",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+            content: <>​Alternate Investment Funds (AIFs) and Portfolio Management Services (PMS) provide access to high-growth opportunities in emerging sectors, aiming to accelerate wealth creation beyond traditional markets. ​</>
         },
         {
             img: "/Images/ServicesIcons/MutualFund.svg",
             title: "Mutual funds",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+            content: <>Mutual Funds in India offer a balanced, accessible way to grow wealth. With diversification, transparency, and oversight, they help investors achieve financial goals while managing risk.</>
 
         },
         {
             img: "/Images/ServicesIcons/Insurance.svg",
             title: "Insurance",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+            content: <>​Life insurance safeguards your family's future by providing financial stability and tax benefits, allowing you to navigate uncertainties with confidence.</>
 
         },
         {
             img: "/Images/ServicesIcons/FixedIncome.svg",
             title: "Fixed income",
-            content: <>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsum quia sed hic dolorem ipsam consequatur tempora, commodi earum fuga.</>
+            content: <>​Fixed income investments like Fixed Deposits and Bonds offer a secure, predictable path to wealth accumulation, balancing growth with stability.</>
 
         },
 
@@ -112,6 +112,7 @@ const ServicesHome = () => {
                                     autoplay={{
                                         delay: 2000,
                                         disableOnInteraction: false,
+                                        pauseOnMouseEnter: true,
                                     }}
                                     breakpoints={{
                                         320: { // Small screens (phones)
@@ -143,7 +144,7 @@ const ServicesHome = () => {
                                                         <img src={item.img} alt="" loading="lazy" />
                                                     </div>
                                                     <br />
-                                                    <div>
+                                                    <div className='ServicesContainer'>
                                                         <h2 style={{ textAlign: "end" }}>{item.title}</h2>
                                                         <br />
                                                         <p style={{ textAlign: "end" }}>{item.content}</p>
@@ -181,6 +182,7 @@ const ServicesHome = () => {
                                     autoplay={{
                                         delay: 2000,
                                         disableOnInteraction: false,
+                                        pauseOnMouseEnter: true,
                                     }}
                                     breakpoints={{
                                         320: { // Small screens (phones)

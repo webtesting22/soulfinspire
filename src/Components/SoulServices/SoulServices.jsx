@@ -26,22 +26,24 @@ const SoulServices = () => {
     const PerfectMatchMutualFundsCardsData = [
         {
             title: "Mutual Funds",
-            content: <>India’s 5th largest Mutual Fund distributor, offering a comprehensive range of investment options, including SIPs, Trigger Facility, Risk Profiling, Goal Planner, INSTAFUNDZ, Gold Accumulation Plan, Smart Combos, and Asset Allocation Combos—all in one place at www.fundzbazar.com. Invest easily via the app or chatbot.</>,
+            content: <>Mutual Funds are one of the most effective ways to grow wealth in India, offering a balance of diversification, professional management, and accessibility. Whether you're taking your first steps into investing or looking to optimize your existing portfolio, they provide a structured approach to achieving financial goals. With strong regulatory oversight, transparency, and a wide variety of options tailored to different risk appetites and time horizons, Mutual Funds empower investors to build long-term wealth with security.</>,
             img: "/Images/ServicesIcons/MutualFund.svg",
         },
         {
             title: "Insurance",
-            content: <>Offering Life and General Insurance solutions through a cutting-edge online platform and app, backed by Gennext Insurance Brokers Pvt. Ltd., an IRDA-registered insurance broking company. Easily select, compare, buy, renew, and manage policies anytime at www.policyworld.com. Partnered with leading insurers, Policy World provides coverage for Life, Health, Personal Accident, Critical Illness, Travel, Car, and Two-Wheeler insurance.</>,
+            content: <>Your family's well-being is your top priority, and protecting their future starts with the right insurance plan. Life insurance is more than just a policy—it’s a safety net that shields you from life’s uncertainties while also offering valuable tax benefits. Our carefully designed insurance solutions provide financial stability, ensuring that you and your loved ones can navigate the future with confidence and peace of mind.</>,
             img: "/Images/ServicesIcons/Insurance.svg",
         },
         {
             title: "Alternative Investments",
-            content: <>​We provide access to third-party Portfolio Management Services (PMS) and Alternative Investment Funds (AIFs), offering sophisticated investment strategies such as venture capital, private equity, hedge funds, and long-short strategies. Our Prudent Partners and Relationship Managers, located in your city, are available to guide you in developing investment strategies tailored to your risk appetite and return expectations.</>,
+            content: <>The future of investing is driven by innovation, and we believe in staying ahead of the curve. Alternate Investment Funds (AIFs) and Portfolio Management Services (PMS) open doors to high-growth opportunities in disruptive technologies and emerging industries. For investors looking to go beyond traditional markets, these strategic investment avenues provide access to unique, high-potential assets designed to accelerate wealth creation.
+</>,
             img: "/Images/ServicesIcons/Loan.svg"
         },
         {
             title: "Fixed Income",
-            content: <>Fixed Income Products cater to investors seeking stable, regular returns while diversifying their portfolios. Through Fundzbazar.com, we offer a seamless, paperless investment solution for G-Secs, SDLs, Fixed Deposits, and Liquiloans. Visit our website for more details.</>,
+            content: <>A strong portfolio balances growth with stability. Fixed income investments like Fixed Deposits (FDs) and Bonds offer a secure and predictable way to build wealth over time. Whether you’re preparing for retirement, saving for a major goal, or simply seeking steady returns, our fixed income solutions provide a reliable path to financial security while keeping your investment milestones in focus.
+</>,
             img: "/Images/ServicesIcons/FixedIncome.svg",
         }
     ]
