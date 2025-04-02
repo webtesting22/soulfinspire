@@ -1,12 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Row, Col, Button, Modal, Input, Form, message, notification } from "antd";
 import "./LoginPortal.css";
 import "./LoginPage.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+// import required modules
+import { Navigation } from 'swiper/modules';
 const LoginPortal = () => {
+    const [isSignUp, setIsSignUp] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
     const [form] = Form.useForm(); // Ant Design's form instance to manage the form
+    const swiperRef = useRef(null);
+    const toggleMode = () => {
+        setIsSignUp(!isSignUp);
+    };
+    const handleNavigation = () => {
+        if (swiperRef.current) {
+            const swiper = swiperRef.current.swiper;
+            if (isSignUp) {
+                // If in Sign Up mode, move to the next slide
+                swiper.slideNext();
+            } else {
+                // If in Log In mode, move to the previous slide
+                swiper.slidePrev();
+            }
+        }
+    };
 
     // Handle form submit
     const handleSubmit = async (values) => {
@@ -105,6 +128,17 @@ const LoginPortal = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const handleButtonClick = () => {
+        if (swiperRef.current) {
+            swiperRef.current.slidePrev();
+        }
+    }; const handleButtonClickAnother = () => {
+        if (swiperRef.current) {
+            swiperRef.current.slideNext();
+        }
+    };
+
     return (
         <>
             <div id="LoginPage">
@@ -118,24 +152,77 @@ const LoginPortal = () => {
                     </Col>
                     <Col lg={12}>
                         <div className="DynamicLoginFilesContainer">
-                            <div>
+                            <div style={{ width: "100%" }}>
                                 <div className="LoginPageLogoContainer">
                                     <img src="/Images/SoulFinspireLogo.png" alt="" loading="lazy" />
                                 </div>
-                                <div>
+                                <br /><br />
+                                <div className="LogInSwiperContainer">
+                                    <Swiper
+                                        // navigation={true}
+                                        modules={[Navigation]}
+                                        className="mySwiper"
+                                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+                                    >
+                                        <SwiperSlide>
+                                            <div className="FiledsContainer">
+                                                <div>
+                                                    <Form.Item
+                                                        label="UserName"
+                                                        name="UserName"
+                                                        rules={[{ required: true, message: 'Please enter your Client Code (UCC)' }]}
+                                                    >
+                                                        <Input placeholder="Enter your User Name" />
+                                                    </Form.Item>
+
+                                                    <Form.Item
+                                                        label="Primary Holder First Name"
+                                                        name="firstName"
+                                                        rules={[{ required: true, message: 'Please enter your First Name' }]}
+                                                    >
+                                                        <Input placeholder="Enter your First Name" />
+                                                    </Form.Item>
+                                                    {/* <div style={{ display: "flex", }} className="PrimarybtnContainer">
+                                                        <Button type="primary" onClick={showModal}>Log In</Button>
+                                                    </div> */}
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div>
+                                                <div>
+                                                    <p>Please visit the link below to validate your KYC</p>
+                                                    <p>https://www.cvlkra.com</p>
+                                                    <p> Click on 'Continue' only if your KYC is "Validated"</p>
+                                                    <p>CONTINUE</p>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    </Swiper>
+                                </div>
+                                {/* <div>
                                     <h2 className="PrimaryHeadingStyle" style={{ textAlign: "center" }}>Welcome <span>Back</span></h2>
                                     <p style={{ textAlign: "center" }}>Fill all the Fields and Get <b>Dashboard Credentials</b></p>
-                                </div>
+                                </div> */}
                                 <br />
+
                                 <div style={{ display: "flex", justifyContent: "center" }} className="PrimarybtnContainer">
-                                    <Button type="primary" onClick={showModal}>Sign Up</Button>
+                                    <Button type="primary" onClick={handleButtonClick}>
+                                        Log In
+                                    </Button>
+                                </div>
+
+                                {/* Toggle between Sign Up and Log In */}
+                                <div style={{ textAlign: "center", marginTop: 10 }}>
+                                    <Button type="link" onClick={handleButtonClickAnother}>
+                                        {isSignUp ? "Already have an account? Log In" : "Don't have an account? Sign Up"}
+                                    </Button>
                                 </div>
                             </div>
                         </div>
                     </Col>
                 </Row>
 
-                {/* Modal for Sign Up */}
                 <Modal
                     width={800}
                     title="SoulfinSpire"
@@ -559,11 +646,11 @@ const LoginPortal = () => {
                                 <p>  In case of any queries, please contact Team Soul Finspire.</p>
                             </div>
                         </div>
-                       <div style={{display:"flex",justifyContent:"end"}}>
-                       <Button type="primary" onClick={handleSuccessModalCancel}>
-                            OK
-                        </Button>
-                       </div>
+                        <div style={{ display: "flex", justifyContent: "end" }}>
+                            <Button type="primary" onClick={handleSuccessModalCancel}>
+                                OK
+                            </Button>
+                        </div>
                     </div>
                 </Modal>
             </div>

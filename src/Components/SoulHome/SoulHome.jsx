@@ -131,15 +131,15 @@ const SoulHome = () => {
                         />
                     </div>
                     <img
-                        src="/Images/IllustrationImages/Birds.png"
-                        alt="Birds"
+                        src="/Images/IllustrationImages/mountainsMarkets.png"
+                        alt="Mountains Markets"
                         style={{ width: '100%', position: 'absolute', top: "0px" }}
                         loading="lazy"
                         data-aos="fade-right"
                         data-aos-duration="1000"
-                        data-aos-delay="3000" // 3 seconds delay
+                        data-aos-delay="1900"
+                    // data-aos-delay="4000" // 8 seconds delay
                     />
-
                     <img
                         src="/Images/IllustrationImages/RewardsPersistent.png"
                         alt="Rewards Persistent"
@@ -147,18 +147,20 @@ const SoulHome = () => {
                         loading="lazy"
                         data-aos="fade-right"
                         data-aos-duration="1000"
-                        data-aos-delay="2000"  // 6 seconds delay
+                        data-aos-delay="2500"  // 6 seconds delay
                     />
 
+
                     <img
-                        src="/Images/IllustrationImages/mountainsMarkets.png"
-                        alt="Mountains Markets"
+                        src="/Images/IllustrationImages/Birds.png"
+                        alt="Birds"
                         style={{ width: '100%', position: 'absolute', top: "0px" }}
                         loading="lazy"
                         data-aos="fade-right"
                         data-aos-duration="1000"
-                        data-aos-delay="4000" // 8 seconds delay
+                        data-aos-delay="3000"// 3 seconds delay
                     />
+
                     {/* <div>
                         <Swiper
                             spaceBetween={30}

@@ -38,6 +38,19 @@
     padding: 0px 10px;
 }
 
+.DynamicLoginFilesContainer .swiper-navigation{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.FiledsContainer{
+    min-height: 40vh;
+    
+}
+.LogInSwiperContainer{
+    padding: 0px 40px;
+}
+
 @media (max-width:900px){
     .ant-form-item{
         width: 100%;

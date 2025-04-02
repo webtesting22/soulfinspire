@@ -31,7 +31,7 @@ const SoulTeam = () => {
                 <p>Founder of SOULFINSPIRE</p>
                 <br />
                 <div>
-                    <Link to="https://www.linkedin.com/in/raj-shah-324a12298/" target="_blank"><FaLinkedin style={{color:"white",fontSize:"25px"}}/></Link>
+                    <Link to="https://www.linkedin.com/in/raj-shah-324a12298/" target="_blank"><FaLinkedin style={{ color: "white", fontSize: "25px" }} /></Link>
                 </div>
             </>
         }
@@ -39,15 +39,13 @@ const SoulTeam = () => {
     const TeamMembers = [
         {
             image: "/Images/TeamPhotos/ShanayShah.jpeg",
-            content: <>
-                <p><b>Shanay Sir</b></p>
-            </>
+            position: "(Head of Products & Research)",
+            content: "Shriya Shah"
         },
         {
             image: "https://plus.unsplash.com/premium_photo-1690366911099-0c0e170c9a51?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            content: <>
-                <p><b>Shanay Sir</b></p>
-            </>
+            position: " (Head of Retail Development)",
+            content: "Shanay Shah",
         }
     ]
     return (
@@ -85,17 +83,19 @@ const SoulTeam = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="TeamMemberCards">
+                        <br /><br />
+                        <div className="TeamMemberCards FounderCardsContainer">
                             <div>
-                                <Row>
-                                    {/* {TeamMembers.map((item, index))}
-                                    <Col lg={8} md={12}>
-                                        <div>
-                                            <div>
-
+                                <Row className="FounderRow">
+                                    {TeamMembers.map((item, index) => (
+                                        <Col lg={8} md={12} key={index}>
+                                            <div className="TeamMembersCard">
+                                                <div>
+                                                    <img src={item.image} alt="" />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </Col> */}
+                                        </Col>
+                                    ))}
                                 </Row>
                             </div>
                         </div>
