@@ -38,14 +38,16 @@ const SoulTeam = () => {
     ]
     const TeamMembers = [
         {
-            image: "/Images/TeamPhotos/ShanayShah.jpeg",
+            image: "/Images/TeamPhotos/Shriya.jpeg",
             position: "(Head of Products & Research)",
-            content: "Shriya Shah"
+            content: "Shriya Shah",
+            Link: "https://www.linkedin.com/in/shriyashah/"
         },
         {
-            image: "https://plus.unsplash.com/premium_photo-1690366911099-0c0e170c9a51?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            position: " (Head of Retail Development)",
+            image: "/Images/TeamPhotos/ShanayShah.jpeg",
+            position: "(Head of Retail Development)",
             content: "Shanay Shah",
+            Link: "https://www.linkedin.com/in/shanay-shah-035437214/"
         }
     ]
     return (
@@ -92,6 +94,14 @@ const SoulTeam = () => {
                                             <div className="TeamMembersCard">
                                                 <div>
                                                     <img src={item.image} alt="" />
+                                                </div>
+                                                <br />
+                                                <div>
+                                                    <div style={{display:"flex",gap:"10px",alignItems:"center"}}>
+                                                        <h2>{item.content}</h2><Link to={item.Link} target="_blank"><FaLinkedin style={{ color: "white", fontSize: "20px" }} /></Link>
+                                                    </div>
+                                                    <p style={{ color: "white" }}>{item.position}</p>
+
                                                 </div>
                                             </div>
                                         </Col>

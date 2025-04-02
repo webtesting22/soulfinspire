@@ -46,14 +46,6 @@
     margin-top: 4rem;
 }
 
-.TeamMembersCards .ant-row {
-    background-color: #173022;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    position: sticky;
-    z-index: 4;
-}
 
 .TeamMembersCards .FounderImageContainer img {
     width: 100%;
@@ -63,9 +55,54 @@
 
 .TeamMembersCard div img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.TeamMembersCard {
+    /* padding: 0px 10px; */
+    background-color: #173022;
+    /* margin: 0px 20px; */
+
+}
+
+.TeamMembersCard>div:first-child {
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+
+}
+
+.TeamMemberCards .FounderRow {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0px !important;
+    display: flex;
+    justify-content: center;
+}
+
+.TeamMemberCards .FounderRow .ant-col {
+    background-color: #173022;
+    padding: 20px;
+    margin: 0px 20px;
+    border-radius: 20px;
+}
+
+.TeamMembersCard h2 {
+    color: white;
 }
 
 @media (max-width:900px) {
+    .TeamMemberCards .FounderRow .ant-col {
+        background-color: #173022;
+        padding: 20px;
+        margin: 0px 0px;
+        border-radius: 20px;
+        width: 100% !important;
+        margin-bottom: 40px;
+    }
     .FounderCardsContainer div .FounderRow {
         background-color: #173022;
         padding: 20px 20px;
