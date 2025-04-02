@@ -71,7 +71,8 @@ const AwardsandRecognitions = () => {
                                     <Col lg={24}>
                                         <div className="LeftSideContentContainer">
                                             <div>
-                                                <h2 className="PrimaryHeadingStyle" style={{ marginTop: "0px" }}>A Testament to Our Financial <span>Expertise</span></h2>
+                                                <h2 className="PrimaryHeadingStyle" style={{ marginTop: "0px" }} data-aos="fade-up"
+                                                            data-aos-duration="1400">A Testament to Our Financial <span>Expertise</span></h2>
                                                 <br />
                                                 <p>At SoulFinspire, our excellence in financial advisory has been recognized through prestigious awards and industry-leading certifications. These accolades reflect our commitment to delivering top-tier wealth management, tax planning, and loan solutions. Our award-winning expertise ensures trusted, strategic, and client-centric financial growth.</p>
                                             </div>

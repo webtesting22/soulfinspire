@@ -98,7 +98,7 @@ const AboutHome = () => {
                                     <div>
                                         <div>
                                             <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
-                                                data-aos-duration="1100">Reach New Heights with Trust, <span>Transparency</span> & <span>Expertise</span></h1>
+                                                data-aos-duration="1100">Reach New Heights with <span>Trust</span>, <span>Transparency</span> & <span>Expertise</span></h1>
                                             <br />
                                             <br />
                                             {/* <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
