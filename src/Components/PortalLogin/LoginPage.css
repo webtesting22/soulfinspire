@@ -48,7 +48,13 @@
     
 }
 .LogInSwiperContainer{
-    padding: 0px 40px;
+    /* padding: 0px 40px; */
+width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.LogInSwiperContainer>div{
+    width: 70% !important;
 }
 
 @media (max-width:900px){

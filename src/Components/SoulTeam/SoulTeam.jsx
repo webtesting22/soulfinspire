@@ -27,7 +27,7 @@ const SoulTeam = () => {
 
                 </p>
                 <br />
-                <p><b>Mr. Raj</b></p>
+                <p><b>Mr. Raj Shah</b></p>
                 <p>Founder of SOULFINSPIRE</p>
                 <br />
                 <div>
