@@ -39,13 +39,13 @@ const SoulTeam = () => {
     const TeamMembers = [
         {
             image: "/Images/TeamPhotos/Shriya.jpeg",
-            position: "(Head of Products & Research)",
+            position: "Head of Products & Research",
             content: "Shriya Shah",
             Link: "https://www.linkedin.com/in/shriyashah/"
         },
         {
             image: "/Images/TeamPhotos/ShanayShah.jpeg",
-            position: "(Head of Retail Development)",
+            position: "Head of Retail Development",
             content: "Shanay Shah",
             Link: "https://www.linkedin.com/in/shanay-shah-035437214/"
         }
