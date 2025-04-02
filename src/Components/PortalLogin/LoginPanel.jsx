@@ -13,6 +13,8 @@ const LoginPortal = () => {
     const [isSignUp, setIsSignUp] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+    const [isDisabled, setIsDisabled] = useState(true);
+
     const [form] = Form.useForm(); // Ant Design's form instance to manage the form
     const swiperRef = useRef(null);
     const toggleMode = () => {
@@ -30,6 +32,13 @@ const LoginPortal = () => {
             }
         }
     };
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsDisabled(false);
+        }, 15000); // 10 seconds
+
+        return () => clearTimeout(timer);
+    }, []);
 
     // Handle form submit
     const handleSubmit = async (values) => {
@@ -191,10 +200,21 @@ const LoginPortal = () => {
                                         <SwiperSlide>
                                             <div>
                                                 <div>
-                                                    <p>Please visit the link below to validate your KYC</p>
-                                                    <p>https://www.cvlkra.com</p>
+                                                    <p><b>Please visit the link below to validate your KYC</b></p>
+                                                    <p>Please follow the steps below:</p>
+                                                    <ul>
+                                                        <li>- Visit the KYC Validation Portal: <a href="https://www.cvlkra.com" target="_blank">https://www.cvlkra.com</a></li>
+                                                        <li>- If your KYC status is marked as "Validated," please proceed by clicking the "Continue" button below.</li>
+                                                        <li>- If your KYC status is not "Validated," please complete the necessary steps on the portal to update your information.</li>
+                                                        <li>- Once your KYC is validated, click on the "Continue" button to confirm.</li>
+                                                    </ul>
+                                                    <div className="PrimarybtnContainer" style={{ marginLeft: "10px" }}>
+                                                        <Button style={{ padding: "10px 20px" }} disabled={isDisabled}>Confirm</Button>
+                                                    </div>
+
+                                                    {/* <p>https://www.cvlkra.com</p>
                                                     <p> Click on 'Continue' only if your KYC is "Validated"</p>
-                                                    <p>CONTINUE</p>
+                                                    <p>CONTINUE</p> */}
                                                 </div>
                                             </div>
                                         </SwiperSlide>
