@@ -20,11 +20,11 @@ const NavigationLinks = [
     {
         link: "Services",
         sublinks: [
-            { link: "Wealth Management", path: "" },
-            { link: "Tax Planning", path: "" },
-            { link: "Portfolio Management", path: "" },
-            { link: "Load Acquisitions", path: "" },
-            { link: "Private Wealth", path: "" }
+            { link: "360° Financial Planning", path: "" },
+            { link: "⁠⁠Portfolio Management", path: "" },
+            { link: "Tax planning", path: "" },
+            { link: "Family Offices", path: "" },
+            { link: "loan syndications", path: "" }
         ],
         path: "/soul-services"
     },
