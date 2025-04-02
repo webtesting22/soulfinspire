@@ -35,7 +35,7 @@ const LoginPortal = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsDisabled(false);
-        }, 15000); // 10 seconds
+        }, 20000); // 10 seconds
 
         return () => clearTimeout(timer);
     }, []);
@@ -177,29 +177,29 @@ const LoginPortal = () => {
                                             <SwiperSlide>
                                                 <div className="FiledsContainer">
                                                     <div>
-                                                    <h2 style={{ textAlign: "center" }}>Enhance your Finances
-                                                    </h2>
-                                                    <p style={{ textAlign: "center" }}>Click below to View & Manage Portfolio</p>
-                                                    <br /><br />
-                                                    <div style={{ width: "100%" }}>
-                                                        <Form.Item
-                                                            style={{ width: "100%" }}
-                                                            label="UserName"
-                                                            name="UserName"
-                                                            rules={[{ required: true, message: 'Please enter your Client Code (UCC)' }]}
-                                                        >
-                                                            <Input placeholder="Enter your User Name" />
-                                                        </Form.Item>
+                                                        <h2 style={{ textAlign: "center" }}>Enhance your Finances
+                                                        </h2>
+                                                        <p style={{ textAlign: "center" }}>Click below to View & Manage Portfolio</p>
+                                                        <br /><br />
+                                                        <div style={{ width: "100%" }}>
+                                                            <Form.Item
+                                                                style={{ width: "100%" }}
+                                                                label="UserName"
+                                                                name="UserName"
+                                                                rules={[{ required: true, message: 'Please enter your Client Code (UCC)' }]}
+                                                            >
+                                                                <Input placeholder="Enter your User Name" />
+                                                            </Form.Item>
 
-                                                        <Form.Item
-                                                            style={{ width: "100%" }}
-                                                            label="Password"
-                                                            name="password"
-                                                            rules={[{ required: true, message: 'Please enter your Valid Password' }]}
-                                                        >
-                                                            <Input placeholder="Enter your Password" />
-                                                        </Form.Item>
-                                                    </div>
+                                                            <Form.Item
+                                                                style={{ width: "100%" }}
+                                                                label="Password"
+                                                                name="password"
+                                                                rules={[{ required: true, message: 'Please enter your Valid Password' }]}
+                                                            >
+                                                                <Input placeholder="Enter your Password" />
+                                                            </Form.Item>
+                                                        </div>
                                                         {/* <div style={{ display: "flex", }} className="PrimarybtnContainer">
                                                         <Button type="primary" onClick={showModal}>Log In</Button>
                                                     </div> */}
@@ -212,13 +212,13 @@ const LoginPortal = () => {
                                                         <p><b>Please visit the link below to validate your KYC</b></p>
                                                         <p>Please follow the steps below:</p>
                                                         <ul>
-                                                            <li>- Visit the KYC Validation Portal: <a href="https://www.cvlkra.com" target="_blank">https://www.cvlkra.com</a></li>
-                                                            <li>- If your KYC status is marked as "Validated," please proceed by clicking the "Continue" button below.</li>
+                                                            <li>- Visit the KYC Validation Portal: <a href="https://www.cvlkra.com" target="_blank">https://www.cvlkra.com</a> and click KYC Inquiry.</li>
+                                                            <li>- If your KYC status is marked as "Validated," please proceed by clicking the "Confirm" button below.</li>
                                                             <li>- If your KYC status is not "Validated," please complete the necessary steps on the portal to update your information.</li>
-                                                            <li>- Once your KYC is validated, click on the "Continue" button to confirm.</li>
+                                                            <li>- Once your KYC is validated, click on the "Confirm" button to confirm KYC.</li>
                                                         </ul>
                                                         <div className="PrimarybtnContainer" style={{ marginLeft: "10px" }}>
-                                                            <Button style={{ padding: "10px 20px" }} disabled={isDisabled}>Confirm</Button>
+                                                            <Button style={{ padding: "10px 20px" }} disabled={isDisabled} onClick={showModal}>Confirm</Button>
                                                         </div>
 
                                                         {/* <p>https://www.cvlkra.com</p>
