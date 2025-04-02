@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
-import { Row, Col } from "antd";
-
+import { Collapse, Row, Col } from "antd";
+const { Panel } = Collapse;
 
 //----------- This is a animated card common component to used every services inside
 export const AnimatedCards = ({ cardsData }) => {
@@ -42,17 +42,39 @@ export const AnimatedCards = ({ cardsData }) => {
                         <Col lg={24}>
                             <div key={index} className="Animated3DCard" ref={(el) => (cardRefs.current[index] = el)}>
 
-                                <div className="AnimatedContentContainer">
-                                    <div className="CountCards">
-                                        <span>0{index + 1}</span>
-                                    </div>
-                                    <h3 className="PrimaryHeadingStyle">{item.title}</h3>
-                                    <br />
-                                    <p>{item.content}</p>
-                                </div>
-                                <div className="AnimatedInsideImageContainer">
-                                    <img src={item.img} alt="" />
-                                </div>
+                                <Collapse
+                                    accordion
+                                    bordered={false}
+                                    // className="Animated3DCard"
+                                    expandIconPosition="right"
+                                    style={{ width: "100%" }}
+                                >
+                                    <Panel
+                                        header={
+                                            <>
+                                                <div className="AnimatedRowColumnContainer">
+                                                    <div className="AnimatedContentContainer">
+                                                        <div className="CountCards">
+                                                            <span>0{index + 1}</span>
+                                                        </div>
+                                                        <h3 className="PrimaryHeadingStyle">{item.title}</h3>
+                                                    </div>
+                                                    <div className="AnimatedInsideImageContainer">
+                                                        <img src={item.img} alt="" />
+                                                    </div>
+                                                </div>
+                                            </>
+                                        }
+                                        key={index}
+                                    >
+                                        <p>{item.content}</p>
+                                        {/* <div className="AnimatedInsideImageContainer">
+                                            <img src={item.img} alt="" />
+                                        </div> */}
+                                    </Panel>
+                                </Collapse>
+
+
                             </div>
                         </Col>
                     </Row>

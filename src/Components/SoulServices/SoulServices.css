@@ -84,7 +84,41 @@
     cursor: pointer;
 } */
 
+.Animated3DCard .ant-collapse-expand-icon {
+    display: none !important;
+}
+
+.AnimatedRowColumnContainer {
+    display: flex;
+    width: 100%;
+}
+
+.ant-collapse-content-box {
+    padding: 0px !important;
+    padding-top: 0px !important;
+    width: 60%;
+}
+.AnimatedContentContainer h3{
+    margin-bottom: 0px !important;
+}
 @media (max-width:900px) {
+
+    .AnimatedRowColumnContainer {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .ant-collapse-content-box {
+        padding: 0px !important;
+        padding-top: 0px !important;
+        width: 100% !important;
+    }
+
+    .ant-collapse-item {
+        padding: 0px !important;
+    }
+
     .OurServicesCardsContainer {
         padding: 20px 0px;
         position: relative;
