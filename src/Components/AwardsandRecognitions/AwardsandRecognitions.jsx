@@ -39,7 +39,7 @@ const AwardsandRecognitions = () => {
             link: "https://www.icicipruamc.com/",
         },
         {
-            img: "/Images/AwardsLogos/icicaccostmanagement.jpg",
+            img: "/Images/AwardsLogos/ICICILogo.png",
             link: "https://www.icicibank.com/"
         },
         {
