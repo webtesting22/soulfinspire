@@ -27,24 +27,24 @@ const SoulServices = () => {
         {
             title: "Mutual Funds",
             content: <>Mutual Funds are one of the most effective ways to grow wealth in India, offering a balance of diversification, professional management, and accessibility. Whether you're taking your first steps into investing or looking to optimize your existing portfolio, they provide a structured approach to achieving financial goals. With strong regulatory oversight, transparency, and a wide variety of options tailored to different risk appetites and time horizons, Mutual Funds empower investors to build long-term wealth with security.</>,
-            img: "/Images/ServicesIcons/MutualFund.svg",
+            img: "/Images/ServicesIcons/Mutual Funds.png",
         },
         {
             title: "Insurance",
             content: <>Your family's well-being is your top priority, and protecting their future starts with the right insurance plan. Life insurance is more than just a policy—it’s a safety net that shields you from life’s uncertainties while also offering valuable tax benefits. Our carefully designed insurance solutions provide financial stability, ensuring that you and your loved ones can navigate the future with confidence and peace of mind.</>,
-            img: "/Images/ServicesIcons/Insurance.svg",
+            img: "/Images/ServicesIcons/Insurance.png",
         },
         {
             title: "Alternative Investments",
             content: <>The future of investing is driven by innovation, and we believe in staying ahead of the curve. Alternate Investment Funds (AIFs) and Portfolio Management Services (PMS) open doors to high-growth opportunities in disruptive technologies and emerging industries. For investors looking to go beyond traditional markets, these strategic investment avenues provide access to unique, high-potential assets designed to accelerate wealth creation.
 </>,
-            img: "/Images/ServicesIcons/Loan.svg"
+            img: "/Images/ServicesIcons/Alternative Investments.png"
         },
         {
             title: "Fixed Income",
             content: <>A strong portfolio balances growth with stability. Fixed income investments like Fixed Deposits (FDs) and Bonds offer a secure and predictable way to build wealth over time. Whether you’re preparing for retirement, saving for a major goal, or simply seeking steady returns, our fixed income solutions provide a reliable path to financial security while keeping your investment milestones in focus.
 </>,
-            img: "/Images/ServicesIcons/FixedIncome.svg",
+            img: "/Images/ServicesIcons/FIXIncome.png",
         }
     ]
 

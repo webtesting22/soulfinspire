@@ -49,24 +49,24 @@ const ServicesHome = () => {
 
     const ProductsCarousal = [
         {
-            img: "/Images/ServicesIcons/Alternative Investments.png",
+            img: "/Images/ServicesIcons/Loan.svg",
             title: "Alternative Investments",
             content: <>​Alternate Investment Funds (AIFs) and Portfolio Management Services (PMS) provide access to high-growth opportunities in emerging sectors, aiming to accelerate wealth creation beyond traditional markets. ​</>
         },
         {
-            img: "/Images/ServicesIcons/Mutual Funds.png",
+            img: "/Images/ServicesIcons/MutualFund.svg",
             title: "Mutual funds",
             content: <>Mutual Funds in India offer a balanced, accessible way to grow wealth. With diversification, transparency, and oversight, they help investors achieve financial goals while managing risk.</>
 
         },
         {
-            img: "/Images/ServicesIcons/Insurance.png",
+            img: "/Images/ServicesIcons/Insurance.svg",
             title: "Insurance",
             content: <>​Life insurance safeguards your family's future by providing financial stability and tax benefits, allowing you to navigate uncertainties with confidence.</>
 
         },
         {
-            img: "/Images/ServicesIcons/FIXIncome.png",
+            img: "/Images/ServicesIcons/FixedIncome.svg",
             title: "Fixed income",
             content: <>​Fixed income investments like Fixed Deposits and Bonds offer a secure, predictable path to wealth accumulation, balancing growth with stability.</>
 
