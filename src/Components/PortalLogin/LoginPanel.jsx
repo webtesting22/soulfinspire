@@ -35,7 +35,7 @@ const LoginPortal = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsDisabled(false);
-        }, 20000); // 10 seconds
+        }, 30000); // 10 seconds
 
         return () => clearTimeout(timer);
     }, []);
