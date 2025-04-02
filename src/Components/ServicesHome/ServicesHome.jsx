@@ -16,7 +16,7 @@ const ServicesHome = () => {
     const ServicesCarousal = [
         {
             img: "/Images/ServicesIcons/WealthManagement.png",
-            title: "360-Degree Financial Planning",
+            title: <>360°Financial Planning</>,
             content: <>Wealth management is about building the life you want, not just growing money. We provide strategic, personalized guidance to simplify finances and help you achieve your goals</>
         },
         {

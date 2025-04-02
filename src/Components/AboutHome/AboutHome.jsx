@@ -98,7 +98,7 @@ const AboutHome = () => {
                                     <div>
                                         <div>
                                             <h1 className="PrimaryHeadingStyle" style={{ color: "black" }} data-aos="fade-up"
-                                                data-aos-duration="1100">Simplifying Wealth with Trust, <span>Transparency & Expertise</span></h1>
+                                                data-aos-duration="1100">Reach New Heights with Trust, <span>Transparency</span> & <span>Expertise</span></h1>
                                             <br />
                                             <br />
                                             {/* <div className="AboutusCardsContainer " style={{ paddingBottom: "0px" }}>
@@ -124,7 +124,7 @@ const AboutHome = () => {
                                                 </div>
                                             </div> */}
                                             <p data-aos="fade-up"
-                                                data-aos-duration="1200">At <b>SoulFinspire LLP</b>, we make wealth creation simple, accessible, and effective. With a commitment to trust, transparency, and efficiency, we provide tailored financial strategies that drive growth and stability. Our client-centric approach ensures personalized solutions, empowering individuals and businesses to achieve long-term financial <b>success with confidence</b>.
+                                                data-aos-duration="1200">The path to your financial success may appear steep, but the journey is worth it — we at <b>SoulFinspire LLP</b>, make Wealth Creation simple, accessible, and effective.   With a commitment to <b>trust, transparency, and efficiency</b>, we provide tailored financial strategies that drive growth and stability. Our client-centric approach ensures personalized solutions, empowering individuals and businesses to achieve long-term financial success with confidence.
                                             </p>
                                         </div>
                                     </div>
