@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useRef, useEffect,useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Collapse, Row, Col } from "antd";
 const { Panel } = Collapse;
 
@@ -7,7 +7,7 @@ const { Panel } = Collapse;
 export const AnimatedCards = ({ cardsData }) => {
     const [activeKey, setActiveKey] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
-  
+
     const cardRefs = useRef([]);
 
     useEffect(() => {
@@ -36,20 +36,20 @@ export const AnimatedCards = ({ cardsData }) => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     // Detect if the device is mobile
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
-    };
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+        };
 
-    handleResize(); // Initial check
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+        handleResize(); // Initial check
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
     const handlePanelChange = (key) => {
         if (isMobile) {
-          setActiveKey(activeKey === key ? null : key);
+            setActiveKey(activeKey === key ? null : key);
         }
-      };
+    };
     return (
         // <div>
         <>
@@ -57,8 +57,8 @@ export const AnimatedCards = ({ cardsData }) => {
                 {cardsData.map((item, index) => (
                     <Row>
                         <Col lg={24}>
-                            <div key={index} className="Animated3DCard"    onMouseEnter={() => !isMobile && setActiveKey(index.toString())}
-              onMouseLeave={() => !isMobile && setActiveKey(null)} ref={(el) => (cardRefs.current[index] = el)}>
+                            <div key={index} className="Animated3DCard" onMouseEnter={() => !isMobile && setActiveKey(index.toString())}
+                                onMouseLeave={() => !isMobile && setActiveKey(null)} ref={(el) => (cardRefs.current[index] = el)}>
 
                                 <Collapse
                                     accordion
@@ -67,7 +67,7 @@ export const AnimatedCards = ({ cardsData }) => {
                                     expandIconPosition="right"
                                     activeKey={activeKey}
                                     onChange={() => handlePanelChange(index.toString())}
-                    
+
                                     style={{ width: "100%" }}
                                 >
                                     <Panel
