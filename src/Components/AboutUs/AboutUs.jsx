@@ -15,10 +15,10 @@ const AboutUs = () => {
     );
 
     const OurAchievementsData = [
-        { counterNumber: 250, suffix: "+", title: "Investors", content: "Serving Over 3000 Investors Across India and globe, we manage diverse portfolios and provide customized investment solutions." },
-        { counterNumber: 200, suffix: "Cr", title: "Crore", content: "Managing ₹600 Crores of Investments. We ensure prudent management and growth of our clients' wealth." },
-        { counterNumber: 5, suffix: "+", title: "Experts", content: "Our team includes some of the brightest minds in the financial industry, dedicated to your peaceful investment journey." },
-        { counterNumber: 30, suffix: "+", title: "Experience", content: "75+ Years of Combined Experience. Our team brings a wealth of knowledge and expertise to every client interaction." }
+        { counterNumber: 250, suffix: "+", title: "Investors", content: "With a diverse clientele of over 250 investors, we tailor our wealth management strategies to meet individual financial goals." },
+        { counterNumber: 200, suffix: "Cr", title: "Crore", content: "Managing assets surpassing ₹200 crore, we employ prudent investment approaches to ensure consistent growth and security." },
+        { counterNumber: 5, suffix: "+", title: "Experts", content: "Our team of over five professionals brings a wealth of knowledge, ensuring informed and effective financial guidance.​" },
+        { counterNumber: 30, suffix: "+", title: "Experience", content: "With more than three decades of collective experience, we navigate complex financial landscapes to benefit our clients." }
     ];
 
     useEffect(() => {
@@ -106,9 +106,9 @@ const AboutUs = () => {
                     <div className="MaxWidthContainer sliteSectionLikePadding">
                         {/* <SectionHeading text="Soulfinspire Achievements" color="white" beforeBgColor="white" /> */}
                         <div>
-                                    <h2 className="PrimaryHeadingStyle" data-aos="fade-up"
-                                        data-aos-duration="2000" data-aos-delay="200">Our Achievements</h2>
-                                </div>
+                            <h2 className="PrimaryHeadingStyle" data-aos="fade-up"
+                                data-aos-duration="2000" data-aos-delay="200">Our Achievements</h2>
+                        </div>
                         <div >
                             <Row className="PaddingAdjustHeadingContainer" style={{ paddingBottom: "0px" }}>
                                 {OurAchievementsData.map((item, index) => (
@@ -130,11 +130,11 @@ const AboutUs = () => {
 
                     </div>
                 </div>
-                <div className="SectionContainer" style={{paddingBottom:"0px"}}>
+                <div className="SectionContainer" style={{ paddingBottom: "0px" }}>
                     {/* <img src="/Images/CommonAllPagesTop.webp" alt="" /> */}
                     <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust">
                         <div>
-                            <p><span style={{fontSize:"30px",fontWeight:"400"}}>W</span>e believe wealth management should be as personal as your financial journey. Our approach is built on understanding what truly matters to you—your goals, your lifestyle, and your vision for the future. With a blend of strategic planning, smart investing, and proactive guidance, we craft tailored solutions that grow and protect your wealth. No one-size-fits-all advice here—just a thoughtful, hands-on partnership designed to keep you confident in every financial decision.
+                            <p><span style={{ fontSize: "30px", fontWeight: "400" }}>W</span>e believe wealth management should be as personal as your financial journey. Our approach is built on understanding what truly matters to you—your goals, your lifestyle, and your vision for the future. With a blend of strategic planning, smart investing, and proactive guidance, we craft tailored solutions that grow and protect your wealth. No one-size-fits-all advice here—just a thoughtful, hands-on partnership designed to keep you confident in every financial decision.
                             </p>
                             <br />
                             <p><b>Started in 2003</b>, today Soul Finspire is one of <b>India's fastest growing</b> wealth management company. We sensed the potential and under penetration of mutual funds early on, which laid the foundation of Soul Finspire. Since then we have expanded to offer financial services and products such as <b>Mutual Funds, Insurance, Fixed Income Products, PMS-AIF and Fixed Income Products.</b></p>
