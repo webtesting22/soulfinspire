@@ -50,7 +50,7 @@ const Services = () => {
                     <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust">
                         <div>
                             <h1 className="PrimaryHeadingStyle" data-aos="fade-up"
-                                data-aos-duration="2000" data-aos-delay="200">
+                                data-aos-duration="1200" data-aos-delay="200">
                                 Our <span>Services</span>
                             </h1>
                         </div>
@@ -58,6 +58,8 @@ const Services = () => {
                             <Row>
                                 {ServicesData.map((item, index) => (
                                     <Col lg={12} key={index}
+                                    data-aos="fade-up" data-aos-duration="1500" data-aos-delay={`${index * 400}`}
+
                                     >
                                         <div className="ServicesCards">
                                             <div>

@@ -99,7 +99,8 @@ const SoulTeam = () => {
                             <div>
                                 <Row className="FounderRow">
                                     {TeamMembers.map((item, index) => (
-                                        <Col lg={12} md={24} key={index}>
+                                        <Col lg={12} md={24} key={index} data-aos="fade-up" data-aos-duration="1500" data-aos-delay={`${index * 400}`}
+>
                                             <div className="TeamMembersCard">
                                                 <div className="AnimatedSlideWhiteLayerAnimation" ref={item.ref}>
                                                     <div className="AnimatedWhiteLayer">
