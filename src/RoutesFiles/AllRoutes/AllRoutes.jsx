@@ -9,6 +9,7 @@ import SoulServices from "../../Components/SoulServices/SoulServices";
 import Calculators from "../../Components/Calculators/Calculators";
 import SoulDynamicSingleService from "../../Components/SoulServices/SoulDynamicSingleService";
 import LoginPortal from "../../Components/PortalLogin/LoginPanel";
+import Services from "../../Components/Services/services";
 const AllRoutes = () => {
     return (
         <>
@@ -22,6 +23,7 @@ const AllRoutes = () => {
                     <Route path="/soul-services/:serviceId" element={<SoulDynamicSingleService />} />
                     <Route path="/soul-calculators" element={<Calculators />} />
                     <Route path="/login-portal" element={<LoginPortal />} />
+                    <Route path="/services" element={<Services />} />
                 </Routes>
                 <Footer />
             </Router>

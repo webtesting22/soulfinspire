@@ -70,11 +70,11 @@ const SoulTestimonial = () => {
             content: (
                 <>
                     <p>
-                        Hi all, I have been taking investment advisory and making my investments through SoulFinspire. I must admit that my experience has been extremely good. The team here is very knowledgeable and gives highly customized services.
+                        Hi all, I have been taking investment advisory and making my investments through Soul Finspire. I must admit that my experience has been extremely good. The team here is very knowledgeable and gives highly customized services.
                     </p>
                     <br />
                     <p>
-                        Over and above this, the team here proposes a re-jig of the portfolio as and when needed. I would recommend all long-term investors to consult SoulFinspire.
+                        Over and above this, the team here proposes a re-jig of the portfolio as and when needed. I would recommend all long-term investors to consult Soul Finspire.
                     </p>
                 </>
             ),
@@ -86,9 +86,9 @@ const SoulTestimonial = () => {
             postionPost: "",
             content: (
                 <>
-                    <p>SoulFinspire was introduced to me by my colleague. I was investing in mutual funds earlier also but when I first wanted to begin investing in SoulFinspire was a different ball game. What I can say about the SoulFinspire team is highly professional, knowledgeable, and quick responsive. They have their own app called Wealth Elite which makes it easier for people to see their status. </p>
+                    <p>Soul Finspire was introduced to me by my colleague. I was investing in mutual funds earlier also but when I first wanted to begin investing in Soul Finspire was a different ball game. What I can say about the Soul Finspire team is highly professional, knowledgeable, and quick responsive. They have their own app called Wealth Elite which makes it easier for people to see their status. </p>
                     <br />
-                    <p>I would like to thank SoulFinspire for taking care of my investments and for immediate support whenever I required and hoping that this relationship will go long. </p>
+                    <p>I would like to thank Soul Finspire for taking care of my investments and for immediate support whenever I required and hoping that this relationship will go long. </p>
                 </>
             ),
         },
@@ -100,7 +100,7 @@ const SoulTestimonial = () => {
             content: (
                 <>
                     <p>
-                        We are investor with Raj Shah as our advisor and manager. We are extremely happy with services provided by him and his company SoulFinspire
+                        We are investor with Raj Shah as our advisor and manager. We are extremely happy with services provided by him and his company Soul Finspire
                     </p>
                     <br />
                     <p>

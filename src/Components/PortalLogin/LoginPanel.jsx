@@ -255,7 +255,7 @@ const LoginPortal = () => {
 
                 <Modal
                     width={800}
-                    title="SoulfinSpire"
+                    title={null}
                     open={isModalOpen}
                     onCancel={handleCancel}
                     footer={null}

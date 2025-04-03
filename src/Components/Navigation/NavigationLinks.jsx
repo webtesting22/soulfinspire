@@ -20,13 +20,13 @@ const NavigationLinks = [
     {
         link: "Services",
         sublinks: [
-            { link: "360° Financial Planning", path: "" },
-            { link: "⁠⁠Portfolio Management", path: "" },
-            { link: "Tax planning", path: "" },
-            { link: "Family Offices", path: "" },
-            { link: "loan syndications", path: "" }
+            { link: "360° Financial Planning", path: "/services" },
+            { link: "⁠⁠Portfolio Management", path: "/services" },
+            { link: "Tax planning", path: "/services" },
+            { link: "Family Offices", path: "/services" },
+            { link: "loan syndications", path: "/services" }
         ],
-        path: "/soul-services"
+        path: "/services"
     },
     {
         link: "Calculators",

@@ -88,12 +88,14 @@
     background-color: white;
     /* Or any desired color */
     transform: translateX(0);
+    border-radius: 20px;
     /* No animation here initially */
 }
 
 /* When the parent container gets the "animate" class, trigger the slide animation */
 .AnimatedSlideWhiteLayerAnimation.animate .AnimatedWhiteLayer {
     animation: slideOnce 2s ease-in-out forwards;
+    
 }
 
 /* Slide the layer from left (0) to completely off to the right (100%) */

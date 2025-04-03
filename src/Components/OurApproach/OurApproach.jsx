@@ -6,39 +6,31 @@ import { Row, Col } from "antd";
 const OurApproach = () => {
     const OurApproachData = [
         {
-            title: "Assess Your Needs",
+            title: "Understanding You",
             image: "/Images/OurApprochIcons/AssesYouNeed.svg",
             content: (
-                <>
-                    We begin by having an in-depth conversation to understand your investment
-                    milestones, volatility tolerance, and investment preferences. This
-                    comprehensive assessment allows us to gain deep insights into your
-                    aspirations and the financial landscape you wish to navigate.
+                <>We start with an in-depth conversation to explore your goals, risk tolerance, and personal preferences. This thorough assessment helps us gain valuable insight into your financial vision, ensuring we craft a strategy tailored to your aspirations and the path you want to take.
                 </>
             ),
         },
         {
-            title: "Create a Custom Roadmap",
+            title: "Designing Your Personalized Strategy",
             image: "/Images/OurApprochIcons/CreateaCustomRoadmap.png",
             content: (
                 <>
-                    With a clear understanding of your needs, we craft a personalized
-                    investment strategy. This strategy includes optimum asset allocation,
-                    careful selection of suitable investment products, and a detailed
-                    investment roadmap. Every aspect of the strategy is tailored to meet
-                    your specific objectives, ensuring a focused and individualized approach.
+                    With your goals in mind, we build a tailored investment plan that aligns with your needs. This includes smart asset allocation, carefully chosen investment products, and a clear roadmap to guide your financial journey. Every detail is customized to keep you on track toward your objectives with a focused, strategic approach.
+
                 </>
             ),
         },
         {
-            title: "Implement and Monitor",
+            title: "Putting Your Plan into Action",
             image: "/Images/OurApprochIcons/Implement.png",
             content: (
                 <>
-                    Once your custom plan is mutually agreed, we handle the implementation
-                    of your investments. Our team diligently reviews your portfolio. We
-                    provide you with regular updates and feedback, so you can rest easy
-                    knowing your financial future is in expert hands.
+                    Once we finalize your custom strategy, we take care of the investment process for you. Our team continuously monitors your portfolio, making sure it stays aligned with your goals. With regular updates and insights, you’ll always know where you stand—while we handle the details with expert care.
+
+
                 </>
             ),
         },

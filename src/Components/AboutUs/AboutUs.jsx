@@ -15,10 +15,10 @@ const AboutUs = () => {
     );
 
     const OurAchievementsData = [
-        { counterNumber: 3000, suffix: "+", title: "Investors", content: "Serving Over 3000 Investors Across India and globe, we manage diverse portfolios and provide customized investment solutions." },
-        { counterNumber: 600, suffix: "Cr", title: "Investments", content: "Managing ₹600 Crores of Investments. We ensure prudent management and growth of our clients' wealth." },
-        { counterNumber: 12, suffix: "+", title: "Industry Experts", content: "Our team includes some of the brightest minds in the financial industry, dedicated to your peaceful investment journey." },
-        { counterNumber: 75, suffix: "+", title: "Years Experience", content: "75+ Years of Combined Experience. Our team brings a wealth of knowledge and expertise to every client interaction." }
+        { counterNumber: 250, suffix: "+", title: "Investors", content: "Serving Over 3000 Investors Across India and globe, we manage diverse portfolios and provide customized investment solutions." },
+        { counterNumber: 200, suffix: "Cr", title: "Crore", content: "Managing ₹600 Crores of Investments. We ensure prudent management and growth of our clients' wealth." },
+        { counterNumber: 5, suffix: "+", title: "Experts", content: "Our team includes some of the brightest minds in the financial industry, dedicated to your peaceful investment journey." },
+        { counterNumber: 30, suffix: "+", title: "Experience", content: "75+ Years of Combined Experience. Our team brings a wealth of knowledge and expertise to every client interaction." }
     ];
 
     useEffect(() => {
@@ -137,7 +137,7 @@ const AboutUs = () => {
                             <p><span style={{fontSize:"30px",fontWeight:"400"}}>W</span>e believe wealth management should be as personal as your financial journey. Our approach is built on understanding what truly matters to you—your goals, your lifestyle, and your vision for the future. With a blend of strategic planning, smart investing, and proactive guidance, we craft tailored solutions that grow and protect your wealth. No one-size-fits-all advice here—just a thoughtful, hands-on partnership designed to keep you confident in every financial decision.
                             </p>
                             <br />
-                            <p><b>Started in 2003</b>, today Soul FinSpire is one of <b>India's fastest growing</b> wealth management company. We sensed the potential and under penetration of mutual funds early on, which laid the foundation of Soul FinSpire. Since then we have expanded to offer financial services and products such as <b>Mutual Funds, Insurance, Fixed Income Products, PMS-AIF and Fixed Income Products.</b></p>
+                            <p><b>Started in 2003</b>, today Soul Finspire is one of <b>India's fastest growing</b> wealth management company. We sensed the potential and under penetration of mutual funds early on, which laid the foundation of Soul Finspire. Since then we have expanded to offer financial services and products such as <b>Mutual Funds, Insurance, Fixed Income Products, PMS-AIF and Fixed Income Products.</b></p>
                         </div>
                     </div>
                 </div>

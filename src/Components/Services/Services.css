@@ -1,0 +1,26 @@
+.ServicesCards {
+    margin: 20px;
+    background-color: white;
+    border: 1px solid #1E402D;
+    padding: 40px;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.ServicesCards:hover {
+    transform: translateY(-10px);
+    transition: .5s;
+    background-color: #1E402D;
+    color: white !important;
+}
+
+@media (max-width:900px) {
+    .ServicesCards {
+        margin: 20px 0px !important;
+        background-color: white;
+        border: 1px solid #1E402D;
+        padding: 20px;
+        border-radius: 20px;
+        transition: .5s;
+    }
+}
