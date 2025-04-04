@@ -137,7 +137,7 @@ const AboutUs = () => {
                             <p><span style={{ fontSize: "30px", fontWeight: "400" }}>W</span>e believe wealth management should be as personal as your financial journey. Our approach is built on understanding what truly matters to you—your goals, your lifestyle, and your vision for the future. With a blend of strategic planning, smart investing, and proactive guidance, we craft tailored solutions that grow and protect your wealth. No one-size-fits-all advice here—just a thoughtful, hands-on partnership designed to keep you confident in every financial decision.
                             </p>
                             <br />
-                            <p><b>Started in 2003</b>, today Soul Finspire is one of <b>India's fastest growing</b> wealth management company. We sensed the potential and under penetration of mutual funds early on, which laid the foundation of Soul Finspire. Since then we have expanded to offer financial services and products such as <b>Mutual Funds, Insurance, Fixed Income Products, PMS-AIF and Fixed Income Products.</b></p>
+                            <p><b>Started in 2003</b>, today Soul Finspire is one of <b>India's fastest growing</b> wealth management company. We sensed the potential and under penetration of mutual funds early on, which laid the foundation of Soul Finspire. Since then we have expanded to offer financial services and products such as <b>Mutual Funds, Insurance, Fixed Income Products and Alternative Investments.</b></p>
                         </div>
                     </div>
                 </div>

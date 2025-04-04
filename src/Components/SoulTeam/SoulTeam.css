@@ -71,10 +71,10 @@
 }
 
 .TeamMembersCard>div:first-child {
-    height: 450px;
+    /* height: 450px; */
     overflow: hidden;
     display: flex;
-    align-items: end;
+    /* align-items: end; */
     border-radius: 20px;
 
 }
@@ -89,9 +89,28 @@
 
 .TeamMemberCards .FounderRow .ant-col {
 
-    padding: 20px;
+    padding: 10px;
     /* margin: 0px 20px; */
     border-radius: 20px;
+}
+
+.TeamMemberCards .FounderRow .ant-col:first-child {
+    padding: 10px;
+    padding-left: 0px !important;
+    /* margin: 0px 20px; */
+    border-radius: 20px;
+}
+
+.TeamMembersCard>div:last-child {
+    min-height: 28vh;
+}
+
+.TeamMembersCard .CardContent {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 
 .TeamMembersCard h2 {

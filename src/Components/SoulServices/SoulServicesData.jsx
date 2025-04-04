@@ -35,73 +35,75 @@ export const AnimatedCards = ({ cardsData }) => {
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-    // Detect if the device is mobile
+
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+            const isNowMobile = window.innerWidth <= 768;
+            setIsMobile(isNowMobile);
+
+            if (isNowMobile) {
+                const allKeys = cardsData.map((_, index) => index.toString());
+                setActiveKey(allKeys); // Open all on mobile
+            } else {
+                setActiveKey(null); // Reset on desktop
+            }
         };
 
         handleResize(); // Initial check
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [cardsData]);
+
     const handlePanelChange = (key) => {
-        if (isMobile) {
+        if (!isMobile) {
             setActiveKey(activeKey === key ? null : key);
         }
     };
+
     return (
-        // <div>
-        <>
-            <div>
-                {cardsData.map((item, index) => (
-                    <Row>
-                        <Col lg={24}>
-                            <div key={index} className="Animated3DCard" onMouseEnter={() => !isMobile && setActiveKey(index.toString())}
-                                onMouseLeave={() => !isMobile && setActiveKey(null)} ref={(el) => (cardRefs.current[index] = el)}>
-
-                                <Collapse
-                                    accordion
-                                    bordered={false}
-                                    // className="Animated3DCard"
-                                    expandIconPosition="right"
-                                    activeKey={activeKey}
-                                    onChange={() => handlePanelChange(index.toString())}
-
-                                    style={{ width: "100%" }}
-                                >
-                                    <Panel
-                                        header={
-                                            <>
-                                                <div className="AnimatedRowColumnContainer">
-                                                    <div className="AnimatedContentContainer">
-                                                        <div className="CountCards">
-                                                            <span>0{index + 1}</span>
-                                                        </div>
-                                                        <h3 className="PrimaryHeadingStyle">{item.title}</h3>
-                                                    </div>
-                                                    <div className="AnimatedInsideImageContainer">
-                                                        <img src={item.img} alt="" />
-                                                    </div>
+        <div>
+            {cardsData.map((item, index) => (
+                <Row key={index}>
+                    <Col lg={24} style={{width:"100%"}}>
+                        <div
+                            id={item.id}
+                            className="Animated3DCard"
+                            onMouseEnter={() => !isMobile && setActiveKey(index.toString())}
+                            onMouseLeave={() => !isMobile && setActiveKey(null)}
+                            ref={(el) => (cardRefs.current[index] = el)}
+                        >
+                            <Collapse
+                                bordered={false}
+                                expandIconPosition="right"
+                                {...(!isMobile && { accordion: true })}
+                                activeKey={activeKey}
+                                onChange={() => handlePanelChange(index.toString())}
+                                style={{ width: "100%" }}
+                            >
+                                <Panel
+                                    header={
+                                        <div className="AnimatedRowColumnContainer">
+                                            <div className="AnimatedContentContainer">
+                                                <div className="CountCards">
+                                                    <span>{(index + 1).toString().padStart(2, '0')}</span>
                                                 </div>
-                                            </>
-                                        }
-                                        key={index}
-                                    >
-                                        <p>{item.content}</p>
-                                        {/* <div className="AnimatedInsideImageContainer">
-                                            <img src={item.img} alt="" />
-                                        </div> */}
-                                    </Panel>
-                                </Collapse>
-
-
-                            </div>
-                        </Col>
-                    </Row>
-                ))}
-            </div>
-        </>
+                                                <h3 className="PrimaryHeadingStyle">{item.title}</h3>
+                                            </div>
+                                            <div className="AnimatedInsideImageContainer">
+                                                <img src={item.img} alt="" />
+                                            </div>
+                                        </div>
+                                    }
+                                    key={index.toString()}
+                                >
+                                    <p>{item.content}</p>
+                                </Panel>
+                            </Collapse>
+                        </div>
+                    </Col>
+                </Row>
+            ))}
+        </div>
     );
 };
 

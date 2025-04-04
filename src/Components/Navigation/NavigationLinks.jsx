@@ -10,21 +10,21 @@ const NavigationLinks = [
     {
         link: "Products",
         sublinks: [
-            { link: "Mutual Funds", path: "/soul-services#mutualfunds" },
-            { link: "Insurance", path: "/soul-services#insurance" },
-            { link: "Alternative Investments", path: "/soul-services#alternativeinvestments" },
-            { link: "Fixed Income", path: "/soul-services#fixedincome" }
+            { link: "Mutual Funds", path: "/soul-services#MutualFunds" },
+            { link: "Insurance", path: "/soul-services#Insurance" },
+            { link: "Alternative Investments", path: "/soul-services#AlternativeInvestments" },
+            { link: "Fixed Income", path: "/soul-services#FixedIncome" }
         ],
         path: "/soul-services"
     },
     {
         link: "Services",
         sublinks: [
-            { link: "360° Financial Planning", path: "/services" },
-            { link: "⁠⁠Portfolio Management", path: "/services" },
-            { link: "Tax planning", path: "/services" },
-            { link: "Family Offices", path: "/services" },
-            { link: "loan syndications", path: "/services" }
+            { link: "360° Financial Planning", path: "/services#financialPlanning" },
+            { link: "Portfolio Management", path: "/services#portfolioManagement" },
+            { link: "Tax Planning", path: "/services#taxPlanning" },
+            { link: "Family Offices", path: "/services#familyOffices" },
+            { link: "Loan Syndications", path: "/services#loanSyndications" }
         ],
         path: "/services"
     },

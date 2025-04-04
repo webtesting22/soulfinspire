@@ -109,7 +109,7 @@ const SoulNavigation = () => {
                             <Collapse accordion>
                                 {NavigationLinks.map((item, index) => (
                                     item.sublinks && item.sublinks.length > 0 ? (
-                                        <Panel header={item.link} key={index}>
+                                        <Panel header={item.link} key={index} className="SublinkPanel">
                                             {item.sublinks.map((sub, subIndex) => (
                                                 <p key={subIndex}>
                                                     <Link to={sub.path} onClick={() => setDrawerVisible(false)}>{sub.link}</Link>
@@ -129,6 +129,11 @@ const SoulNavigation = () => {
                                     )
                                 ))}
                             </Collapse>
+                            <div className="PortfolioLoginBtn">
+                                <div className="PrimarybtnContainer">
+                                    <Link to="/login-portal" onClick={() => setDrawerVisible(false)}><button style={{ marginTop: "0px", cursor: "pointer" }}><FaUser />&nbsp; Portfolio Login</button></Link>
+                                </div>
+                            </div>
                         </Drawer>
                     </div>
                 </div>

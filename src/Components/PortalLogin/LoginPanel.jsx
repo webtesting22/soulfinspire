@@ -35,7 +35,7 @@ const LoginPortal = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsDisabled(false);
-        }, 30000); // 10 seconds
+        }, 40000); // 10 seconds
 
         return () => clearTimeout(timer);
     }, []);
@@ -97,7 +97,7 @@ const LoginPortal = () => {
         };
 
         try {
-            const response = await fetch("http://localhost:4040/api/soulfinspire/addSoulFinspireUserApplication", {
+            const response = await fetch("https://testapi.prepseed.com/soulfinspire/addSoulFinspireUserApplication", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -152,7 +152,7 @@ const LoginPortal = () => {
         <>
             <div id="LoginPage">
                 <Row>
-                    <Col lg={12}>
+                    <Col lg={12} style={{ width: "100%" }}>
                         <div>
                             <div>
                                 <img src="/Images/LoginPageImage.jpg" alt="" />
@@ -175,7 +175,18 @@ const LoginPortal = () => {
                                             onSwiper={(swiper) => (swiperRef.current = swiper)}
                                         >
                                             <SwiperSlide>
-                                                <div className="FiledsContainer">
+                                                <div style={{ height: '60vh', borderRadius: '10px', }}>
+                                                    <iframe
+                                                        src="https://login.ifa.wealthelite.in/"
+                                                        title="Embedded Page"
+                                                        style={{
+                                                            width: '100%',
+                                                            height: '100%',
+                                                            border: 'none',
+                                                        }}
+                                                    />
+                                                </div>
+                                                {/* <div className="FiledsContainer">
                                                     <div>
                                                         <h2 style={{ textAlign: "center" }}>Enhance your Finances
                                                         </h2>
@@ -200,11 +211,11 @@ const LoginPortal = () => {
                                                                 <Input placeholder="Enter your Password" />
                                                             </Form.Item>
                                                         </div>
-                                                        {/* <div style={{ display: "flex", }} className="PrimarybtnContainer">
+                                                        <div style={{ display: "flex", }} className="PrimarybtnContainer">
                                                         <Button type="primary" onClick={showModal}>Log In</Button>
-                                                    </div> */}
                                                     </div>
-                                                </div>
+                                                    </div>
+                                                </div> */}
                                             </SwiperSlide>
                                             <SwiperSlide>
                                                 <div>
@@ -238,7 +249,7 @@ const LoginPortal = () => {
 
                                 <div style={{ display: "flex", justifyContent: "center" }} className="PrimarybtnContainer">
                                     <Button type="primary" onClick={handleButtonClick}>
-                                        Log In
+                                        Sign In
                                     </Button>
                                 </div>
 

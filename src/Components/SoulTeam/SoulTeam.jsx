@@ -56,6 +56,11 @@ const SoulTeam = () => {
             position: <>Head&nbsp;of&nbsp;Retail&nbsp;Development</>,
             ref: teamRefs,
             content: "Shanay Shah",
+            details: <>
+                With 6+ years of experience in business development, I have honed my skills across diverse industries, driving growth, forging strategic partnerships, and leading expansion initiatives. My experience spans across Financial Services, IT solutions, Staffing, BIM-solutions, Business Consulting and so on, where I have successfully led lead generation, client acquisition, and revenue growth initiatives.
+<br /><br />
+                In my role as Head of Retail Development at Soul Finspire, I focus on building and optimizing the Retail Division. <br />
+            </>,
             Link: "https://www.linkedin.com/in/shanay-shah-035437214/"
         }
     ]
@@ -100,26 +105,31 @@ const SoulTeam = () => {
                                 <Row className="FounderRow">
                                     {TeamMembers.map((item, index) => (
                                         <Col lg={12} md={24} key={index} data-aos="fade-up" data-aos-duration="1500" data-aos-delay={`${index * 400}`}
->
+                                        >
                                             <div className="TeamMembersCard">
-                                                <div className="AnimatedSlideWhiteLayerAnimation" ref={item.ref}>
-                                                    <div className="AnimatedWhiteLayer">
-
-                                                    </div>
-                                                    <img src={item.image} alt="" loading="lazy" />
-                                                </div>
-                                                <br />
                                                 <div>
-                                                    <div id="TeamCardAdjust">
-                                                        <div >
+                                                    <div className="AnimatedSlideWhiteLayerAnimation" ref={item.ref}>
+                                                        <div className="AnimatedWhiteLayer">
+
+                                                        </div>
+                                                        <img src={item.image} alt="" loading="lazy" />
+                                                    </div>
+                                                    <div className="CardContent">
+                                                        <div>
                                                             <h2>{item.content}</h2>
                                                             <p style={{ color: "white" }}>{item.position}</p>
                                                         </div>
+                                                        <div id="TeamCardAdjust">
 
-                                                        <div>
-                                                            <Link to={item.Link} target="_blank"><FaLinkedin style={{ color: "white", fontSize: "20px" }} /></Link>
+                                                            <div>
+                                                                <Link to={item.Link} target="_blank"><FaLinkedin style={{ color: "white", fontSize: "20px" }} /></Link>
+                                                            </div>
                                                         </div>
                                                     </div>
+
+                                                </div>
+                                                <div>
+
 
                                                     <br />
                                                     <p>{item.details}</p>

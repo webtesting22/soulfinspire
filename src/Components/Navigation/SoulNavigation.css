@@ -180,6 +180,45 @@
 }
 
 @media (max-width:900px) {
+
+.PortfolioLoginBtn {
+    padding-left: 0px;
+}
+
+    .SublinkPanel .ant-collapse-header,
+    .WidthContainer .ant-collapse-header{
+        display: flex !important;
+        align-items: center !important;
+    }
+    .SublinkPanel,
+    .WithoutSublinkPanel{
+        margin: 20px 0px !important;
+        border: none !important;
+    }
+    .SublinkPanel .ant-collapse-content ,
+    .WithoutSublinkPanel .ant-collapse-content {
+        border: none !important;
+    }
+    .SublinkPanel .ant-collapse-header-text,
+    .WithoutSublinkPanel .ant-collapse-header-text{
+       font-size: 18px;
+    }
+    .SublinkPanel .ant-collapse-content-box p ,
+    .WithoutSublinkPanel .ant-collapse-content-box p {
+        margin: 10px 0px !important;
+    }
+    .SublinkPanel .ant-collapse-content-box p::before ,
+    .WithoutSublinkPanel .ant-collapse-content-box p::before {
+        content: "-";
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .SublinkPanel .ant-collapse-content-box p a,
+    .WithoutSublinkPanel .ant-collapse-content-box p a{
+        font-size: 18px;
+        color: black !important;
+      
+    }
     .MobileNavHeader {
         display: flex;
         justify-content: space-between;

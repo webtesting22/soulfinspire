@@ -37,10 +37,10 @@ const Calculators = () => {
                     <div className="MaxWidthContainer" id="HomepageContainerPaddingAdjust">
                         <Row>
                             <Col lg={24}>
-                                <span className="TagEdit" data-aos="fade-up" data-aos-duration="3000">
+                                {/* <span className="TagEdit" data-aos="fade-up" data-aos-duration="3000">
                                     Our Soul Finspire Planning
 
-                                </span>
+                                </span> */}
                                 <h1 className="PrimaryHeadingStyle" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
                                     Comprehensive <span>Investment</span> & Lending <span>Solutions</span> at Your Fingertips
                                 </h1>
@@ -52,7 +52,7 @@ const Calculators = () => {
                             </Col> */}
                         </Row>
                         <div className="sliteSectionLikePadding">
-                            <SectionHeading text="Soul Finspire Planning" valueOfBorder="1px solid black" color="black" beforeBgColor="black" />
+                            {/* <SectionHeading text="Soul Finspire Planning" valueOfBorder="1px solid black" color="black" beforeBgColor="black" /> */}
 
                             <div className="sliteSectionLikePadding " style={{paddingBottom:"0px"}}>
                                 <Tabs activeKey={activeTab} onChange={setActiveTab}>

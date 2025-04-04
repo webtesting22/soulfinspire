@@ -124,7 +124,7 @@ const AboutHome = () => {
                                                 </div>
                                             </div> */}
                                             <p data-aos="fade-up"
-                                                data-aos-duration="1200">The path to your financial success may appear steep, but the journey is worth it — we at <b>Soul Finspire</b>, make Wealth Creation simple, accessible, and effective.   With a commitment to <b>trust, transparency, and efficiency</b>, we provide tailored financial strategies that drive growth and stability. Our client-centric approach ensures personalized solutions, empowering individuals and businesses to achieve long-term financial success with confidence.
+                                                data-aos-duration="1200">The path to your financial success may appear steep, but the journey is worth it — we at <b>Soul Finspire</b>, make wealth creation simple, accessible, and effective.   With a commitment to <b>trust, transparency, and efficiency</b>, we provide tailored financial strategies that drive growth and stability. Our client-centric approach ensures personalized solutions, empowering individuals and businesses to achieve long-term financial success with confidence.
                                             </p>
                                         </div>
                                     </div>
